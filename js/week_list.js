@@ -36,37 +36,6 @@ function renderChart1(data) {
          .attr("height", chartHeight)
          .attr("transform", "translate(" + charMargin.left + "," + charMargin.top + ")");
     
-    var xScale = d3.scale.ordinal()
-        .rangeBands([0, chartInnerWidth])
-        //.range([0, 1, 2,3,4,5,6,7,8,9,10,11,12])
-        .domain(["0:00", "2:00", "4:00", "6:00", "8:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "24:00"]);
-        
-
-    var yScale = d3.scale.ordinal()
-        .rangeBands([chartInnerHeight, 0])
-        .domain(data.map(function(d) { return d.day; }));
-
-    var cScale = d3.scale.linear()
-        .range([yScale.rangeBand(), 0])
-        .domain([5, 0]);
-
-    var xAxis = d3.svg.axis()
-        .scale(xScale)
-        .orient("bottom");
-
-    var yAxis = d3.svg.axis()
-        .scale(yScale)
-        .orient("left");
-
-    chart1.append("g")
-        .attr("class", "axis")
-        .attr("transform", "translate(" + charMargin.left + ", " + (chartInnerHeight + charMargin.top) + ")")
-        .call(xAxis);
-
-    chart1.append("g")
-        .attr("class", "axis")
-        .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
-        .call(yAxis); 
 }
 
 function renderChart2(data) {
