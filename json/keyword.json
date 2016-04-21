@@ -1,0 +1,31 @@
+[
+  {
+    "keyword": "network",
+    "frequency": 4
+  },
+  {
+    "keyword": "company",
+    "frequency": 7
+  },
+  {
+    "keyword": "visualization",
+    "frequency": 9
+  },
+  {
+    "keyword": "business",
+    "frequency": 13
+  },
+  {
+    "keyword": "appointment",
+    "frequency": 7
+  },
+  
+  {
+    "keyword": "meeting",
+    "frequency": 15
+  },
+  {
+    "keyword": "proposal",
+    "frequency": 23
+  }
+]
