@@ -11,7 +11,8 @@ d3.json("json/recipient.json", function(error, result) {
     renderRecipList(result);
 })
 
-d3.json("json/sample.json", function(error, result) {
+//d3.json("json/sample.json", function(error, result) {
+d3.json("json/jeff_2001_10.json", function(error, result) {
     renderWeekList(result);
     renderChart1(result);
     renderChart2(result);
@@ -82,7 +83,7 @@ function renderChart2(data) {
 
     var xScale = d3.scale.linear()
         .range([0, chartInnerWidth])
-        .domain([0, d3.max(data, function(d) { return d.recipient; })]);
+        .domain([0, d3.max(data, function(d) { return d.num_recipent; })]);
 
     var yScale = d3.scale.ordinal()
         .rangeRoundBands([chartInnerHeight, 0], .2)
@@ -119,7 +120,7 @@ function renderChart2(data) {
       .attr("class", "bar")
       //.attr("x", charMargin.left)
       .attr("y", function(d) { return yScale(d.day); })
-      .attr("width", function(d) { return xScale(d.recipient); })
+      .attr("width", function(d) { return xScale(d.num_recipent); })
       .attr("height", yScale.rangeBand())
       .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
       .attr("fill", "#5bc0de");   
