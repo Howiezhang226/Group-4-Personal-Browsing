@@ -11,9 +11,19 @@ d3.json("json/recipient.json", function(error, result) {
     renderRecipList(result);
 })
 
-//d3.json("json/sample.json", function(error, result) {
+d3.json("json/js_week.json", function(error, result) {
+    data = result;
+    var filteredData = data.filter(function(d) {
+        return d.day.length > 0;
+    });
+        
+    filteredData.sort(function(a, b) { return d3.ascending(a.week_number, b.week_number)});
+        
+    renderWeekList(filteredData);
+})
+
 d3.json("json/jeff_2001_10.json", function(error, result) {
-    renderWeekList(result);
+    //renderWeekList(result);
     renderChart1(result);
     renderChart2(result);
 })
@@ -154,24 +164,19 @@ function renderChart3(data) {
 
 function renderWeekList(data) {
     //Left side: Week List
-    var chartWidth = 260;
-    var chartHeight = 140;
-    var charMargin = {top: 10, left: 20, right: 80, bottom: 20};
+    var chartWidth = 160;
+    var chartHeight = 100;
+    var charMargin = {top: 10, left: 20, right: 10, bottom: 20};
     var chartInnerWidth = chartWidth - charMargin.left - charMargin.right;
     var chartInnerHeight = chartHeight - charMargin.top - charMargin.bottom;
-    var week1 = d3.selectAll(".weeklist");
 
-    week1.attr("width", chartWidth)
-         .attr("height", chartHeight)
-         .attr("transform", "translate(" + charMargin.left + "," + charMargin.top + ")");;
-    
     var xScale = d3.scale.ordinal()
         .rangeRoundBands([0, chartInnerWidth], .1)
-        .domain(data.map(function(d) { return d.day; }));
+        .domain(["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]);
 
     var yScale = d3.scale.linear()
         .range([chartInnerHeight, 0])
-        .domain([0, d3.max(data, function(d) { return d.total; })]);
+        .domain([0, 10, 30]);
 
     var xAxis = d3.svg.axis()
         .scale(xScale)
@@ -181,33 +186,56 @@ function renderWeekList(data) {
         .scale(yScale)
         .orient("left");
 
-    week1.append("g")
+    var weekList = d3.select("#weekList");
+
+    var weekLi = weekList.selectAll("a")
+        .data(data)
+        .enter().append("a")
+        .attr("class", "list-group-item")
+        .attr("href", "#")
+        .on("click", function(d, i) {
+            //alert(d.week_number);
+            d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
+        });
+
+    var weekSvg = weekLi.append("svg")
+        .attr("id", function(d, i){return "week" + i})
+        .attr("width", chartWidth)
+        .attr("height", chartHeight)
+        .attr("transform", "translate(" + charMargin.left + "," + charMargin.top + ")");
+
+    weekSvg.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(" + charMargin.left + ", " + (chartInnerHeight + charMargin.top) + ")")
         .call(xAxis);
 
-    week1.append("g")
+    weekSvg.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
         .call(yAxis);
+    
+    for (var j = 0; j < data.length; j++) {
+        var iweek = d3.select("#week" + j);
+        var weekData = data[j];
+        iweek.append("text")
+            .text(weekData.start_date + " - " + weekData.end_date)
+            .style({"font-size": "12px", fill: "#ccc"})
+            .attr("dx", 30)
+            .attr("dy", 10);
 
-    week1.append("text")
-        .text("Week 1")
-        .style({"font-size": "15px", fill: "#ccc"})
-        .attr("dx", 200)
-        .attr("dy", 70);
-
-    week1.selectAll(".bar")
-      .data(data)
-      .enter()
-      .append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return xScale(d.day); })
-      .attr("y", function(d) { return yScale(d.total); })
-      .attr("width", xScale.rangeBand())
-      .attr("height", function(d) { return chartInnerHeight - yScale(d.total); })
-      .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
-      .attr("fill", "#337ab7");  
+        iweek.selectAll(".bar")
+          .data(weekData.day)
+          .enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("x", function(d) { return xScale(d.day); })
+          .attr("y", function(d) { return yScale(d.day_num); })
+          .attr("width", xScale.rangeBand())
+          .attr("height", function(d) { return chartInnerHeight - yScale(d.day_num); })
+          .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
+          .attr("fill", "#337ab7");  
+    }    
+    
 }
 
 function renderRecipList(data) {
