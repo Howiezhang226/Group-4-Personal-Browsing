@@ -9,7 +9,7 @@ var weekNum = 25;
 d3.json("json/js_week.json", function(error, result) {
     data = result;
     var filteredData = data.filter(function(d) {
-        return d.day.length > 0;
+        return d.days.length > 0;
     });
     filteredData.sort(function(a, b) { return d3.ascending(a.week_number, b.week_number)});
         
@@ -220,7 +220,7 @@ function renderWeekList(data) {
             .attr("dy", 10);
 
         iweek.selectAll(".bar")
-          .data(weekData.day)
+          .data(weekData.days)
           .enter()
           .append("rect")
           .attr("class", "bar")
