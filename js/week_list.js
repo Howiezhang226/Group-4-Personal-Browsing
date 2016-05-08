@@ -1,29 +1,23 @@
-//atepicker
-$(function(){
-  $('.datepicker').datepicker({
-    "format": 'mm-dd-yyyy',
-    "autoclose": true
-  });
-});
+//Global Variables
+var weekNum = 25;
 
 //Import Data
-d3.json("json/recipient.json", function(error, result) {
-    renderRecipList(result);
-})
+// d3.json("json/recipient.json", function(error, result) {
+//     renderRecipList(result);
+// })
 
 d3.json("json/js_week.json", function(error, result) {
     data = result;
     var filteredData = data.filter(function(d) {
         return d.day.length > 0;
     });
-        
     filteredData.sort(function(a, b) { return d3.ascending(a.week_number, b.week_number)});
         
     renderWeekList(filteredData);
+    renderRecipList(filteredData);
 })
 
 d3.json("json/jeff_2001_10.json", function(error, result) {
-    //renderWeekList(result);
     renderChart1(result);
     renderChart2(result);
 })
@@ -176,7 +170,7 @@ function renderWeekList(data) {
 
     var yScale = d3.scale.linear()
         .range([chartInnerHeight, 0])
-        .domain([0, 10, 30]);
+        .domain([0, 10, 100]);
 
     var xAxis = d3.svg.axis()
         .scale(xScale)
@@ -195,7 +189,9 @@ function renderWeekList(data) {
         .attr("href", "#")
         .on("click", function(d, i) {
             //alert(d.week_number);
+            weekNum = d.week_number;
             d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
+            renderRecipList(data);
         });
 
     var weekSvg = weekLi.append("svg")
@@ -241,7 +237,14 @@ function renderWeekList(data) {
 function renderRecipList(data) {
     //Right side: Recipient list
     d3.select("#recipList").selectAll('tr')
-        .data(data)
+        .data(data, function(d) {
+            // console.log("weekNum: " + weekNum);
+            if (d.week_number == weekNum) {
+                console.log("d.week_number" + d.week_number);
+                console.log("d.sent_detail" + d.sent_detail);
+                return d.sent_detail;
+            }   
+        })
         .enter()
         .append('tr')
         .attr("class", "text-primary")
