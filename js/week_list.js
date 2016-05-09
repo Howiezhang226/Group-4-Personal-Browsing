@@ -1,5 +1,5 @@
 //Global Variables
-var weekNum = 25;
+var weekNum = 40;
 var days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 var daysReverse = ["Sa", "Fr", "Th", "We", "Tu", "Mo", "Su"];
 var times = ["12a", "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p", 
@@ -25,9 +25,9 @@ d3.json("json/js_week.json", function(error, result) {
 // Render functions  
 function renderWeekList(data) {
     //Left side: Week List
-    var chartWidth = 160;
-    var chartHeight = 100;
-    var charMargin = {top: 10, left: 20, right: 10, bottom: 20};
+    var chartWidth = 165;
+    var chartHeight = 70;
+    var charMargin = {top: 10, left: 20, right: 10, bottom: 18};
     var chartInnerWidth = chartWidth - charMargin.left - charMargin.right;
     var chartInnerHeight = chartHeight - charMargin.top - charMargin.bottom;
 
@@ -37,7 +37,7 @@ function renderWeekList(data) {
 
     var yScale = d3.scale.linear()
         .range([chartInnerHeight, 0])
-        .domain([0, 40, 200]);
+        .domain([0, 40]);
 
     var xAxis = d3.svg.axis()
         .scale(xScale)
@@ -45,7 +45,8 @@ function renderWeekList(data) {
 
     var yAxis = d3.svg.axis()
         .scale(yScale)
-        .orient("left");
+        .orient("left")
+        .tickValues([0, 40]);
 
     var weekList = d3.select("#weekList");
 
@@ -87,9 +88,9 @@ function renderWeekList(data) {
         var weekData = data[j];
         iweek.append("text")
             .text(weekData.start_date + " - " + weekData.end_date)
-            .style({"font-size": "12px", fill: "#ccc"})
-            .attr("dx", 30)
-            .attr("dy", 10);
+            .style({"font-size": "10px", fill: "#ccc"})
+            .attr("dx", 35)
+            .attr("dy", 9);
 
         iweek.selectAll("rect")
           .data(weekData.days)
@@ -153,7 +154,7 @@ function renderRecipList(data) {
 function renderMainChart(data) {
     var chartWidth = 700;
     var chartHeight = 580;
-    var chartMargin = {top: 30, left: 30, right: 80, bottom: 30};
+    var chartMargin = {top: 30, left: 100, right: 20, bottom: 30};
     var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
     var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
 
@@ -238,7 +239,7 @@ function renderMainChart(data) {
 
     d3.select("#mailTotal").html(weekly_total + " Emails");
     var barChart = mainChart.append("g").attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
-    var circleChart = mainChart.append("g").attr("transform", "translate(" + (chartMargin.left + chartInnerWidth)  + "," + chartMargin.top + ")");
+    var circleChart = mainChart.append("g").attr("transform", "translate(" + "20"  + "," + chartMargin.top + ")");
     
     var rectScale = d3.scale.linear().range([0, gridSize]).domain([0, 16]);
     var rScale = d3.scale.linear().range([7, gridSize / 2]).domain([0, 50]);
@@ -282,8 +283,8 @@ function renderMainChart(data) {
     circles.enter().append("circle"); 
     circles.attr("class", "bar")
         .attr("r", function (d, i) { return rScale(d.total);})
-        .attr("cx", 40)
-        .attr("cy", function (d) { return (d.day) * gridSize + gridSize - rScale(d.total);})
+        .attr("cx", 20)
+        .attr("cy", function (d) { return (d.day * gridSize + gridSize/2);})
         .attr("fill", "#f0ad4e") //original #225ea8 info #5bc0de
         .on("mouseenter", function(d, i) {
             d3.select("#tooltip").style({

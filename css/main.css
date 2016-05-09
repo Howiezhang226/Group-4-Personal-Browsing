@@ -12,11 +12,11 @@ text {
     text-align: center;
 }
 #recipListContainer {
-	height: 550px;
+	height: 500px;
     border: 1px solid #eee;
+    border-top: 0px;
 	overflow: auto;
 }
-#recipListContainer table,
 #recipList{
     margin: 0 auto;
     height: 2000px;
@@ -47,9 +47,12 @@ text {
     fill: rgba(217, 83, 79, 0.9) !important;
 }
 .list-group-item {
-    padding: 8px;
+    padding: 3px;
 }
-
+.list-group-item svg{
+    margin: 0 auto;
+    /*padding: 3px auto;*/
+}
 rect.bordered {
      stroke: #E6E6E6;
      stroke-width: 1px;
