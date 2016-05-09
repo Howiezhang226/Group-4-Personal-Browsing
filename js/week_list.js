@@ -165,15 +165,17 @@ function renderMainChart(data) {
 
     var xScale = d3.scale.ordinal().rangeBands([0, chartInnerWidth]).domain(times);  
     var yScale = d3.scale.ordinal().rangeBands([chartInnerHeight, 0]).domain(daysReverse);
+    var yAxis = d3.svg.axis().scale(yScale).orient("left").outerTickSize(0);
     var xAxis = d3.svg.axis().scale(xScale).orient("top")
                 .innerTickSize(-chartInnerHeight)
                 .outerTickSize(0);
-    var yAxis = d3.svg.axis().scale(yScale).orient("left").outerTickSize(0);
-
+    
     var gridWeight = xScale.rangeBand();
     var gridSize = yScale.rangeBand();
 
+    //Draw axis and shade
     mainChart.selectAll(".axis").remove(); 
+    mainChart.selectAll(".shade").remove(); 
 
     mainChart.append("g")
         .attr("class", "axis")
@@ -183,7 +185,7 @@ function renderMainChart(data) {
         .attr("class", "axis")
         .attr("transform", "translate(" + chartMargin.left + ", " + chartMargin.top + ")")
         .call(yAxis); 
-    for (var i = 1; i <=7; i++) {
+    for (var i = 1; i <=7; i++) { //horizontal grid lines
         mainChart.append("line")
         .attr("transform", "translate(" + chartMargin.left + ", " + chartMargin.top + ")")
         .attr("x1", "0")
@@ -193,23 +195,30 @@ function renderMainChart(data) {
         .style("stroke", "#eee")
         .style("stroke-width", "1px");
     }
-    // mainChart.append("line")
-    //     // .attr("class", "axis")
-    //     .attr("transform", "translate(" + (chartMargin.left) + ", " + chartMargin.top + ")")
-    //     .attr("x1", 0)
-    //     .attr("y1", gridSize*2)
-    //     .attr("x2", chartWidth)
-    //     .attr("y2", gridSize*2)
-    //     .style("stroke", "#eee")
-    //     .style("stroke-width", "1px");
+    mainChart.append("rect")  //night shade: 12a - 6a
+        .attr("class", "shade")
+        .attr("transform", "translate(" + (chartMargin.left) + ", " + chartMargin.top + ")")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", gridWeight*6)
+        .attr("height", gridSize*7)
+        .style("fill", "#ccc")
+        .style("opacity", ".2");
+
+    mainChart.append("rect")  //night shade: 6p - 12a+1
+        .attr("class", "shade")
+        .attr("transform", "translate(" + (chartMargin.left) + ", " + chartMargin.top + ")")
+        .attr("x", gridWeight*18)
+        .attr("y", 0)
+        .attr("width", gridWeight*6)
+        .attr("height", gridSize*7)
+        .style("fill", "#ccc")
+        .style("opacity", ".2");
     
-    
-    var barChart = mainChart.append("g").attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
-    var circleChart = mainChart.append("g").attr("transform", "translate(" + (chartMargin.left + chartInnerWidth)  + "," + chartMargin.top + ")");
-    
+    //Draw data items: cells, circles, circle-text
     var results = [];
     var circles = [];
-    var weekly_total = 0;
+    var weekly_total = 0; //profile - total emails
     for (var i = 0; i < data[0].days.length; i++) {
         var day_data = data[0].days;
         var day = day_data[i]["day_num"];
@@ -229,13 +238,16 @@ function renderMainChart(data) {
     }
 
     d3.select("#mailTotal").html(weekly_total + " Emails");
-
+    var barChart = mainChart.append("g").attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
+    var circleChart = mainChart.append("g").attr("transform", "translate(" + (chartMargin.left + chartInnerWidth)  + "," + chartMargin.top + ")");
+    
     var rectScale = d3.scale.linear().range([0, gridSize]).domain([0, 16]);
-    var rScale = d3.scale.linear().range([5, gridSize / 2]).domain([0, 50]);
+    var rScale = d3.scale.linear().range([7, gridSize / 2]).domain([0, 50]);
 
     mainChart.selectAll(".hour").remove();
     mainChart.selectAll("circle").remove();
 
+    //Draw Cells
     var cards = barChart.selectAll(".hour").data(results, function (d) { 
         return d.day + ':' + d.hour;
     });
@@ -262,12 +274,14 @@ function renderMainChart(data) {
                 opacity: 0
             });
         });
+    cards.exit().remove();
 
-    var selection = circleChart.selectAll("circle").data(circles, function (d) {
+    //Draw Circles
+    var circles = circleChart.selectAll("circle").data(circles, function (d) {
         return d.day + ':' + d.total;
     });
-    selection.enter().append("circle")
-        .attr("class", "bar")
+    circles.enter().append("circle"); 
+    circles.attr("class", "bar")
         .attr("r", function (d, i) { return rScale(d.total);})
         .attr("cx", 40)
         .attr("cy", function (d) { return (d.day) * gridSize + gridSize - rScale(d.total);})
@@ -286,19 +300,7 @@ function renderMainChart(data) {
                 opacity: 0
             });
         });
-
-    // mainChart.selectAll("line").data(circles)
-    //     .enter().append("line")
-    //     .attr("transform", "translate(" + chartMargin.left + ", " + chartMargin.top + ")")
-    //     .attr("x1", "0")
-    //     .attr("y1", function (d, i) { return (i+1)* gridSize})
-    //     .attr("x2", chartWidth)
-    //     .attr("y2", function (d, i) { return (i+1)* gridSize})
-    //     .style("stroke", "#eee")
-    //     .style("stroke-width", "1px");
-
-    cards.exit().remove();
-    selection.exit().remove();  
+    circles.exit().remove();      
 }
 
 
