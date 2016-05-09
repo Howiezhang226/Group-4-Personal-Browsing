@@ -91,11 +91,10 @@ function renderWeekList(data) {
             .attr("dx", 30)
             .attr("dy", 10);
 
-        iweek.selectAll(".bar")
+        iweek.selectAll("rect")
           .data(weekData.days)
           .enter()
           .append("rect")
-          .attr("class", "bar")
           .attr("x", function(d) { return xScale(d.day); })
           .attr("y", function(d) { return yScale(d.total); })
           .attr("width", xScale.rangeBand())
