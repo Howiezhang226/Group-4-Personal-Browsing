@@ -17,18 +17,8 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Visualization of Personal Email Behavior</a>
         </div>
-
         <ul class="nav navbar-nav navbar-right">
-            <li class="navbar-text">Hello,</li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jeff Dasvich <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Sign Out</a></li>
-                </ul>
-            </li>
+            <li class="navbar-text">Hello, Jeff Dasvich</li>
         </ul>
     </div>
 </nav>
@@ -47,8 +37,8 @@
         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
             <!-- Time Frame  -->
             <h4>
-                <span class="label label-info" id="timeFrame">10/07/01 - 10/13/01</span>
-                <span class="label label-warning" id="mailTotal">123 Emails</span>
+                <span class="label label-info" id="timeFrame"></span>
+                <span class="label label-warning" id="mailTotal"></span>
             </h4>
             <!-- Main Chart  -->
             <svg id="mainChart"></svg>
@@ -58,7 +48,7 @@
     	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-3">
             <div>
                 <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="#">Recipients <span id="recipTotal" class="badge">96</span></a></li>
+                    <li role="presentation" class="active"><a href="#">Recipients <span id="recipTotal" class="badge">  </span></a></li>
                     <li role="presentation"><a href="#">Keywords</a></li>
                 </ul>
                 <div  id="recipListContainer"><svg id="recipList"></svg></div>
@@ -79,19 +69,3 @@
 <script src="js/week_list.js" charset="utf-8"></script> 
 </body>
 </html>
-
-
-<!-- User Profile-->
-<!-- <table id="profile">
-    <tr>
-        <td rowspan="2">
-            <button type="button" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-user"></i></button>
-        </td>
-        <td >96 Recipients</td>
-    </tr>
-    <tr>
-        <td id="mailTotal">123 Emails</td>
-    </tr>
-</table> -->
-<!-- Recipient List-->
-

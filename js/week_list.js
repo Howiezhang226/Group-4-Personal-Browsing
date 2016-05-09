@@ -57,8 +57,8 @@ function renderWeekList(data) {
         .attr("href", "#")
         .on("click", function(d, i) {
             weekNum = d.week_number;
-            d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
-            d3.select("#recipTotal").html(d.recipients.length);
+            // d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
+            // d3.select("#recipTotal").html(d.recipients.length);
             var weeklyData = data.filter(function (d) {
                 return d.week_number == weekNum;
             });
@@ -155,10 +155,12 @@ function renderRecipList(data) {
 
 function renderMainChart(data) {
     var chartWidth = 700;
-    var chartHeight = 580;
-    var chartMargin = {top: 30, left: 100, right: 20, bottom: 30};
+    var chartHeight = 600;
+    var chartMargin = {top: 30, left: 100, right: 20, bottom: 20};
     var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
     var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
+    d3.select("#timeFrame").html(data[0].start_date + " - " + data[0].end_date);
+    d3.select("#recipTotal").html(data[0].recipients.length);
 
     var mainChart = d3.select("#mainChart")
                         .attr("width", chartWidth)

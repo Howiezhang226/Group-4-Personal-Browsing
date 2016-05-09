@@ -12,7 +12,7 @@ text {
     text-align: center;
 }
 #recipListContainer {
-	height: 550px;
+	height: 580px;
     border: 1px solid #eee;
     border-top: 0px;
 	overflow: auto;
@@ -23,7 +23,7 @@ text {
     width: 100%;
 }
 #weekList {
-    height: 550px;
+    height: 580px;
 	overflow: auto;
 }
 #weekList li {
