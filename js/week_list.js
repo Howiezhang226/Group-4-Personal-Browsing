@@ -111,12 +111,15 @@ function renderRecipList(data) {
 
     var chartWidth = 250;
     var chartHeight = 34;
-    var chartMargin = {top: 1, left: 0, right: 50, bottom: 1};
+    var chartMargin = {top: 1, left: 0, right: 20, bottom: 1};
     var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
     var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
 
-    var barScale = d3.scale.linear().range([0, chartInnerWidth]).domain([0, 20]);
-    var recipList = d3.select("#recipList");
+    var barScale = d3.scale.linear().range([0, chartInnerWidth]).domain([0, 45]);
+    var recipList = d3.select("#recipList")
+        .attr("width", chartWidth)
+        .attr("height", chartHeight)
+        .attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
     var recipItems = recipList.selectAll("rect").data(recipData);
     var recipText1 = recipList.selectAll(".text1").data(recipData);
     var recipText2 = recipList.selectAll(".text2").data(recipData);
@@ -142,7 +145,7 @@ function renderRecipList(data) {
     recipText2.attr("class", "text2")
         .text(function(d) {return d.num})
         .style({"font-size": "15px", fill: "#555"})
-        .attr("dx", 240)
+        .attr("dx", chartWidth)
         .attr("dy", function(d, i) { return (34 * i + 20); });
     
     recipText1.exit().remove();
@@ -245,6 +248,7 @@ function renderMainChart(data) {
 
     //Remove Cells, Circles and Circles' text labels
     mainChart.selectAll(".bar").remove();
+    mainChart.selectAll("circle").remove();
     mainChart.selectAll(".circlesText").remove();
 
     //Draw Cells
@@ -281,12 +285,11 @@ function renderMainChart(data) {
     });
     
     circleItems.enter().append("circle")
-        .attr("class", "bar")
         .attr("r", function (d, i) { return rScale(d.total);})
         .attr("cx", 20)
         .attr("cy", function (d) { return (d.day * gridSize + gridSize/2);})
         .attr("fill", "#f0ad4e"); //original #225ea8 info #5bc0de
-        
+
     //Draw Circles' text labels
     circleItems.enter().append("text")
         .text(function(d) {return d.total})
