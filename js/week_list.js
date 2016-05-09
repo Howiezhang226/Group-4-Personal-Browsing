@@ -1,11 +1,11 @@
 //Global Variables
 var weekNum = 25;
+var days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+var daysReverse = ["Sa", "Fr", "Th", "We", "Tu", "Mo", "Su"];
+var times = ["12a", "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p", 
+                "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p"];
 
-//Import Data
-// d3.json("json/recipient.json", function(error, result) {
-//     renderRecipList(result);
-// })
-var mainChartData = []
+//Load .json data
 d3.json("json/js_week.json", function(error, result) {
     data = result;
     mainChartData = result;
@@ -15,149 +15,14 @@ d3.json("json/js_week.json", function(error, result) {
     filteredData.sort(function(a, b) { return d3.ascending(a.week_number, b.week_number)});
         
     renderWeekList(filteredData);
-    renderRecipList(filteredData);
-    renderMainChart(mainChartData, weekNum);
-})
-
-d3.json("json/jeff_2001_10.json", function(error, result) {
-    renderChart1(result);
-    renderChart2(result);
-})
-
-d3.json("json/keyword.json", function(error, result) {
-    renderChart3(result);
+    var weeklyData = filteredData.filter(function (d) {
+        return d.week_number == weekNum;
+    });
+    renderRecipList(weeklyData);
+    renderMainChart(weeklyData);
 })
 
 // Render functions  
-function renderChart1(data) {
-    //Left side: Week List
-    var chartWidth = 700;
-    var chartHeight = 350;
-    var charMargin = {top: 40, left: 40, right: 40, bottom: 40};
-    var chartInnerWidth = chartWidth - charMargin.left - charMargin.right;
-    var chartInnerHeight = chartHeight - charMargin.top - charMargin.bottom;
-    var chart1 = d3.select("#chart1");
-
-    chart1.attr("width", chartWidth)
-         .attr("height", chartHeight)
-         .attr("transform", "translate(" + charMargin.left + "," + charMargin.top + ")");
-    
-}
-
-function renderChart2(data) {
-    var chartWidth = 350;
-    var chartHeight = 200;
-    var charMargin = {top: 0, left: 40, right: 40, bottom: 20};
-    var chartInnerWidth = chartWidth - charMargin.left - charMargin.right;
-    var chartInnerHeight = chartHeight - charMargin.top - charMargin.bottom;
-    var chart2 = d3.select("#chart2");
-
-    chart2.attr("width", chartWidth)
-         .attr("height", chartHeight)
-         .attr("transform", "translate(" + charMargin.left + "," + charMargin.top + ")");;
-
-    var xScale = d3.scale.linear()
-        .range([0, chartInnerWidth])
-        .domain([0, d3.max(data, function(d) { return d.num_recipent; })]);
-
-    var yScale = d3.scale.ordinal()
-        .rangeRoundBands([chartInnerHeight, 0], .2)
-        .domain(data.map(function(d) { return d.day; }));
-
-    var xAxis = d3.svg.axis()
-        .scale(xScale)
-        .orient("bottom");
-
-    var yAxis = d3.svg.axis()
-        .scale(yScale)
-        .orient("left");
-
-    chart2.append("g")
-        .attr("class", "axis")
-        .attr("transform", "translate(" + charMargin.left + ", " + (chartInnerHeight + charMargin.top) + ")")
-        .call(xAxis);
-
-    chart2.append("g")
-        .attr("class", "axis")
-        .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
-        .call(yAxis);
-
-    chart2.append("text")
-        .text("Recipient")
-        .style({"font-size": "15px", fill: "#ccc"})
-        .attr("dx", 250)
-        .attr("dy", 150);
-
-    chart2.selectAll(".bar")
-      .data(data)
-      .enter()
-      .append("rect")
-      .attr("class", "bar")
-      //.attr("x", charMargin.left)
-      .attr("y", function(d) { return yScale(d.day); })
-      .attr("width", function(d) { return xScale(d.num_recipent); })
-      .attr("height", yScale.rangeBand())
-      .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
-      .attr("fill", "#5bc0de");   
-}
-
-function renderChart3(data) {
-    var chartWidth = 350;
-    var chartHeight = 200;
-    var charMargin = {top: 0, left: 60, right: 40, bottom: 20};
-    var chartInnerWidth = chartWidth - charMargin.left - charMargin.right;
-    var chartInnerHeight = chartHeight - charMargin.top - charMargin.bottom;
-    var chart3 = d3.select("#chart3");
-
-    chart3.attr("width", chartWidth)
-         .attr("height", chartHeight)
-         .attr("transform", "translate(" + charMargin.left + "," + charMargin.top + ")");;
-
-    var xScale = d3.scale.linear()
-        .range([0, chartInnerWidth])
-        .domain([0, d3.max(data, function(d) { return d.frequency; })]);
-
-    var yScale = d3.scale.ordinal()
-        .rangeRoundBands([chartInnerHeight, 0], .2)
-        .domain(data.map(function(d) { return d.keyword; }));
-
-    var xAxis = d3.svg.axis()
-        .scale(xScale)
-        .orient("bottom");
-
-    var yAxis = d3.svg.axis()
-        .scale(yScale)
-        .orient("left");
-
-    chart3.append("g")
-        .attr("class", "axis")
-        .attr("transform", "translate(" + charMargin.left + ", " + (chartInnerHeight + charMargin.top) + ")")
-        .call(xAxis);
-
-    chart3.append("g")
-        .attr("class", "axis")
-        .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
-        .call(yAxis);
-
-    chart3.append("text")
-        .text("Keyword")
-        .style({"font-size": "15px", fill: "#ccc"})
-        .attr("dx", 250)
-        .attr("dy", 150);
-
-    chart3.selectAll(".bar")
-      .data(data)
-      .enter()
-      .append("rect")
-      .attr("class", "bar")
-      //.attr("x", charMargin.left)
-      .attr("y", function(d) { return yScale(d.keyword); })
-      .attr("width", function(d) { return xScale(d.frequency); })
-      .attr("height", yScale.rangeBand())
-      .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
-      .attr("fill", "#5cb85c");  
-}
-
 function renderWeekList(data) {
     //Left side: Week List
     var chartWidth = 160;
@@ -168,11 +33,11 @@ function renderWeekList(data) {
 
     var xScale = d3.scale.ordinal()
         .rangeRoundBands([0, chartInnerWidth], .1)
-        .domain(["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]);
+        .domain(days);
 
     var yScale = d3.scale.linear()
         .range([chartInnerHeight, 0])
-        .domain([0, 10, 100]);
+        .domain([0, 40, 200]);
 
     var xAxis = d3.svg.axis()
         .scale(xScale)
@@ -190,11 +55,15 @@ function renderWeekList(data) {
         .attr("class", "list-group-item")
         .attr("href", "#")
         .on("click", function(d, i) {
-            //alert(d.week_number);
             weekNum = d.week_number;
             d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
-            renderRecipList(data);
-            renderMainChart(mainChartData, weekNum);
+            d3.select("#recipTotal").html(d.recipients.length + " Recipients");
+            //d3.select("#mailTotal").html(d.recipients.length + " Emails");
+            var weeklyData = data.filter(function (d) {
+                return d.week_number == weekNum;
+            });
+            renderRecipList(weeklyData);
+            renderMainChart(weeklyData);
         });
 
     var weekSvg = weekLi.append("svg")
@@ -228,96 +97,126 @@ function renderWeekList(data) {
           .append("rect")
           .attr("class", "bar")
           .attr("x", function(d) { return xScale(d.day); })
-          .attr("y", function(d) { return yScale(d.day_num); })
+          .attr("y", function(d) { return yScale(d.total); })
           .attr("width", xScale.rangeBand())
-          .attr("height", function(d) { return chartInnerHeight - yScale(d.day_num); })
+          .attr("height", function(d) { return chartInnerHeight - yScale(d.total); })
           .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
           .attr("fill", "#337ab7");  
-    }    
-    
+    }      
 }
 
 function renderRecipList(data) {
-    //Right side: Recipient list
-    d3.select("#recipList").selectAll('tr')
-        .data(data, function(d) {
-            // console.log("weekNum: " + weekNum);
-            if (d.week_number == weekNum) {
-                console.log("d.week_number" + d.week_number);
-                console.log("d.sent_detail" + d.sent_detail);
-                return d.sent_detail;
-            }   
-        })
-        .enter()
-        .append('tr')
-        .attr("class", "text-primary")
-        .text(function(d) {return d.name});
+    //Right panel: Recipient list
+    var recipData = data[0].recipients;
+    recipData.sort(function(a, b) { return d3.descending(a.num, b.num)});
+
+    var chartWidth = 250;
+    var chartHeight = 34;
+    var chartMargin = {top: 1, left: 0, right: 50, bottom: 1};
+    var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
+    var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
+
+    var barScale = d3.scale.linear().range([0, chartInnerWidth]).domain([0, 20]);
+    var recipList = d3.select("#recipList");
+    var recipItems = recipList.selectAll("rect").data(recipData);
+    var recipText1 = recipList.selectAll(".text1").data(recipData);
+    var recipText2 = recipList.selectAll(".text2").data(recipData);
+
+    recipItems.enter().append("rect");
+    recipItems.attr("x", chartMargin.left)
+        .attr("y", function(d, i) { return (34 * i + chartMargin.top); })
+        .attr("width", function(d) { return barScale(d.num); })
+        .attr("height", chartInnerHeight)
+        .style("fill", "#5cb85c")
+        .style("opacity", "0.8");  //green: #5cb85c yell: #f0ad4e info:#5bc0de
+
+    
+    recipText1.enter().append("text") ;
+    recipText1.attr("class", "text1")
+        .text(function(d) {return d.name})
+        .style({"font-size": "15px", fill: "#555"})
+        .attr("dx", 2)
+        .attr("dy", function(d, i) { return (34 * i + 20); });
+
+    
+    recipText2.enter().append("text"); 
+    recipText2.attr("class", "text2")
+        .text(function(d) {return d.num})
+        .style({"font-size": "15px", fill: "#555"})
+        .attr("dx", 240)
+        .attr("dy", function(d, i) { return (34 * i + 20); });
+    
+    recipText1.exit().remove();
+    recipItems.exit().remove();
+    recipText2.exit().remove();
 }
 
+function renderMainChart(data) {
+    var chartWidth = 700;
+    var chartHeight = 580;
+    var chartMargin = {top: 30, left: 30, right: 80, bottom: 30};
+    var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
+    var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
 
+    var mainChart = d3.select("#mainChart")
+                        .attr("width", chartWidth)
+                        .attr("height", chartHeight)
+                        .attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
 
+    var xScale = d3.scale.ordinal().rangeBands([0, chartInnerWidth]).domain(times);  
+    var yScale = d3.scale.ordinal().rangeBands([chartInnerHeight, 0]).domain(daysReverse);
+    var xAxis = d3.svg.axis().scale(xScale).orient("top")
+                .innerTickSize(-chartInnerHeight)
+                .outerTickSize(0);
+    var yAxis = d3.svg.axis().scale(yScale).orient("left").outerTickSize(0);
 
-//global variable for main chart. Render only once.
+    var gridWeight = xScale.rangeBand();
+    var gridSize = yScale.rangeBand();
 
-var margin = {top: 30, right: 50, bottom: 20, left: 30},
-  width = 700 - margin.left - margin.right,
-  height = 350 - margin.top - margin.bottom,
-  gridSize = Math.floor(height / 8),
-  days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-  times = ["1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12a", "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p", "12p"],
-  gridWeight = gridSize * 2 / 3;
-var svg = d3.select("#chart1").append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom);
-var barChart = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-var circleChart = svg.append("g").attr("transform", "translate(" + gridWeight * 24.8 + "," + margin.top + ")");
-var dayLabels = barChart.selectAll(".dayLabel")
-  .data(days)
-  .enter().append("text")
-  .text(function (d) {
-      return d;
-  })
-  .attr("x", 0)
-  .attr("y", function (d, i) {
-      return i * gridSize;
-  })
-  .style("text-anchor", "end")
-  .attr("transform", "translate(-6," + gridSize + ")")
-  .attr("class", function (d, i) {
-      return ((i >= 0 && i <= 4) ? "dayLabel mono axis axis-workweek" : "dayLabel mono axis");
-  });
+    mainChart.selectAll(".axis").remove(); 
 
-var timeLabels = barChart.selectAll(".timeLabel")
-  .data(times)
-  .enter().append("text")
-  .text(function (d) {
-      return d;
-  })
-  .attr("x", function (d, i) {
-      return i * gridWeight;
-  })
-  .attr("y", 0)
-  .style("text-anchor", "middle")
-  .attr("transform", "translate(" + gridSize / 3 + ", " + (height) + ")")
-  .attr("class", function (d, i) {
-      return ((i >= 7 && i <= 16) ? "timeLabel mono axis axis-worktime" : "timeLabel mono axis");
-  });
-
-var renderMainChart = function (data, week) {
-    var dataFiltered = data.filter(function (d) {
-        return d.week_number == week;
-    });
+    mainChart.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(" + (chartMargin.left - gridWeight/2) + ", " + chartMargin.top + ")")
+        .call(xAxis);
+    mainChart.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(" + chartMargin.left + ", " + chartMargin.top + ")")
+        .call(yAxis); 
+    for (var i = 1; i <=7; i++) {
+        mainChart.append("line")
+        .attr("transform", "translate(" + chartMargin.left + ", " + chartMargin.top + ")")
+        .attr("x1", "0")
+        .attr("y1", i * gridSize)
+        .attr("x2", chartInnerWidth)
+        .attr("y2", i * gridSize)
+        .style("stroke", "#eee")
+        .style("stroke-width", "1px");
+    }
+    // mainChart.append("line")
+    //     // .attr("class", "axis")
+    //     .attr("transform", "translate(" + (chartMargin.left) + ", " + chartMargin.top + ")")
+    //     .attr("x1", 0)
+    //     .attr("y1", gridSize*2)
+    //     .attr("x2", chartWidth)
+    //     .attr("y2", gridSize*2)
+    //     .style("stroke", "#eee")
+    //     .style("stroke-width", "1px");
+    
+    
+    var barChart = mainChart.append("g").attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
+    var circleChart = mainChart.append("g").attr("transform", "translate(" + (chartMargin.left + chartInnerWidth)  + "," + chartMargin.top + ")");
+    
     var results = [];
     var circles = [];
-    for (var i = 0; i < dataFiltered[0].days.length; i++) {
-        var day_data = dataFiltered[0].days;
-        //console.log(day_data[i].length);
-
-
+    var weekly_total = 0;
+    for (var i = 0; i < data[0].days.length; i++) {
+        var day_data = data[0].days;
         var day = day_data[i]["day_num"];
         var circle_result = {};
         circle_result["day"] = day;
         circle_result["total"] = day_data[i]["total"];
+        weekly_total += day_data[i]["total"];
         circles.push(circle_result);
         var myMap = day_data[i]["daytime"];
         for (var key in myMap) {
@@ -327,69 +226,79 @@ var renderMainChart = function (data, week) {
             result["value"] = myMap[key];
             results.push(result);
         }
-
-
     }
-    console.log(results.length);
-    console.log(circles.length);
-    //console.log(circles);
-    var rectScale = d3.scale.linear()
-      .domain([0, 16])
-      .range([0, gridSize]);
 
+    d3.select("#mailTotal").html(weekly_total + " Emails");
+
+    var rectScale = d3.scale.linear().range([0, gridSize]).domain([0, 16]);
     var rScale = d3.scale.linear().range([5, gridSize / 2]).domain([0, 50]);
-    svg.selectAll(".hour").remove();
-    svg.selectAll("circle").remove();
-    var cards = barChart.selectAll(".hour")
-      .data(results, function (d) {
-          return d.day + ':' + d.hour;
-      });
 
-    //cards.append("title");
+    mainChart.selectAll(".hour").remove();
+    mainChart.selectAll("circle").remove();
 
+    var cards = barChart.selectAll(".hour").data(results, function (d) { 
+        return d.day + ':' + d.hour;
+    });
     cards.enter().append("rect")
-      .attr("x", function (d) {
-          return (d.hour) * gridWeight;
-      })
-      .attr("y", function (d) {
-          return (d.day) * gridSize + gridSize - rectScale(d.value);
-      })
-      .attr("rx", 4)
-      .attr("ry", 4)
-      .attr("class", "hour bordered")
-      .attr("width", gridWeight)
-      .attr("height", function (d) {
-            return rectScale(d.value);
-        }
-      )
-      .style("fill", "#225ea8");
-//
-//                    cards.transition().duration(1000)
-//                            .style("fill", function(d) { return colorScale(d.value); });
+        .attr("class", "hour bordered bar")
+        .attr("x", function (d) { return (d.hour) * gridWeight;})
+        .attr("y", function (d) { return (d.day) * gridSize + gridSize - rectScale(d.value);})
+        .attr("rx", 2)
+        .attr("ry", 2)
+        .attr("width", gridWeight)
+        .attr("height", function (d) { return rectScale(d.value);})
+        .attr("fill", "#5bc0de")
+        .on("mouseenter", function(d, i) {
+            d3.select("#tooltip").style({
+                visibility: "visible",
+                top: (d3.event.clientY + 5) +  "px",
+                left: (d3.event.clientX + 10) + "px",
+                opacity: 1
+            }).text(d.value + " Emails");
+        })
+        .on("mouseleave", function(d, i) {
+            d3.select("#tooltip").style({
+                visibility: "hidden",
+                opacity: 0
+            });
+        });
 
-    //cards.select("title").text(function(d) { return d.value; });
-    console.log(circles);
     var selection = circleChart.selectAll("circle").data(circles, function (d) {
-        console.log(d.day + ':' + d.total);
         return d.day + ':' + d.total;
     });
+    selection.enter().append("circle")
+        .attr("class", "bar")
+        .attr("r", function (d, i) { return rScale(d.total);})
+        .attr("cx", 40)
+        .attr("cy", function (d) { return (d.day) * gridSize + gridSize - rScale(d.total);})
+        .attr("fill", "#f0ad4e") //original #225ea8 info #5bc0de
+        .on("mouseenter", function(d, i) {
+            d3.select("#tooltip").style({
+                visibility: "visible",
+                top: (d3.event.clientY + 5) + "px",
+                left: (d3.event.clientX + 10) + "px",
+                opacity: 1
+            }).text(d.total + " Emails");
+        })
+        .on("mouseleave", function(d, i) {
+            d3.select("#tooltip").style({
+                visibility: "hidden",
+                opacity: 0
+            });
+        });
 
-    selection.enter()
-      .append("circle")
-      .on("click", function (d, i) {
-          alert(d.day + ':' + d.total);
-      })
-      .attr("r", function (d, i) {
-          return rScale(d.total);
-      })
-      .attr("cx", 40)
-      .attr("cy", function (d, i) {
-          return (1 + parseInt(d.day) ) * gridSize;
-      })
-      .attr("fill", "#225ea8");
+    // mainChart.selectAll("line").data(circles)
+    //     .enter().append("line")
+    //     .attr("transform", "translate(" + chartMargin.left + ", " + chartMargin.top + ")")
+    //     .attr("x1", "0")
+    //     .attr("y1", function (d, i) { return (i+1)* gridSize})
+    //     .attr("x2", chartWidth)
+    //     .attr("y2", function (d, i) { return (i+1)* gridSize})
+    //     .style("stroke", "#eee")
+    //     .style("stroke-width", "1px");
 
     cards.exit().remove();
-    selection.exit().remove();
+    selection.exit().remove();  
+}
 
-};
 
