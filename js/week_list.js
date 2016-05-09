@@ -59,7 +59,6 @@ function renderWeekList(data) {
             weekNum = d.week_number;
             d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
             d3.select("#recipTotal").html(d.recipients.length + " Recipients");
-            //d3.select("#mailTotal").html(d.recipients.length + " Emails");
             var weeklyData = data.filter(function (d) {
                 return d.week_number == weekNum;
             });
@@ -88,7 +87,7 @@ function renderWeekList(data) {
         var weekData = data[j];
         iweek.append("text")
             .text(weekData.start_date + " - " + weekData.end_date)
-            .style({"font-size": "10px", fill: "#ccc"})
+            .style({"font-size": "10px", fill: "#777"})
             .attr("dx", 35)
             .attr("dy", 9);
 
@@ -242,10 +241,11 @@ function renderMainChart(data) {
     var circleChart = mainChart.append("g").attr("transform", "translate(" + "20"  + "," + chartMargin.top + ")");
     
     var rectScale = d3.scale.linear().range([0, gridSize]).domain([0, 16]);
-    var rScale = d3.scale.linear().range([7, gridSize / 2]).domain([0, 50]);
+    var rScale = d3.scale.linear().range([10, gridSize / 2]).domain([0, 50]);
 
-    mainChart.selectAll(".hour").remove();
-    mainChart.selectAll("circle").remove();
+    //Remove Cells, Circles and Circles' text labels
+    mainChart.selectAll(".bar").remove();
+    mainChart.selectAll(".circlesText").remove();
 
     //Draw Cells
     var cards = barChart.selectAll(".hour").data(results, function (d) { 
@@ -274,33 +274,27 @@ function renderMainChart(data) {
                 opacity: 0
             });
         });
-    cards.exit().remove();
 
     //Draw Circles
-    var circles = circleChart.selectAll("circle").data(circles, function (d) {
+    var circleItems = circleChart.selectAll("circle").data(circles, function (d) {
         return d.day + ':' + d.total;
     });
-    circles.enter().append("circle"); 
-    circles.attr("class", "bar")
+    
+    circleItems.enter().append("circle")
+        .attr("class", "bar")
         .attr("r", function (d, i) { return rScale(d.total);})
         .attr("cx", 20)
         .attr("cy", function (d) { return (d.day * gridSize + gridSize/2);})
-        .attr("fill", "#f0ad4e") //original #225ea8 info #5bc0de
-        .on("mouseenter", function(d, i) {
-            d3.select("#tooltip").style({
-                visibility: "visible",
-                top: (d3.event.clientY + 5) + "px",
-                left: (d3.event.clientX + 10) + "px",
-                opacity: 1
-            }).text(d.total + " Emails");
-        })
-        .on("mouseleave", function(d, i) {
-            d3.select("#tooltip").style({
-                visibility: "hidden",
-                opacity: 0
-            });
-        });
-    circles.exit().remove();      
+        .attr("fill", "#f0ad4e"); //original #225ea8 info #5bc0de
+        
+    //Draw Circles' text labels
+    circleItems.enter().append("text")
+        .text(function(d) {return d.total})
+        .style({"font-size": "16px", fill: "#FFF", opacity: 1})
+        .attr("class", "circlesText")
+        .attr("text-anchor", "middle")
+        .attr("dx", 20)
+        .attr("dy", function (d) { return (d.day * gridSize + gridSize/2 + 6); });
 }
 
 
