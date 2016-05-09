@@ -1,5 +1,5 @@
 //Global Variables
-var weekNum = 25;
+var weekNum = 40;
 var days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 var daysReverse = ["Sa", "Fr", "Th", "We", "Tu", "Mo", "Su"];
 var times = ["12a", "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p", 
