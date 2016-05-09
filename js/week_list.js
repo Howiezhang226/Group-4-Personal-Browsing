@@ -153,7 +153,7 @@ function renderRecipList(data) {
 function renderMainChart(data) {
     var chartWidth = 700;
     var chartHeight = 580;
-    var chartMargin = {top: 30, left: 30, right: 80, bottom: 30};
+    var chartMargin = {top: 30, left: 100, right: 20, bottom: 30};
     var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
     var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
 
@@ -238,7 +238,7 @@ function renderMainChart(data) {
 
     d3.select("#mailTotal").html(weekly_total + " Emails");
     var barChart = mainChart.append("g").attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
-    var circleChart = mainChart.append("g").attr("transform", "translate(" + (chartMargin.left + chartInnerWidth)  + "," + chartMargin.top + ")");
+    var circleChart = mainChart.append("g").attr("transform", "translate(" + "20"  + "," + chartMargin.top + ")");
     
     var rectScale = d3.scale.linear().range([0, gridSize]).domain([0, 16]);
     var rScale = d3.scale.linear().range([7, gridSize / 2]).domain([0, 50]);
@@ -282,8 +282,8 @@ function renderMainChart(data) {
     circles.enter().append("circle"); 
     circles.attr("class", "bar")
         .attr("r", function (d, i) { return rScale(d.total);})
-        .attr("cx", 40)
-        .attr("cy", function (d) { return (d.day) * gridSize + gridSize - rScale(d.total);})
+        .attr("cx", 20)
+        .attr("cy", function (d) { return (d.day * gridSize + gridSize/2);})
         .attr("fill", "#f0ad4e") //original #225ea8 info #5bc0de
         .on("mouseenter", function(d, i) {
             d3.select("#tooltip").style({
