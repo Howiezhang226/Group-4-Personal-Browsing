@@ -57,9 +57,8 @@ function renderWeekList(data) {
         .attr("href", "#")
         .on("click", function(d, i) {
             weekNum = d.week_number;
-            d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
-            d3.select("#recipTotal").html(d.recipients.length + " Recipients");
-            //d3.select("#mailTotal").html(d.recipients.length + " Emails");
+            // d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
+            // d3.select("#recipTotal").html(d.recipients.length);
             var weeklyData = data.filter(function (d) {
                 return d.week_number == weekNum;
             });
@@ -88,7 +87,7 @@ function renderWeekList(data) {
         var weekData = data[j];
         iweek.append("text")
             .text(weekData.start_date + " - " + weekData.end_date)
-            .style({"font-size": "10px", fill: "#ccc"})
+            .style({"font-size": "10px", fill: "#777"})
             .attr("dx", 35)
             .attr("dy", 9);
 
@@ -111,20 +110,23 @@ function renderRecipList(data) {
     recipData.sort(function(a, b) { return d3.descending(a.num, b.num)});
 
     var chartWidth = 250;
-    var chartHeight = 34;
-    var chartMargin = {top: 1, left: 0, right: 50, bottom: 1};
+    var chartHeight = 30;
+    var chartMargin = {top: 1, left: 0, right: 20, bottom: 1};
     var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
     var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
 
-    var barScale = d3.scale.linear().range([0, chartInnerWidth]).domain([0, 20]);
-    var recipList = d3.select("#recipList");
+    var barScale = d3.scale.linear().range([0, chartInnerWidth]).domain([0, 45]);
+    var recipList = d3.select("#recipList")
+        .attr("width", chartWidth)
+        .attr("height", chartHeight)
+        .attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
     var recipItems = recipList.selectAll("rect").data(recipData);
     var recipText1 = recipList.selectAll(".text1").data(recipData);
     var recipText2 = recipList.selectAll(".text2").data(recipData);
 
     recipItems.enter().append("rect");
     recipItems.attr("x", chartMargin.left)
-        .attr("y", function(d, i) { return (34 * i + chartMargin.top); })
+        .attr("y", function(d, i) { return (chartHeight * i + chartMargin.top); })
         .attr("width", function(d) { return barScale(d.num); })
         .attr("height", chartInnerHeight)
         .style("fill", "#5cb85c")
@@ -134,16 +136,16 @@ function renderRecipList(data) {
     recipText1.enter().append("text") ;
     recipText1.attr("class", "text1")
         .text(function(d) {return d.name})
-        .style({"font-size": "15px", fill: "#555"})
+        .style({"font-size": "14px", fill: "#555"})
         .attr("dx", 2)
-        .attr("dy", function(d, i) { return (34 * i + 20); });
+        .attr("dy", function(d, i) { return (chartHeight * i + 20); });
 
     
     recipText2.enter().append("text"); 
     recipText2.attr("class", "text2")
         .text(function(d) {return d.num})
         .style({"font-size": "15px", fill: "#555"})
-        .attr("dx", 240)
+        .attr("dx", chartWidth)
         .attr("dy", function(d, i) { return (34 * i + 20); });
     
     recipText1.exit().remove();
@@ -153,10 +155,12 @@ function renderRecipList(data) {
 
 function renderMainChart(data) {
     var chartWidth = 700;
-    var chartHeight = 580;
-    var chartMargin = {top: 30, left: 100, right: 20, bottom: 30};
+    var chartHeight = 600;
+    var chartMargin = {top: 30, left: 100, right: 20, bottom: 20};
     var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
     var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
+    d3.select("#timeFrame").html(data[0].start_date + " - " + data[0].end_date);
+    d3.select("#recipTotal").html(data[0].recipients.length);
 
     var mainChart = d3.select("#mainChart")
                         .attr("width", chartWidth)
@@ -242,10 +246,12 @@ function renderMainChart(data) {
     var circleChart = mainChart.append("g").attr("transform", "translate(" + "20"  + "," + chartMargin.top + ")");
     
     var rectScale = d3.scale.linear().range([0, gridSize]).domain([0, 16]);
-    var rScale = d3.scale.linear().range([7, gridSize / 2]).domain([0, 50]);
+    var rScale = d3.scale.linear().range([10, gridSize / 2]).domain([0, 50]);
 
-    mainChart.selectAll(".hour").remove();
+    //Remove Cells, Circles and Circles' text labels
+    mainChart.selectAll(".bar").remove();
     mainChart.selectAll("circle").remove();
+    mainChart.selectAll(".circlesText").remove();
 
     //Draw Cells
     var cards = barChart.selectAll(".hour").data(results, function (d) { 
@@ -274,33 +280,26 @@ function renderMainChart(data) {
                 opacity: 0
             });
         });
-    cards.exit().remove();
 
     //Draw Circles
-    var circles = circleChart.selectAll("circle").data(circles, function (d) {
+    var circleItems = circleChart.selectAll("circle").data(circles, function (d) {
         return d.day + ':' + d.total;
     });
-    circles.enter().append("circle"); 
-    circles.attr("class", "bar")
+    
+    circleItems.enter().append("circle")
         .attr("r", function (d, i) { return rScale(d.total);})
         .attr("cx", 20)
         .attr("cy", function (d) { return (d.day * gridSize + gridSize/2);})
-        .attr("fill", "#f0ad4e") //original #225ea8 info #5bc0de
-        .on("mouseenter", function(d, i) {
-            d3.select("#tooltip").style({
-                visibility: "visible",
-                top: (d3.event.clientY + 5) + "px",
-                left: (d3.event.clientX + 10) + "px",
-                opacity: 1
-            }).text(d.total + " Emails");
-        })
-        .on("mouseleave", function(d, i) {
-            d3.select("#tooltip").style({
-                visibility: "hidden",
-                opacity: 0
-            });
-        });
-    circles.exit().remove();      
+        .attr("fill", "#f0ad4e"); //original #225ea8 info #5bc0de
+
+    //Draw Circles' text labels
+    circleItems.enter().append("text")
+        .text(function(d) {return d.total})
+        .style({"font-size": "16px", fill: "#FFF", opacity: 1})
+        .attr("class", "circlesText")
+        .attr("text-anchor", "middle")
+        .attr("dx", 20)
+        .attr("dy", function (d) { return (d.day * gridSize + gridSize/2 + 6); });
 }
 
 
