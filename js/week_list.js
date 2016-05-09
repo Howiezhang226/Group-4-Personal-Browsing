@@ -25,9 +25,9 @@ d3.json("json/js_week.json", function(error, result) {
 // Render functions  
 function renderWeekList(data) {
     //Left side: Week List
-    var chartWidth = 160;
-    var chartHeight = 100;
-    var charMargin = {top: 10, left: 20, right: 10, bottom: 20};
+    var chartWidth = 165;
+    var chartHeight = 70;
+    var charMargin = {top: 10, left: 20, right: 10, bottom: 18};
     var chartInnerWidth = chartWidth - charMargin.left - charMargin.right;
     var chartInnerHeight = chartHeight - charMargin.top - charMargin.bottom;
 
@@ -37,7 +37,7 @@ function renderWeekList(data) {
 
     var yScale = d3.scale.linear()
         .range([chartInnerHeight, 0])
-        .domain([0, 40, 200]);
+        .domain([0, 40]);
 
     var xAxis = d3.svg.axis()
         .scale(xScale)
@@ -45,7 +45,8 @@ function renderWeekList(data) {
 
     var yAxis = d3.svg.axis()
         .scale(yScale)
-        .orient("left");
+        .orient("left")
+        .tickValues([0, 40]);
 
     var weekList = d3.select("#weekList");
 
@@ -87,9 +88,9 @@ function renderWeekList(data) {
         var weekData = data[j];
         iweek.append("text")
             .text(weekData.start_date + " - " + weekData.end_date)
-            .style({"font-size": "12px", fill: "#ccc"})
-            .attr("dx", 30)
-            .attr("dy", 10);
+            .style({"font-size": "10px", fill: "#ccc"})
+            .attr("dx", 35)
+            .attr("dy", 9);
 
         iweek.selectAll("rect")
           .data(weekData.days)
