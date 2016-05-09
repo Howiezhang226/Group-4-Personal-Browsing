@@ -1,130 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<!-- If IE use the latest rendering engine -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- Set the page to the width of the device and set the zoon level -->
-<meta name="viewport" content="width = device-width, initial-scale = 1">
-<title>Visualization of Personal Email Behavior</title>
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta charset="utf-8">
+    <!-- If IE use the latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the page to the width of the device and set the zoon level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>Visualization of Personal Email Behavior</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-    <!-- Header: Navbar -->
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">
-		        Visualization of Personal Email Behavior
-		      </a>
-		    </div>
+<!-- Header: Navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Visualization of Personal Email Behavior</a>
+        </div>
 
-		    <ul class="nav navbar-nav navbar-right">
-                <li class="navbar-text">Hello,</li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jeff Dasvich <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-text">Hello,</li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jeff Dasvich <span class="caret"></span></a>
+                <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="#">Sign Out</a></li>
-                  </ul>
-                </li>
-            </ul>
-	  </div>
-	</nav>
-    
-    <!-- Body: Container -->
-    <div class="container-fluid">
-        <!-- ROW 1  -->
-        <div class="row">
-            <div class="col-md-3">
-                <!-- Date Picker  -->
-                <div class="input-group date" data-provide="datepicker" id="dp" >
-				    <input type="text" class="form-control" id="targetDate" value="10/21/2001">
-				    <div class="input-group-addon">
-				        <span class="glyphicon glyphicon-calendar"></span>
-				    </div>
-				</div>
-			</div>
-            <div class="col-md-7">
-                <!-- Droptown: Weekly View  -->
-                <h4 class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        Weekly View<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Monthly View</a></li>
-                        <li><a href="#">Yearly View</a></li>
-                    </ul>
-                </h4>
-            </div>
-            <div class="col-md-2">
-                <!-- Profile-->
-				<table id="profile">
-					<tr>
-						<td rowspan="2">
-							<button type="button" class="btn btn-default btn-lg">
-								<i class="glyphicon glyphicon-user"></i>
-							</button>
-						</td>
-                        <td>20 Recipients</td>
-					</tr>
-					<tr>
-						<td>390 Emails</td>
-					</tr>
-				</table>
-            </div>
-        </div>
-        
-        <!-- ROW 2  -->    
-    	<div class="row">
-    		<!-- Left part: Weekly bar charts list  -->
-			<div class="col-md-3">
-				<ul class="list-group" id="weekList">
-					<li class="list-group-item"><svg class="weeklist" id="week1"></svg></li> 
-                    <li class="list-group-item"><svg class="weeklist" id="week2"></svg></li> 
-                    <li class="list-group-item"><svg class="weeklist" id="week3"></svg></li> 
-                    <li class="list-group-item"><svg class="weeklist" id="week4"></svg></li> 
-                    <li class="list-group-item"><svg class="weeklist" id="week5"></svg></li> 
-				</ul>
-			</div>
-			<!-- Middle part: 3 Main Charts  -->
-			<div class="col-md-7">
-				<!-- Chart 1  -->
-                <svg id="chart1"></svg>
-				<!-- <div class="row">
-					<div class="col-md-10 col-md-offset-1">
-                        <svg id="chart1"></svg>
-					</div>
-				</div> -->
-
-				<!-- Chart 2 & 3 -->
-				<div class="row">
-					<div class="col-md-6"><svg id="chart2"></svg></div>
-					<div class="col-md-6"><svg id="chart3"></svg></div>
-				</div>
-			</div>
-
-			<!-- Rightt part: Recipient list  -->
-			<div class="col-md-2">
-                <!-- Recipient List-->
-                <div id="recipListContainer">
-                    <table class="table table-striped table-hover" >
-                        <thead><th class="text-center">ALL Recipient</th></thead>
-                        <tbody id="recipList"></tbody>
-                    </table>
-                </div>
-                <!-- Recipient Detail-->
-                <div> </div>
-			</div>
-		</div>
+                </ul>
+            </li>
+        </ul>
     </div>
-    
-    <!-- Footer -->
-    <div></div>
+</nav>
 
-   
+<!-- Body: Container -->
+<div class="container-fluid">
+    <!-- ROW  -->    
+    <div class="row">
+        <!-- Left pannel: Weekly bar charts list  -->
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <h4>Weekly View<span class="caret"></span></h4>
+            <div class="list-group" id="weekList"></div>
+        </div><!-- END of Left pannel  -->
+
+        <!-- Middle pannel: 3 Main Charts  -->
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+            <!-- Time Frame  -->
+            <h4><span class="label label-info" id="timeFrame">06/24/01 - 06/30/01</span></h4>
+            <!-- Main Chart  -->
+            <svg id="mainChart"></svg>
+    	</div><!-- END of Middle pannel  -->
+
+    	<!-- Right pannel: Recipient list  -->
+    	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-3">
+            <!-- User Profile-->
+            <table id="profile">
+                <tr>
+                    <td rowspan="2">
+                        <button type="button" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-user"></i></button>
+                    </td>
+                    <td id="recipTotal">3 Recipients</td>
+                </tr>
+                <tr>
+                    <td id="mailTotal">3 Emails</td>
+                </tr>
+            </table>
+            <!-- Recipient List-->
+            <div id="recipListContainer">
+                <table class="table table-striped table-hover" >
+                    <thead><th class="text-center">Recipients</th></thead>
+                </table>
+                <div><svg id="recipList"></svg></div>
+            </div>
+        </div><!-- END of Right pannel  -->
+        <span id="tooltip" class="label label-success">Info</span>
+    </div><!-- END of ROW -->
+</div><!-- END of Body: Container -->
+    
+<!-- Footer -->
+<div>  </div>
+
+<!-- SCRIPT -->
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -133,5 +89,5 @@
 </body>
 </html>
 
-    
+
 

@@ -1,39 +1,78 @@
- #profile td {
-        padding: 3px;
-    }
-    #profile button {
-        width: 46px;
-        text-align: center;
-    }
-    #recipListContainer {
-        margin-top: 10px;
-    	height: 300px;
-        width: 190px;
-        border: 1px solid #eee;
-    	overflow: auto;
-    }
-    #recipListContainer table{
-        margin: 0 auto;
-        height: 100%;
-        width: 100%;
-    }
-    #weekList {
-        margin-top: 10px;
-        height: 550px;
-    	overflow: auto;
-    }
-    #weekList li {
-        height: 160px;
-    }
-    .axis text {
-      font: 8px sans-serif;
-    }
-    .axis path,
-    .axis line{
-        fill: none;
-        stroke: #000;
-        shape-rendering: crispEdges;
-    }
-    .bar:hover {
-        fill: #d9534f;
-    }
+.navbar {
+    margin-bottom: 10px;
+}
+text {
+    cursor: default;
+}
+#profile td {
+    padding: 3px;
+}
+#profile button {
+    width: 46px;
+    text-align: center;
+}
+#recipListContainer {
+	height: 550px;
+    border: 1px solid #eee;
+	overflow: auto;
+}
+#recipListContainer table,
+#recipList{
+    margin: 0 auto;
+    height: 2000px;
+    width: 100%;
+}
+#weekList {
+    height: 550px;
+	overflow: auto;
+}
+#weekList li {
+    height: 120px;
+}
+.axis text {
+  font: 9px sans-serif;
+  fill: #5e5e5e;
+}
+.axis path,
+.axis line{
+    fill: none;
+    stroke: #eee;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+#mainChart .axis text{
+    font-size: 12px;
+}
+.bar:hover {
+    fill: rgba(217, 83, 79, 0.9) !important;
+}
+.list-group-item {
+    padding: 8px;
+}
+
+rect.bordered {
+     stroke: #E6E6E6;
+     stroke-width: 1px;
+ }
+
+text.mono {
+    font-size: 9pt;
+    font-family: Consolas, courier;
+    fill: #aaa;
+}
+
+text.axis-workweek {
+    fill: #000;
+}
+
+text.axis-worktime {
+    fill: #000;
+}
+
+#tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: all 0.3s
+}
