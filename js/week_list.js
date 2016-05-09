@@ -58,7 +58,7 @@ function renderWeekList(data) {
         .on("click", function(d, i) {
             weekNum = d.week_number;
             d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
-            d3.select("#recipTotal").html(d.recipients.length + " Recipients");
+            d3.select("#recipTotal").html(d.recipients.length);
             var weeklyData = data.filter(function (d) {
                 return d.week_number == weekNum;
             });
@@ -110,7 +110,7 @@ function renderRecipList(data) {
     recipData.sort(function(a, b) { return d3.descending(a.num, b.num)});
 
     var chartWidth = 250;
-    var chartHeight = 34;
+    var chartHeight = 30;
     var chartMargin = {top: 1, left: 0, right: 20, bottom: 1};
     var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
     var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
@@ -126,7 +126,7 @@ function renderRecipList(data) {
 
     recipItems.enter().append("rect");
     recipItems.attr("x", chartMargin.left)
-        .attr("y", function(d, i) { return (34 * i + chartMargin.top); })
+        .attr("y", function(d, i) { return (chartHeight * i + chartMargin.top); })
         .attr("width", function(d) { return barScale(d.num); })
         .attr("height", chartInnerHeight)
         .style("fill", "#5cb85c")
@@ -136,9 +136,9 @@ function renderRecipList(data) {
     recipText1.enter().append("text") ;
     recipText1.attr("class", "text1")
         .text(function(d) {return d.name})
-        .style({"font-size": "15px", fill: "#555"})
+        .style({"font-size": "14px", fill: "#555"})
         .attr("dx", 2)
-        .attr("dy", function(d, i) { return (34 * i + 20); });
+        .attr("dy", function(d, i) { return (chartHeight * i + 20); });
 
     
     recipText2.enter().append("text"); 
