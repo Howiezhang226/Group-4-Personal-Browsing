@@ -1,5 +1,6 @@
 //Global Variables
 var weekNum = 40;
+var duration = 500;
 var days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 var daysReverse = ["Sa", "Fr", "Th", "We", "Tu", "Mo", "Su"];
 var times = ["12a", "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p", 
@@ -19,6 +20,7 @@ d3.json("json/js_week.json", function(error, result) {
         return d.week_number == weekNum;
     });
     renderRecipList(weeklyData);
+    renderKeyList(weeklyData);
     renderMainChart(weeklyData);
 })
 
@@ -57,12 +59,11 @@ function renderWeekList(data) {
         .attr("href", "#")
         .on("click", function(d, i) {
             weekNum = d.week_number;
-            // d3.select("#timeFrame").html(d.start_date + " - " + d.end_date);
-            // d3.select("#recipTotal").html(d.recipients.length);
             var weeklyData = data.filter(function (d) {
                 return d.week_number == weekNum;
             });
             renderRecipList(weeklyData);
+            renderKeyList(weeklyData);
             renderMainChart(weeklyData);
         });
 
@@ -105,7 +106,7 @@ function renderWeekList(data) {
 }
 
 function renderRecipList(data) {
-    //Right panel: Recipient list
+    //Right panel - Tab 1 Recipient list
     var recipData = data[0].recipients;
     recipData.sort(function(a, b) { return d3.descending(a.num, b.num)});
 
@@ -127,10 +128,12 @@ function renderRecipList(data) {
     recipItems.enter().append("rect");
     recipItems.attr("x", chartMargin.left)
         .attr("y", function(d, i) { return (chartHeight * i + chartMargin.top); })
-        .attr("width", function(d) { return barScale(d.num); })
+        .attr("width", 0)
         .attr("height", chartInnerHeight)
         .style("fill", "#5cb85c")
-        .style("opacity", "0.8");  //green: #5cb85c yell: #f0ad4e info:#5bc0de
+        .style("opacity", "0.8")
+        .transition().duration(duration)
+        .attr("width", function(d) { return barScale(d.num); });  //green: #5cb85c yell: #f0ad4e info:#5bc0de
 
     
     recipText1.enter().append("text") ;
@@ -151,6 +154,57 @@ function renderRecipList(data) {
     recipText1.exit().remove();
     recipItems.exit().remove();
     recipText2.exit().remove();
+}
+
+function renderKeyList(data) {
+    //Right panel - Tab 2 Keywords list
+    var keyData = data[0].recipients;
+    keyData.sort(function(a, b) { return d3.descending(a.num, b.num)});
+
+    var chartWidth = 250;
+    var chartHeight = 30;
+    var chartMargin = {top: 1, left: 0, right: 20, bottom: 1};
+    var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
+    var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
+
+    var barScale = d3.scale.linear().range([0, chartInnerWidth]).domain([0, 45]);
+    var keyList = d3.select("#keyList")
+        .attr("width", chartWidth)
+        .attr("height", chartHeight)
+        .attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
+    var keyItems = keyList.selectAll("rect").data(keyData);
+    var keyText1 = keyList.selectAll(".text1").data(keyData);
+    var keyText2 = keyList.selectAll(".text2").data(keyData);
+
+    keyItems.enter().append("rect");
+    keyItems.attr("x", chartMargin.left)
+        .attr("y", function(d, i) { return (chartHeight * i + chartMargin.top); })
+        .attr("width", 0)
+        .attr("height", chartInnerHeight)
+        .style("fill", "#f0ad4e")
+        .style("opacity", "0.8")
+        .transition().duration(duration)
+        .attr("width", function(d) { return barScale(d.num); });  //green: #5cb85c yell: #f0ad4e info:#5bc0de red:#D9534F
+
+    
+    keyText1.enter().append("text") ;
+    keyText1.attr("class", "text1")
+        .text(function(d) {return d.name})
+        .style({"font-size": "14px", fill: "#555"})
+        .attr("dx", 2)
+        .attr("dy", function(d, i) { return (chartHeight * i + 20); });
+
+    
+    keyText2.enter().append("text"); 
+    keyText2.attr("class", "text2")
+        .text(function(d) {return d.num})
+        .style({"font-size": "15px", fill: "#555"})
+        .attr("dx", chartWidth)
+        .attr("dy", function(d, i) { return (34 * i + 20); });
+    
+    keyText1.exit().remove();
+    keyItems.exit().remove();
+    keyText2.exit().remove();
 }
 
 function renderMainChart(data) {
@@ -253,40 +307,13 @@ function renderMainChart(data) {
     mainChart.selectAll("circle").remove();
     mainChart.selectAll(".circlesText").remove();
 
-    //Draw Cells
-    var cards = barChart.selectAll(".hour").data(results, function (d) { 
-        return d.day + ':' + d.hour;
-    });
-    cards.enter().append("rect")
-        .attr("class", "hour bordered bar")
-        .attr("x", function (d) { return (d.hour) * gridWeight;})
-        .attr("y", function (d) { return (d.day) * gridSize + gridSize - rectScale(d.value);})
-        .attr("rx", 2)
-        .attr("ry", 2)
-        .attr("width", gridWeight)
-        .attr("height", function (d) { return rectScale(d.value);})
-        .attr("fill", "#5bc0de")
-        .on("mouseenter", function(d, i) {
-            d3.select("#tooltip").style({
-                visibility: "visible",
-                top: (d3.event.clientY + 5) +  "px",
-                left: (d3.event.clientX + 10) + "px",
-                opacity: 1
-            }).text(d.value + " Emails");
-        })
-        .on("mouseleave", function(d, i) {
-            d3.select("#tooltip").style({
-                visibility: "hidden",
-                opacity: 0
-            });
-        });
-
     //Draw Circles
     var circleItems = circleChart.selectAll("circle").data(circles, function (d) {
         return d.day + ':' + d.total;
     });
     
     circleItems.enter().append("circle")
+        //.attr("r", 0)
         .attr("r", function (d, i) { return rScale(d.total);})
         .attr("cx", 20)
         .attr("cy", function (d) { return (d.day * gridSize + gridSize/2);})
@@ -300,6 +327,38 @@ function renderMainChart(data) {
         .attr("text-anchor", "middle")
         .attr("dx", 20)
         .attr("dy", function (d) { return (d.day * gridSize + gridSize/2 + 6); });
+
+    //Draw Cells
+    var cards = barChart.selectAll(".hour").data(results, function (d) { 
+        return d.day + ':' + d.hour;
+    });
+    cards.enter().append("rect")
+        .attr("class", "hour bordered bar")
+        .attr("x", function (d) { return (d.hour) * gridWeight;})
+        .attr("y", function (d) { return (d.day) * gridSize + gridSize;})
+        .attr("rx", 2)
+        .attr("ry", 2)
+        .attr("width", gridWeight)
+        .attr("height", 0)
+        .attr("fill", "#5bc0de")
+        .transition().duration(duration)
+        .attr("y", function (d) { return (d.day) * gridSize + gridSize - rectScale(d.value);})
+        .attr("height", function (d) { return rectScale(d.value);});
+
+    cards.on("mouseenter", function(d, i) {
+            d3.select("#tooltip").style({
+                visibility: "visible",
+                top: (d3.event.clientY + 5) +  "px",
+                left: (d3.event.clientX + 10) + "px",
+                opacity: 1
+            }).text(d.value + " Emails");
+        })
+        .on("mouseleave", function(d, i) {
+            d3.select("#tooltip").style({
+                visibility: "hidden",
+                opacity: 0
+            });
+        });
 }
 
 
