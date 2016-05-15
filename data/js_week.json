@@ -199,11 +199,11 @@
       },
       {
         "num": 1,
-        "name": "sgovenar@govadv.com"
+        "name": "joseph.alamo@enron.com"
       },
       {
         "num": 1,
-        "name": "joseph.alamo@enron.com"
+        "name": "sgovenar@govadv.com"
       }
     ],
     "end_date": "06/30/01",
@@ -237,15 +237,15 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "james.steffes@enron.com": 1,
-          "joseph.alamo@enron.com": 1,
-          "sgovenar@govadv.com": 1
-        },
+        "day": "Sa",
         "num_recipent": 3,
         "date": "6/30/2001",
         "total": 3,
-        "day": "Sa"
+        "sent_detail": {
+          "james.steffes@enron.com": 1,
+          "sgovenar@govadv.com": 1,
+          "joseph.alamo@enron.com": 1
+        }
       }
     ],
     "year": 2001,
@@ -267,7 +267,7 @@
       },
       {
         "num": 4,
-        "name": "sgovenar@govadv.com"
+        "name": "cra@calretailers.com"
       },
       {
         "num": 1,
@@ -284,6 +284,10 @@
       {
         "num": 1,
         "name": "mark.palmer@enron.com"
+      },
+      {
+        "num": 4,
+        "name": "john.redding@gene.ge.com"
       },
       {
         "num": 4,
@@ -327,15 +331,15 @@
       },
       {
         "num": 4,
-        "name": "cra@calretailers.com"
+        "name": "sgovenar@govadv.com"
       },
       {
         "num": 4,
         "name": "derek.naten@roche.com"
       },
       {
-        "num": 4,
-        "name": "janel.guerrero@enron.com"
+        "num": 1,
+        "name": "kdenne@enron.com"
       },
       {
         "num": 1,
@@ -348,10 +352,6 @@
       {
         "num": 3,
         "name": "hgovenar@govadv.com"
-      },
-      {
-        "num": 2,
-        "name": "james.d.steffes@enron.com"
       },
       {
         "num": 1,
@@ -386,8 +386,8 @@
         "name": "christopher.calger@enron.com"
       },
       {
-        "num": 4,
-        "name": "mikahl@ka-pow.com"
+        "num": 6,
+        "name": "leslie.lawner@enron.com"
       },
       {
         "num": 1,
@@ -399,7 +399,7 @@
       },
       {
         "num": 4,
-        "name": "john.redding@gene.ge.com"
+        "name": "janel.guerrero@enron.com"
       },
       {
         "num": 3,
@@ -458,8 +458,8 @@
         "name": "mpalmer@enron.com"
       },
       {
-        "num": 6,
-        "name": "leslie.lawner@enron.com"
+        "num": 4,
+        "name": "mikahl@ka-pow.com"
       },
       {
         "num": 3,
@@ -498,8 +498,8 @@
         "name": "rshapiro@enron.com"
       },
       {
-        "num": 1,
-        "name": "kdenne@enron.com"
+        "num": 2,
+        "name": "james.d.steffes@enron.com"
       },
       {
         "num": 4,
@@ -549,6 +549,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Th",
+        "num_recipent": 9,
+        "date": "7/5/2001",
+        "total": 5,
         "sent_detail": {
           "paul.kaufman@enron.com": 1,
           "harry.kingerski@enron.com": 1,
@@ -557,13 +561,9 @@
           "susan.mara@enron.com": 1,
           "james.steffes@enron.com": 1,
           "ttt@cpuc.ca.gov": 1,
-          "robin@perfect.com": 1,
-          "leslie.lawner@enron.com": 1
-        },
-        "num_recipent": 9,
-        "date": "7/5/2001",
-        "total": 5,
-        "day": "Th"
+          "leslie.lawner@enron.com": 1,
+          "robin@perfect.com": 1
+        }
       },
       {
         "day_num": "6",
@@ -594,30 +594,30 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "david.delainey@enron.com": 1,
-          "mday@gmssr.com": 1,
-          "cohnap@sce.com": 4,
-          "connie@mctv.com": 1,
-          "richard.shapiro@enron.com": 2,
-          "brbarkovich@earthlink.net": 4,
-          "isenberg@hmot.com": 1,
-          "karen.denne@enron.com": 1,
-          "dhunter@s-k-w.com": 4,
-          "schoongl@sce.com": 4,
-          "fieldejr@sce.com": 4,
-          "jdasovic@enron.com": 4,
-          "drothrock@cmta.com": 4,
-          "mpalmer@enron.com": 1,
-          "leslie.lawner@enron.com": 1,
-          "vjw@cleanpower.org": 4,
-          "kmccrea@sablaw.com": 4,
-          "mikahl@ka-pow.com": 4
-        },
+        "day": "Sa",
         "num_recipent": 18,
         "date": "7/7/2001",
         "total": 9,
-        "day": "Sa"
+        "sent_detail": {
+          "cohnap@sce.com": 4,
+          "connie@mctv.com": 1,
+          "fieldejr@sce.com": 4,
+          "richard.shapiro@enron.com": 2,
+          "isenberg@hmot.com": 1,
+          "karen.denne@enron.com": 1,
+          "drothrock@cmta.com": 4,
+          "vjw@cleanpower.org": 4,
+          "dhunter@s-k-w.com": 4,
+          "brbarkovich@earthlink.net": 4,
+          "jdasovic@enron.com": 4,
+          "david.delainey@enron.com": 1,
+          "mday@gmssr.com": 1,
+          "mikahl@ka-pow.com": 4,
+          "mpalmer@enron.com": 1,
+          "schoongl@sce.com": 4,
+          "kmccrea@sablaw.com": 4,
+          "leslie.lawner@enron.com": 1
+        }
       },
       {
         "day_num": "5",
@@ -648,22 +648,26 @@
           "19": 0,
           "18": 0
         },
+        "day": "Fr",
+        "num_recipent": 49,
+        "date": "7/6/2001",
+        "total": 19,
         "sent_detail": {
           "lga@mother.com": 3,
           "richard.shapiro@enron.com": 7,
-          "sgovenar@govadv.com": 1,
+          "cra@calretailers.com": 3,
           "susan.mara@enron.com": 8,
-          "dominic.dimare@calchamber.com": 3,
+          "karen.denne@enron.com": 1,
           "mark.palmer@enron.com": 1,
-          "john.redding@gene.ge.com": 3,
           "mflorio@turn.org": 3,
           "mday@gmssr.com": 4,
           "ann.cohn@sce.com": 3,
           "vjw@cleanpower.org": 3,
           "debinorton@aol.com": 3,
           "paul.kaufman@enron.com": 3,
-          "cra@calretailers.com": 3,
+          "sgovenar@govadv.com": 1,
           "derek.naten@roche.com": 3,
+          "janel.guerrero@enron.com": 1,
           "donald.black@enron.com": 1,
           "kmccrea@sablaw.com": 3,
           "hgovenar@govadv.com": 1,
@@ -677,7 +681,7 @@
           "christopher.calger@enron.com": 1,
           "'hedy.govenar@enron.com": 1,
           "kristin.walsh@enron.com": 2,
-          "janel.guerrero@enron.com": 1,
+          "john.redding@gene.ge.com": 3,
           "mdjoseph@adamsbroadwell.com": 3,
           "alan.comnes@enron.com": 1,
           "jstewart@cmta.net": 3,
@@ -696,13 +700,9 @@
           "smutny@iepa.com": 3,
           "drothrock@camfg.com": 3,
           "tim.belden@enron.com": 1,
-          "karen.denne@enron.com": 1,
+          "dominic.dimare@calchamber.com": 3,
           "'bev.hansen@enron.com": 1
-        },
-        "num_recipent": 49,
-        "date": "7/6/2001",
-        "total": 19,
-        "day": "Fr"
+        }
       },
       {
         "day_num": "2",
@@ -732,12 +732,16 @@
           "19": 0,
           "18": 0
         },
+        "day": "Tu",
+        "num_recipent": 41,
+        "date": "7/3/2001",
+        "total": 9,
         "sent_detail": {
           "susan.mara@enron.com": 4,
           "kmccrea@sablaw.com": 1,
-          "cra@calretailers.com": 1,
+          "sgovenar@govadv.com": 3,
           "lga@mother.com": 1,
-          "karen.denne@enron.com": 3,
+          "dominic.dimare@calchamber.com": 1,
           "bhansen@lhom.com": 2,
           "mflorio@turn.org": 1,
           "mday@gmssr.com": 1,
@@ -745,7 +749,7 @@
           "vjw@cleanpower.org": 1,
           "debinorton@aol.com": 1,
           "paul.kaufman@enron.com": 6,
-          "sgovenar@govadv.com": 3,
+          "cra@calretailers.com": 1,
           "derek.naten@roche.com": 1,
           "kdenne@enron.com": 1,
           "richard.shapiro@enron.com": 3,
@@ -772,13 +776,9 @@
           "harry.kingerski@enron.com": 5,
           "smara@enron.com": 2,
           "drothrock@camfg.com": 1,
-          "dominic.dimare@calchamber.com": 1,
+          "karen.denne@enron.com": 3,
           "james.d.steffes@enron.com": 2
-        },
-        "num_recipent": 41,
-        "date": "7/3/2001",
-        "total": 9,
-        "day": "Tu"
+        }
       }
     ],
     "year": 2001,
@@ -819,20 +819,24 @@
         "name": "connie@mctv.com"
       },
       {
+        "num": 1,
+        "name": "meredith.eggleston@enron.com"
+      },
+      {
         "num": 2,
         "name": "donald.black@enron.com"
       },
       {
-        "num": 16,
-        "name": "richard.shapiro@enron.com"
+        "num": 1,
+        "name": "cathy.corbin@enron.com"
       },
       {
         "num": 1,
         "name": "kathy.dodgen@enron.com"
       },
       {
-        "num": 1,
-        "name": "sharon.dick@enron.com"
+        "num": 3,
+        "name": "vicki.sharp@enron.com"
       },
       {
         "num": 1,
@@ -840,7 +844,7 @@
       },
       {
         "num": 1,
-        "name": "brenda.barreda@enron.com"
+        "name": "carol.moffett@enron.com"
       },
       {
         "num": 1,
@@ -908,7 +912,7 @@
       },
       {
         "num": 1,
-        "name": "marsha.suggs@enron.com"
+        "name": "evan.hughes@enron.com"
       },
       {
         "num": 1,
@@ -919,8 +923,8 @@
         "name": "louise.kitchen@enron.com"
       },
       {
-        "num": 1,
-        "name": "tony.spruiell@enron.com"
+        "num": 2,
+        "name": "michael.etringer@enron.com"
       },
       {
         "num": 1,
@@ -1003,8 +1007,8 @@
         "name": "janel.guerrero@enron.com"
       },
       {
-        "num": 2,
-        "name": "john.lavorato@enron.com"
+        "num": 8,
+        "name": "lysherif@yahoo.com"
       },
       {
         "num": 1,
@@ -1071,8 +1075,8 @@
         "name": "chris.holmes@enron.com"
       },
       {
-        "num": 1,
-        "name": "cathy.corbin@enron.com"
+        "num": 16,
+        "name": "richard.shapiro@enron.com"
       },
       {
         "num": 1,
@@ -1107,8 +1111,8 @@
         "name": "wgang@enron.com"
       },
       {
-        "num": 8,
-        "name": "sgovenar@govadv.com"
+        "num": 1,
+        "name": "leticia.botello@enron.com"
       },
       {
         "num": 1,
@@ -1123,8 +1127,8 @@
         "name": "scott.gahn@enron.com"
       },
       {
-        "num": 3,
-        "name": "vicki.sharp@enron.com"
+        "num": 1,
+        "name": "sharon.dick@enron.com"
       },
       {
         "num": 2,
@@ -1144,7 +1148,7 @@
       },
       {
         "num": 1,
-        "name": "carol.moffett@enron.com"
+        "name": "brenda.barreda@enron.com"
       },
       {
         "num": 1,
@@ -1192,7 +1196,7 @@
       },
       {
         "num": 1,
-        "name": "evan.hughes@enron.com"
+        "name": "marsha.suggs@enron.com"
       },
       {
         "num": 2,
@@ -1205,10 +1209,6 @@
       {
         "num": 3,
         "name": "susan.landwehr@enron.com"
-      },
-      {
-        "num": 1,
-        "name": "mday@gmssr.com"
       },
       {
         "num": 11,
@@ -1227,8 +1227,8 @@
         "name": "chris.foster@enron.com"
       },
       {
-        "num": 1,
-        "name": "leticia.botello@enron.com"
+        "num": 8,
+        "name": "sgovenar@govadv.com"
       },
       {
         "num": 1,
@@ -1260,7 +1260,7 @@
       },
       {
         "num": 1,
-        "name": "dan.leff@enron.com"
+        "name": "mday@gmssr.com"
       },
       {
         "num": 1,
@@ -1284,7 +1284,7 @@
       },
       {
         "num": 1,
-        "name": "meredith.eggleston@enron.com"
+        "name": "dan.leff@enron.com"
       },
       {
         "num": 1,
@@ -1295,8 +1295,8 @@
         "name": "jeremy.blachman@enron.com"
       },
       {
-        "num": 2,
-        "name": "michael.etringer@enron.com"
+        "num": 1,
+        "name": "tony.spruiell@enron.com"
       },
       {
         "num": 1,
@@ -1307,8 +1307,8 @@
         "name": "ken.gustafson@enron.com"
       },
       {
-        "num": 8,
-        "name": "lysherif@yahoo.com"
+        "num": 2,
+        "name": "john.lavorato@enron.com"
       },
       {
         "num": 1,
@@ -1391,6 +1391,10 @@
           "19": 4,
           "18": 0
         },
+        "day": "Tu",
+        "num_recipent": 136,
+        "date": "7/10/2001",
+        "total": 34,
         "sent_detail": {
           "susan.mara@enron.com": 5,
           "beverly.aden@enron.com": 1,
@@ -1400,9 +1404,9 @@
           "janet.dietrich@enron.com": 1,
           "cohnap@sce.com": 1,
           "donald.black@enron.com": 1,
-          "cathy.corbin@enron.com": 1,
+          "richard.shapiro@enron.com": 8,
           "kathy.dodgen@enron.com": 1,
-          "vicki.sharp@enron.com": 2,
+          "sharon.dick@enron.com": 1,
           "robert.frank@enron.com": 1,
           "brenda.barreda@enron.com": 1,
           "paula.warren@enron.com": 1,
@@ -1421,10 +1425,10 @@
           "mikahl@ka-pow.com": 1,
           "harry.kingerski@enron.com": 2,
           "neil.bresnan@enron.com": 1,
-          "evan.hughes@enron.com": 1,
+          "marsha.suggs@enron.com": 1,
           "steve.walker@enron.com": 1,
           "louise.kitchen@enron.com": 1,
-          "michael.etringer@enron.com": 1,
+          "tony.spruiell@enron.com": 1,
           "jeff.messina@enron.com": 1,
           "joe.hartsoe@enron.com": 3,
           "thompson@enron.com": 1,
@@ -1444,7 +1448,7 @@
           "sandra.mccubbin@enron.com": 1,
           "dorothy.youngblood@enron.com": 1,
           "janel.guerrero@enron.com": 2,
-          "lysherif@yahoo.com": 7,
+          "john.lavorato@enron.com": 1,
           "jubran.whalan@enron.com": 1,
           "isenberg@hmot.com": 8,
           "skean@enron.com": 3,
@@ -1453,7 +1457,6 @@
           "erika.dupre@enron.com": 1,
           "john.neslage@enron.com": 1,
           "mark.muller@enron.com": 1,
-          "dan.leff@enron.com": 1,
           "sarah.novosel@enron.com": 2,
           "terri.greenlee@enron.com": 1,
           "fieldejr@sce.com": 8,
@@ -1462,7 +1465,7 @@
           "eric.letke@enron.com": 1,
           "gfergus@brobeck.com": 2,
           "chris.holmes@enron.com": 1,
-          "richard.shapiro@enron.com": 8,
+          "cathy.corbin@enron.com": 1,
           "gordon.savage@enron.com": 1,
           "leasa.lopez@enron.com": 1,
           "kathryn.corbally@enron.com": 1,
@@ -1470,10 +1473,10 @@
           "marty.sunde@enron.com": 1,
           "vjw@cleanpower.org": 8,
           "wgang@enron.com": 1,
-          "leticia.botello@enron.com": 1,
+          "sgovenar@govadv.com": 5,
           "kmccrea@sablaw.com": 8,
           "scott.gahn@enron.com": 1,
-          "sharon.dick@enron.com": 1,
+          "vicki.sharp@enron.com": 2,
           "phillip.allen@enron.com": 1,
           "bill.votaw@enron.com": 1,
           "eric.melvin@enron.com": 1,
@@ -1488,15 +1491,16 @@
           "debora.whitehead@enron.com": 1,
           "jeff.dasovich@enron.com": 2,
           "leslie.lawner@enron.com": 1,
-          "marsha.suggs@enron.com": 1,
+          "evan.hughes@enron.com": 1,
           "gary.schoonyan@sce.com": 2,
           "dominic.dimare@calchamber.com": 7,
           "susan.landwehr@enron.com": 1,
+          "mday@gmssr.com": 1,
           "schoongl@sce.com": 8,
           "joseph.alamo@enron.com": 2,
           "jennifer.rudolph@enron.com": 1,
           "chris.foster@enron.com": 1,
-          "sgovenar@govadv.com": 5,
+          "leticia.botello@enron.com": 1,
           "dirk.vanulden@enron.com": 1,
           "james.lewis@enron.com": 1,
           "fran.deltoro@enron.com": 1,
@@ -1504,7 +1508,7 @@
           "vladimir.gorny@enron.com": 1,
           "dhunter@s-k-w.com": 11,
           "richard.zdunkewicz@enron.com": 1,
-          "mday@gmssr.com": 1,
+          "dan.leff@enron.com": 1,
           "robert.williams@enron.com": 1,
           "edward.sacks@enron.com": 1,
           "tasha.lair@enron.com": 1,
@@ -1513,10 +1517,10 @@
           "meredith.eggleston@enron.com": 1,
           "wanda.curry@enron.com": 1,
           "jeremy.blachman@enron.com": 2,
-          "tony.spruiell@enron.com": 1,
+          "michael.etringer@enron.com": 1,
           "angela.schwarz@enron.com": 1,
           "ken.gustafson@enron.com": 1,
-          "john.lavorato@enron.com": 1,
+          "lysherif@yahoo.com": 7,
           "mike.smith@enron.com": 1,
           "michael.tribolet@enron.com": 1,
           "lys@a-klaw.com": 7,
@@ -1528,11 +1532,7 @@
           "drothrock@cmta.net": 8,
           "kathy.bass@enron.com": 1,
           "greg.whalley@enron.com": 1
-        },
-        "num_recipent": 136,
-        "date": "7/10/2001",
-        "total": 34,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "3",
@@ -1563,22 +1563,25 @@
           "19": 0,
           "18": 0
         },
+        "day": "We",
+        "num_recipent": 37,
+        "date": "7/11/2001",
+        "total": 22,
         "sent_detail": {
           "gfergus@brobeck.com": 1,
           "susan.mara@enron.com": 6,
           "kmccrea@sablaw.com": 1,
           "sgovenar@govadv.com": 3,
           "david.parquet@enron.com": 1,
-          "karen.denne@enron.com": 5,
+          "dominic.dimare@calchamber.com": 1,
           "dhunter@s-k-w.com": 4,
-          "michael.etringer@enron.com": 1,
           "ann.cohn@sce.com": 1,
           "vjw@cleanpower.org": 1,
+          "drothrock@cmta.net": 1,
           "paul.kaufman@enron.com": 2,
           "kdenne@enron.com": 1,
           "richard.shapiro@enron.com": 4,
           "hgovenar@govadv.com": 1,
-          "joseph.alamo@enron.com": 1,
           "linda.robertson@enron.com": 2,
           "jdasovic@enron.com": 1,
           "brbarkovich@earthlink.net": 1,
@@ -1595,17 +1598,14 @@
           "mpalmer@enron.com": 3,
           "richard.sanders@enron.com": 3,
           "harry.kingerski@enron.com": 1,
-          "dominic.dimare@calchamber.com": 1,
+          "karen.denne@enron.com": 5,
           "mlk@pkns.com": 1,
-          "susan.landwehr@enron.com": 1,
+          "michael.etringer@enron.com": 1,
           "fieldejr@sce.com": 1,
+          "susan.landwehr@enron.com": 1,
           "schoongl@sce.com": 1,
-          "drothrock@cmta.net": 1
-        },
-        "num_recipent": 37,
-        "date": "7/11/2001",
-        "total": 22,
-        "day": "We"
+          "joseph.alamo@enron.com": 1
+        }
       },
       {
         "day_num": "0",
@@ -1635,28 +1635,28 @@
           "19": 0,
           "18": 0
         },
+        "day": "Su",
+        "num_recipent": 16,
+        "date": "7/8/2001",
+        "total": 4,
         "sent_detail": {
           "cohnap@sce.com": 1,
           "connie@mctv.com": 1,
           "richard.shapiro@enron.com": 1,
-          "brbarkovich@earthlink.net": 1,
           "skean@enron.com": 1,
-          "vjw@cleanpower.org": 1,
-          "jdasovic@enron.com": 1,
+          "schoongl@sce.com": 1,
           "drothrock@cmta.com": 1,
           "linda.robertson@enron.com": 1,
           "dhunter@s-k-w.com": 2,
           "fieldejr@sce.com": 1,
-          "james.steffes@enron.com": 1,
-          "kmccrea@sablaw.com": 1,
+          "jdasovic@enron.com": 1,
+          "brbarkovich@earthlink.net": 1,
           "mpalmer@enron.com": 1,
-          "schoongl@sce.com": 1,
+          "james.steffes@enron.com": 1,
+          "vjw@cleanpower.org": 1,
+          "kmccrea@sablaw.com": 1,
           "mikahl@ka-pow.com": 1
-        },
-        "num_recipent": 16,
-        "date": "7/8/2001",
-        "total": 4,
-        "day": "Su"
+        }
       },
       {
         "day_num": "1",
@@ -1687,6 +1687,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Mo",
+        "num_recipent": 34,
+        "date": "7/9/2001",
+        "total": 6,
         "sent_detail": {
           "susan.mara@enron.com": 1,
           "kmccrea@sablaw.com": 1,
@@ -1704,7 +1708,7 @@
           "jdasovic@enron.com": 1,
           "brbarkovich@earthlink.net": 1,
           "christopher.calger@enron.com": 1,
-          "mikahl@ka-pow.com": 2,
+          "leslie.lawner@enron.com": 1,
           "susan.landwehr@enron.com": 1,
           "kristin.walsh@enron.com": 1,
           "david.delainey@enron.com": 1,
@@ -1714,19 +1718,15 @@
           "skean@enron.com": 1,
           "jeremy.blachman@enron.com": 1,
           "james.steffes@enron.com": 1,
-          "leslie.lawner@enron.com": 1,
+          "mikahl@ka-pow.com": 2,
           "tim.belden@enron.com": 1,
-          "schoongl@sce.com": 1,
+          "janet.dietrich@enron.com": 1,
           "louise.kitchen@enron.com": 1,
           "fieldejr@sce.com": 1,
           "greg.whalley@enron.com": 1,
-          "janet.dietrich@enron.com": 1,
+          "schoongl@sce.com": 1,
           "drothrock@cmta.net": 1
-        },
-        "num_recipent": 34,
-        "date": "7/9/2001",
-        "total": 6,
-        "day": "Mo"
+        }
       }
     ],
     "year": 2001,
@@ -1811,6 +1811,10 @@
         "name": "john.shelk@enron.com"
       },
       {
+        "num": 1,
+        "name": "vjw@cleanpower.org"
+      },
+      {
         "num": 3,
         "name": "cristina.zavala@enron.com"
       },
@@ -1859,8 +1863,8 @@
         "name": "b..sanders@enron.com"
       },
       {
-        "num": 4,
-        "name": "dasovich.jeff@enron.com"
+        "num": 15,
+        "name": "paul.kaufman@enron.com"
       },
       {
         "num": 1,
@@ -1885,10 +1889,6 @@
       {
         "num": 3,
         "name": "kevin.keeney@enron.com"
-      },
-      {
-        "num": 3,
-        "name": "steve.swain@enron.com"
       },
       {
         "num": 3,
@@ -1964,11 +1964,15 @@
       },
       {
         "num": 3,
-        "name": "john.lavorato@enron.com"
+        "name": "steve.swain@enron.com"
       },
       {
-        "num": 15,
-        "name": "paul.kaufman@enron.com"
+        "num": 4,
+        "name": "dasovich.jeff@enron.com"
+      },
+      {
+        "num": 3,
+        "name": "john.lavorato@enron.com"
       },
       {
         "num": 3,
@@ -1999,10 +2003,6 @@
         "name": "wade.stubblefield@enron.com"
       },
       {
-        "num": 1,
-        "name": "psellers@pacbell.net"
-      },
-      {
         "num": 3,
         "name": "lisa.mellencamp@enron.com"
       },
@@ -2024,7 +2024,7 @@
       },
       {
         "num": 1,
-        "name": "vjw@cleanpower.org"
+        "name": "psellers@pacbell.net"
       },
       {
         "num": 10,
@@ -2126,30 +2126,30 @@
           "19": 2,
           "18": 7
         },
+        "day": "Mo",
+        "num_recipent": 18,
+        "date": "8/27/2001",
+        "total": 16,
         "sent_detail": {
           "susan.mara@enron.com": 2,
           "john.shelk@enron.com": 1,
           "harry.kingerski@enron.com": 1,
-          "paul.kaufman@enron.com": 1,
-          "david.parquet@enron.com": 1,
-          "richard.shapiro@enron.com": 2,
           "dasovich.jeff@enron.com": 1,
+          "david.parquet@enron.com": 1,
+          "nancy.sellers@robertmondavi.com": 1,
+          "richard.shapiro@enron.com": 2,
+          "paul.kaufman@enron.com": 1,
           "cristina.zavala@enron.com": 1,
           "karen.denne@enron.com": 1,
-          "joseph.alamo@enron.com": 2,
-          "dhunter@s-k-w.com": 1,
-          "alan.comnes@enron.com": 3,
-          "jennifer.thome@enron.com": 2,
-          "mark.fillinger@enron.com": 1,
           "stephanie.miller@enron.com": 1,
-          "d..steffes@enron.com": 4,
+          "dhunter@s-k-w.com": 1,
           "michael.etringer@enron.com": 1,
-          "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 18,
-        "date": "8/27/2001",
-        "total": 16,
-        "day": "Mo"
+          "mark.fillinger@enron.com": 1,
+          "jennifer.thome@enron.com": 2,
+          "d..steffes@enron.com": 4,
+          "joseph.alamo@enron.com": 2,
+          "alan.comnes@enron.com": 3
+        }
       },
       {
         "day_num": "5",
@@ -2179,6 +2179,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Fr",
+        "num_recipent": 42,
+        "date": "8/31/2001",
+        "total": 9,
         "sent_detail": {
           "susan.mara@enron.com": 1,
           "sgovenar@govadv.com": 1,
@@ -2198,18 +2202,18 @@
           "vicki.sharp@enron.com": 1,
           "linda.robertson@enron.com": 1,
           "jeremy.blachman@enron.com": 1,
-          "lynne.ruffer@enron.com": 1,
+          "nancy.sellers@robertmondavi.com": 1,
           "kristin.walsh@enron.com": 1,
-          "john.lavorato@enron.com": 1,
+          "steve.swain@enron.com": 1,
           "david.delainey@enron.com": 1,
           "alan.comnes@enron.com": 1,
-          "steve.swain@enron.com": 1,
+          "john.lavorato@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "lisa.mellencamp@enron.com": 1,
           "jdasovic@enron.com": 1,
           "michael.tribolet@enron.com": 1,
           "wade.stubblefield@enron.com": 1,
-          "nancy.sellers@robertmondavi.com": 1,
+          "lynne.ruffer@enron.com": 1,
           "leslie.lawner@enron.com": 2,
           "josephtambornino@yahoo.com": 1,
           "harry.kingerski@enron.com": 3,
@@ -2222,11 +2226,7 @@
           "janet.dietrich@enron.com": 1,
           "joseph.alamo@enron.com": 2,
           "day.mike@enron.com": 2
-        },
-        "num_recipent": 42,
-        "date": "8/31/2001",
-        "total": 9,
-        "day": "Fr"
+        }
       },
       {
         "day_num": "2",
@@ -2257,27 +2257,30 @@
           "19": 2,
           "18": 3
         },
+        "day": "Tu",
+        "num_recipent": 59,
+        "date": "8/28/2001",
+        "total": 29,
         "sent_detail": {
           "cristina.zavala@enron.com": 1,
           "patrick.keene@enron.com": 1,
           "f..calger@enron.com": 1,
           "don.black@enron.com": 1,
-          "michael.tribolet@enron.com": 2,
-          "vjw@cleanpower.org": 1,
+          "jeff.richter@enron.com": 2,
           "susan.mara@enron.com": 8,
           "lamar.frazier@enron.com": 1,
           "postmaster@lawseminars.com": 1,
-          "mara.susan@enron.com": 1,
+          "jesse.bryson@enron.com": 1,
           "hansen.bev@enron.com": 1,
           "wanda.curry@enron.com": 1,
-          "d..steffes@enron.com": 5,
-          "louise.kitchen@enron.com": 1,
+          "pearce.hammond@enron.com": 1,
           "paul.kaufman@enron.com": 4,
           "ginger.dernehl@enron.com": 3,
           "richard.shapiro@enron.com": 7,
           "scott.gahn@enron.com": 1,
           "kevin.keeney@enron.com": 1,
-          "pearce.hammond@enron.com": 1,
+          "steve.swain@enron.com": 1,
+          "d..steffes@enron.com": 5,
           "j..kean@enron.com": 1,
           "vicki.sharp@enron.com": 1,
           "jeff.keeler@enron.com": 1,
@@ -2293,35 +2296,32 @@
           "david.delainey@enron.com": 1,
           "alan.comnes@enron.com": 2,
           "b..sanders@enron.com": 1,
-          "steve.swain@enron.com": 1,
           "7409949@skytel.com": 1,
           "john.lavorato@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "jdasovic@enron.com": 1,
-          "jeff.richter@enron.com": 2,
+          "<susan\".\"mara@enron.com>": 1,
+          "michael.tribolet@enron.com": 2,
+          "psellers@pacbell.net": 1,
           "lisa.mellencamp@enron.com": 1,
           "leslie.lawner@enron.com": 1,
           "stephanie.miller@enron.com": 1,
-          "psellers@pacbell.net": 1,
+          "vjw@cleanpower.org": 1,
           "harry.kingerski@enron.com": 4,
           "dasovich.jeff@enron.com": 1,
           "dan.leff@enron.com": 1,
           "tim.belden@enron.com": 3,
           "mary.schoen@enron.com": 1,
           "karen.denne@enron.com": 5,
-          "jesse.bryson@enron.com": 1,
+          "mara.susan@enron.com": 1,
           "richard.ring@enron.com": 1,
           "michael.terraso@enron.com": 1,
-          "<susan\".\"mara@enron.com>": 1,
+          "louise.kitchen@enron.com": 1,
           "jalamo@enron.com": 1,
           "mark.fillinger@enron.com": 1,
           "janet.dietrich@enron.com": 1,
           "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 59,
-        "date": "8/28/2001",
-        "total": 29,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "3",
@@ -2352,27 +2352,27 @@
           "19": 0,
           "18": 0
         },
+        "day": "We",
+        "num_recipent": 15,
+        "date": "8/29/2001",
+        "total": 11,
         "sent_detail": {
           "janel.guerrero@enron.com": 1,
           "borenstein@haas.berkeley.edu": 1,
-          "michael.etringer@enron.com": 2,
-          "paul.kaufman@enron.com": 2,
+          "susan.mara@enron.com": 2,
           "david.parquet@enron.com": 2,
           "richard.shapiro@enron.com": 2,
-          "susan.mara@enron.com": 2,
+          "paul.kaufman@enron.com": 2,
           "karen.denne@enron.com": 1,
           "f..calger@enron.com": 2,
           "m..schmidt@enron.com": 1,
           "dhunter@s-k-w.com": 1,
           "michael.tribolet@enron.com": 2,
+          "joseph.alamo@enron.com": 1,
           "jennifer.thome@enron.com": 1,
           "d..steffes@enron.com": 2,
-          "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 15,
-        "date": "8/29/2001",
-        "total": 11,
-        "day": "We"
+          "michael.etringer@enron.com": 2
+        }
       },
       {
         "day_num": "4",
@@ -2402,22 +2402,26 @@
           "19": 2,
           "18": 4
         },
+        "day": "Th",
+        "num_recipent": 42,
+        "date": "8/30/2001",
+        "total": 14,
         "sent_detail": {
           "susan.mara@enron.com": 2,
           "sgovenar@govadv.com": 1,
           "f..calger@enron.com": 3,
           "don.black@enron.com": 1,
-          "jeff.richter@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
           "cristina.zavala@enron.com": 1,
           "lamar.frazier@enron.com": 1,
-          "kevin.keeney@enron.com": 1,
+          "hgovenar@govadv.com": 1,
           "wanda.curry@enron.com": 1,
           "d..steffes@enron.com": 3,
           "paul.kaufman@enron.com": 4,
           "courtney_abernathy@yahoo.com": 1,
           "richard.shapiro@enron.com": 1,
           "scott.gahn@enron.com": 1,
-          "hgovenar@govadv.com": 1,
+          "kevin.keeney@enron.com": 1,
           "dan.leff@enron.com": 1,
           "j..kean@enron.com": 1,
           "vicki.sharp@enron.com": 1,
@@ -2426,14 +2430,14 @@
           "elliot.mainzer@enron.com": 1,
           "michael.etringer@enron.com": 1,
           "kristin.walsh@enron.com": 1,
-          "john.lavorato@enron.com": 1,
+          "steve.swain@enron.com": 1,
           "david.delainey@enron.com": 1,
           "alan.comnes@enron.com": 1,
-          "steve.swain@enron.com": 1,
+          "john.lavorato@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "lisa.mellencamp@enron.com": 1,
           "tj@haas.berkeley.edu": 1,
-          "michael.tribolet@enron.com": 1,
+          "jeff.richter@enron.com": 1,
           "wade.stubblefield@enron.com": 1,
           "jeff.dasovich@enron.com": 1,
           "lynne.ruffer@enron.com": 1,
@@ -2445,11 +2449,7 @@
           "louise.kitchen@enron.com": 1,
           "jbennett@gmssr.com": 1,
           "janet.dietrich@enron.com": 1
-        },
-        "num_recipent": 42,
-        "date": "8/30/2001",
-        "total": 14,
-        "day": "Th"
+        }
       }
     ],
     "year": 2001,
@@ -2475,7 +2475,7 @@
       },
       {
         "num": 2,
-        "name": "jeff.richter@enron.com"
+        "name": "michael.tribolet@enron.com"
       },
       {
         "num": 2,
@@ -2547,7 +2547,7 @@
       },
       {
         "num": 2,
-        "name": "john.lavorato@enron.com"
+        "name": "steve.swain@enron.com"
       },
       {
         "num": 2,
@@ -2563,7 +2563,7 @@
       },
       {
         "num": 2,
-        "name": "steve.swain@enron.com"
+        "name": "john.lavorato@enron.com"
       },
       {
         "num": 3,
@@ -2583,7 +2583,7 @@
       },
       {
         "num": 2,
-        "name": "michael.tribolet@enron.com"
+        "name": "jeff.richter@enron.com"
       },
       {
         "num": 2,
@@ -2681,6 +2681,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Sa",
+        "num_recipent": 6,
+        "date": "9/8/2001",
+        "total": 3,
         "sent_detail": {
           "e-mail<.scott@enron.com>": 1,
           "susan.mara@enron.com": 1,
@@ -2688,11 +2692,7 @@
           "paul.kaufman@enron.com": 1,
           "tj@haas.berkeley.edu": 2,
           "d..steffes@enron.com": 1
-        },
-        "num_recipent": 6,
-        "date": "9/8/2001",
-        "total": 3,
-        "day": "Sa"
+        }
       },
       {
         "day_num": "1",
@@ -2722,11 +2722,15 @@
           "19": 0,
           "18": 0
         },
+        "day": "Mo",
+        "num_recipent": 34,
+        "date": "9/3/2001",
+        "total": 2,
         "sent_detail": {
           "susan.mara@enron.com": 3,
           "f..calger@enron.com": 1,
           "don.black@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
+          "jeff.richter@enron.com": 1,
           "lamar.frazier@enron.com": 1,
           "wanda.curry@enron.com": 1,
           "d..steffes@enron.com": 2,
@@ -2741,14 +2745,14 @@
           "linda.robertson@enron.com": 1,
           "jeremy.blachman@enron.com": 2,
           "kristin.walsh@enron.com": 1,
-          "steve.swain@enron.com": 1,
+          "john.lavorato@enron.com": 1,
           "david.delainey@enron.com": 1,
           "alan.comnes@enron.com": 1,
-          "john.lavorato@enron.com": 1,
+          "steve.swain@enron.com": 1,
           "pr<.palmer@enron.com>": 2,
           "lisa.mellencamp@enron.com": 1,
           "maureen.mcvicker@enron.com": 1,
-          "jeff.richter@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
           "wade.stubblefield@enron.com": 1,
           "lynne.ruffer@enron.com": 1,
           "harry.kingerski@enron.com": 2,
@@ -2757,11 +2761,7 @@
           "louise.kitchen@enron.com": 1,
           "janet.dietrich@enron.com": 1,
           "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 34,
-        "date": "9/3/2001",
-        "total": 2,
-        "day": "Mo"
+        }
       },
       {
         "day_num": "4",
@@ -2791,14 +2791,14 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "paul.kaufman@enron.com": 1,
-          "d..steffes@enron.com": 2
-        },
+        "day": "Th",
         "num_recipent": 2,
         "date": "9/6/2001",
         "total": 3,
-        "day": "Th"
+        "sent_detail": {
+          "paul.kaufman@enron.com": 1,
+          "d..steffes@enron.com": 2
+        }
       },
       {
         "day_num": "0",
@@ -2828,11 +2828,15 @@
           "19": 0,
           "18": 0
         },
+        "day": "Su",
+        "num_recipent": 33,
+        "date": "9/2/2001",
+        "total": 3,
         "sent_detail": {
           "susan.mara@enron.com": 2,
           "f..calger@enron.com": 1,
           "don.black@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
+          "jeff.richter@enron.com": 1,
           "lamar.frazier@enron.com": 1,
           "wanda.curry@enron.com": 1,
           "bortman@haas.berkeley.edu": 1,
@@ -2847,14 +2851,14 @@
           "linda.robertson@enron.com": 1,
           "jeremy.blachman@enron.com": 2,
           "kristin.walsh@enron.com": 1,
-          "john.lavorato@enron.com": 1,
+          "steve.swain@enron.com": 1,
           "david.delainey@enron.com": 1,
           "alan.comnes@enron.com": 1,
-          "steve.swain@enron.com": 1,
+          "john.lavorato@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "lisa.mellencamp@enron.com": 1,
           "tj@haas.berkeley.edu": 1,
-          "jeff.richter@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
           "wade.stubblefield@enron.com": 1,
           "lynne.ruffer@enron.com": 1,
           "harry.kingerski@enron.com": 2,
@@ -2862,11 +2866,7 @@
           "karen.denne@enron.com": 1,
           "louise.kitchen@enron.com": 1,
           "janet.dietrich@enron.com": 1
-        },
-        "num_recipent": 33,
-        "date": "9/2/2001",
-        "total": 3,
-        "day": "Su"
+        }
       },
       {
         "day_num": "5",
@@ -2896,6 +2896,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Fr",
+        "num_recipent": 9,
+        "date": "9/7/2001",
+        "total": 9,
         "sent_detail": {
           "susan.mara@enron.com": 5,
           "harry.kingerski@enron.com": 1,
@@ -2906,11 +2910,7 @@
           "d..steffes@enron.com": 3,
           "joseph.alamo@enron.com": 1,
           "leslie.lawner@enron.com": 1
-        },
-        "num_recipent": 9,
-        "date": "9/7/2001",
-        "total": 9,
-        "day": "Fr"
+        }
       },
       {
         "day_num": "3",
@@ -2940,27 +2940,27 @@
           "19": 0,
           "18": 0
         },
+        "day": "We",
+        "num_recipent": 15,
+        "date": "9/5/2001",
+        "total": 7,
         "sent_detail": {
           "paul.kaufman@enron.com": 2,
-          "govenar.hedy@enron.com": 1,
+          "richard.shapiro@enron.com": 2,
           "harry.kingerski@enron.com": 1,
           "courtney_abernathy@yahoo.com": 1,
           "houston<.ward@enron.com>": 1,
-          "richard.shapiro@enron.com": 2,
+          "govenar.hedy@enron.com": 1,
           "susan.mara@enron.com": 1,
           "mara.susan@enron.com": 1,
-          "vjw@cleanpower.org": 1,
+          "d..steffes@enron.com": 3,
           "j..kean@enron.com": 1,
           "dasovich.jeff@enron.com": 1,
           "hansen.bev@enron.com": 1,
           "barry.tycholiz@enron.com": 1,
-          "d..steffes@enron.com": 3,
+          "vjw@cleanpower.org": 1,
           "janet.dietrich@enron.com": 1
-        },
-        "num_recipent": 15,
-        "date": "9/5/2001",
-        "total": 7,
-        "day": "We"
+        }
       }
     ],
     "year": 2001,
@@ -3001,8 +3001,8 @@
         "name": "enron'.'jim@enron.com"
       },
       {
-        "num": 10,
-        "name": "michael.tribolet@enron.com"
+        "num": 5,
+        "name": "jeff.richter@enron.com"
       },
       {
         "num": 4,
@@ -3113,8 +3113,8 @@
         "name": "9069876@skytel.com"
       },
       {
-        "num": 2,
-        "name": "nancy.sellers@robertmondavi.com"
+        "num": 1,
+        "name": "leslie.lawner@enron.com"
       },
       {
         "num": 1,
@@ -3129,8 +3129,8 @@
         "name": "kristin.walsh@enron.com"
       },
       {
-        "num": 5,
-        "name": "steve.swain@enron.com"
+        "num": 6,
+        "name": "john.lavorato@enron.com"
       },
       {
         "num": 6,
@@ -3157,8 +3157,8 @@
         "name": "jeff_dasovich@enron.com"
       },
       {
-        "num": 6,
-        "name": "john.lavorato@enron.com"
+        "num": 5,
+        "name": "steve.swain@enron.com"
       },
       {
         "num": 7,
@@ -3177,16 +3177,16 @@
         "name": "cvavrek@deloitte.com"
       },
       {
-        "num": 5,
-        "name": "jeff.richter@enron.com"
+        "num": 10,
+        "name": "michael.tribolet@enron.com"
       },
       {
         "num": 1,
         "name": "psellers@haas.berkeley.edu"
       },
       {
-        "num": 1,
-        "name": "leslie.lawner@enron.com"
+        "num": 2,
+        "name": "nancy.sellers@robertmondavi.com"
       },
       {
         "num": 1,
@@ -3289,11 +3289,15 @@
           "19": 0,
           "18": 0
         },
+        "day": "Tu",
+        "num_recipent": 29,
+        "date": "9/11/2001",
+        "total": 2,
         "sent_detail": {
           "susan.mara@enron.com": 1,
           "f..calger@enron.com": 1,
           "don.black@enron.com": 1,
-          "jeff.richter@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
           "lamar.frazier@enron.com": 1,
           "wanda.curry@enron.com": 1,
           "d..steffes@enron.com": 1,
@@ -3307,23 +3311,19 @@
           "linda.robertson@enron.com": 1,
           "jeremy.blachman@enron.com": 1,
           "kristin.walsh@enron.com": 1,
-          "john.lavorato@enron.com": 1,
+          "steve.swain@enron.com": 1,
           "david.delainey@enron.com": 1,
           "alan.comnes@enron.com": 1,
-          "steve.swain@enron.com": 1,
+          "john.lavorato@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "lisa.mellencamp@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
+          "jeff.richter@enron.com": 1,
           "harry.kingerski@enron.com": 1,
           "tim.belden@enron.com": 1,
           "karen.denne@enron.com": 1,
           "louise.kitchen@enron.com": 1,
           "janet.dietrich@enron.com": 1
-        },
-        "num_recipent": 29,
-        "date": "9/11/2001",
-        "total": 2,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "0",
@@ -3353,14 +3353,14 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "eldon@direcpc.com": 1,
-          "richard.shapiro@enron.com": 1
-        },
+        "day": "Su",
         "num_recipent": 2,
         "date": "9/9/2001",
         "total": 2,
-        "day": "Su"
+        "sent_detail": {
+          "eldon@direcpc.com": 1,
+          "richard.shapiro@enron.com": 1
+        }
       },
       {
         "day_num": "6",
@@ -3390,29 +3390,29 @@
           "19": 0,
           "18": 0
         },
+        "day": "Sa",
+        "num_recipent": 17,
+        "date": "9/15/2001",
+        "total": 1,
         "sent_detail": {
           "susan.mara@enron.com": 1,
-          "richard.shapiro@enron.com": 1,
+          "john.lavorato@enron.com": 1,
           "david.delainey@enron.com": 1,
           "f..calger@enron.com": 1,
           "tim.belden@enron.com": 1,
-          "john.lavorato@enron.com": 1,
+          "richard.shapiro@enron.com": 1,
           "paul.kaufman@enron.com": 1,
           "lisa.mellencamp@enron.com": 1,
           "j..kean@enron.com": 1,
           "vicki.sharp@enron.com": 1,
-          "louise.kitchen@enron.com": 1,
-          "greg.whalley@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
           "jeremy.blachman@enron.com": 1,
+          "louise.kitchen@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
+          "greg.whalley@enron.com": 1,
           "linda.robertson@enron.com": 1,
           "d..steffes@enron.com": 1,
           "janet.dietrich@enron.com": 1
-        },
-        "num_recipent": 17,
-        "date": "9/15/2001",
-        "total": 1,
-        "day": "Sa"
+        }
       },
       {
         "day_num": "1",
@@ -3442,6 +3442,10 @@
           "19": 0,
           "18": 3
         },
+        "day": "Mo",
+        "num_recipent": 32,
+        "date": "9/10/2001",
+        "total": 14,
         "sent_detail": {
           "susan.mara@enron.com": 3,
           "9069761@skytel.com": 1,
@@ -3453,20 +3457,20 @@
           "kingerski'.'harry@enron.com": 1,
           "d..steffes@enron.com": 5,
           "josepht@hallequitiesgroup.com": 1,
-          "dasovich.jeff@enron.com": 1,
           "paul.kaufman@enron.com": 3,
           "richard.shapiro@enron.com": 4,
           "hgovenar@govadv.com": 1,
           "j..noske@enron.com": 1,
           "j..kean@enron.com": 1,
           "psellers@haas.berkeley.edu": 1,
-          "leslie.lawner@enron.com": 1,
+          "nancy.sellers@robertmondavi.com": 1,
           "jeff_dasovich@enron.com": 1,
+          "dasovich.jeff@enron.com": 1,
           "7409949@skytel.com": 1,
-          "lisa.mellencamp@enron.com": 1,
           "sf'.'jeff@enron.com": 1,
           "michael.tribolet@enron.com": 1,
-          "nancy.sellers@robertmondavi.com": 1,
+          "lisa.mellencamp@enron.com": 1,
+          "leslie.lawner@enron.com": 1,
           "psellers@pacbell.net": 2,
           "harry.kingerski@enron.com": 2,
           "'mday'@enron.com": 1,
@@ -3475,11 +3479,7 @@
           "jbennett@gmssr.com": 1,
           "sf'.'sue@enron.com": 1,
           "day.mike@enron.com": 1
-        },
-        "num_recipent": 32,
-        "date": "9/10/2001",
-        "total": 14,
-        "day": "Mo"
+        }
       },
       {
         "day_num": "4",
@@ -3509,12 +3509,16 @@
           "19": 0,
           "18": 0
         },
+        "day": "Th",
+        "num_recipent": 37,
+        "date": "9/13/2001",
+        "total": 8,
         "sent_detail": {
           "susan.mara@enron.com": 2,
           "9069761@skytel.com": 1,
           "f..calger@enron.com": 1,
           "don.black@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
+          "jeff.richter@enron.com": 1,
           "lamar.frazier@enron.com": 1,
           "cameron@perfect.com": 1,
           "hap.boyd@enron.com": 1,
@@ -3532,13 +3536,13 @@
           "jeremy.blachman@enron.com": 2,
           "scottwl@hotmail.com": 1,
           "kristin.walsh@enron.com": 1,
-          "steve.swain@enron.com": 1,
+          "john.lavorato@enron.com": 1,
           "david.delainey@enron.com": 1,
           "alan.comnes@enron.com": 1,
-          "john.lavorato@enron.com": 1,
+          "steve.swain@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "d..steffes@enron.com": 1,
-          "jeff.richter@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
           "lisa.mellencamp@enron.com": 1,
           "psellers@pacbell.net": 1,
           "harry.kingerski@enron.com": 2,
@@ -3547,11 +3551,7 @@
           "louise.kitchen@enron.com": 1,
           "michael.etringer@enron.com": 1,
           "janet.dietrich@enron.com": 1
-        },
-        "num_recipent": 37,
-        "date": "9/13/2001",
-        "total": 8,
-        "day": "Th"
+        }
       },
       {
         "day_num": "5",
@@ -3581,24 +3581,27 @@
           "19": 2,
           "18": 1
         },
+        "day": "Fr",
+        "num_recipent": 37,
+        "date": "9/14/2001",
+        "total": 11,
         "sent_detail": {
           "grosston@stanford.edu": 1,
           "susan.mara@enron.com": 6,
           "dafb@stanford.edu": 1,
           "f..calger@enron.com": 2,
           "don.black@enron.com": 2,
-          "jeff.richter@enron.com": 2,
+          "michael.tribolet@enron.com": 2,
           "lamar.frazier@enron.com": 2,
           "'vavrek@enron.com": 1,
           "wanda.curry@enron.com": 2,
-          "d..steffes@enron.com": 4,
+          "dan.leff@enron.com": 2,
           "kelly.higgason@enron.com": 1,
           "paul.kaufman@enron.com": 5,
           "richard.shapiro@enron.com": 4,
           "scott.gahn@enron.com": 2,
           "kevin.keeney@enron.com": 2,
-          "steve.swain@enron.com": 2,
-          "dan.leff@enron.com": 2,
+          "d..steffes@enron.com": 4,
           "j..kean@enron.com": 3,
           "vicki.sharp@enron.com": 2,
           "ttt@cpuc.ca.gov": 1,
@@ -3608,22 +3611,19 @@
           "b..sanders@enron.com": 1,
           "david.delainey@enron.com": 2,
           "alan.comnes@enron.com": 3,
-          "john.lavorato@enron.com": 2,
+          "steve.swain@enron.com": 2,
           "pr<.palmer@enron.com>": 3,
+          "john.lavorato@enron.com": 2,
           "lisa.mellencamp@enron.com": 2,
           "cvavrek@deloitte.com": 1,
-          "michael.tribolet@enron.com": 2,
+          "jeff.richter@enron.com": 2,
           "harry.kingerski@enron.com": 4,
           "tim.belden@enron.com": 4,
           "karen.denne@enron.com": 4,
           "louise.kitchen@enron.com": 2,
           "janet.dietrich@enron.com": 2,
           "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 37,
-        "date": "9/14/2001",
-        "total": 11,
-        "day": "Fr"
+        }
       },
       {
         "day_num": "3",
@@ -3653,13 +3653,17 @@
           "19": 4,
           "18": 0
         },
+        "day": "We",
+        "num_recipent": 40,
+        "date": "9/12/2001",
+        "total": 18,
         "sent_detail": {
           "e-mail<.scott@enron.com>": 1,
           "susan.mara@enron.com": 6,
           "sgovenar@govadv.com": 1,
           "f..calger@enron.com": 1,
           "don.black@enron.com": 1,
-          "michael.tribolet@enron.com": 4,
+          "jeff.richter@enron.com": 1,
           "rory@carmelnet.com": 2,
           "lamar.frazier@enron.com": 1,
           "hap.boyd@enron.com": 2,
@@ -3677,14 +3681,14 @@
           "jeremy.blachman@enron.com": 2,
           "mlk@pkns.com": 1,
           "kristin.walsh@enron.com": 1,
-          "b..sanders@enron.com": 1,
+          "steve.swain@enron.com": 1,
           "david.delainey@enron.com": 1,
           "alan.comnes@enron.com": 2,
-          "steve.swain@enron.com": 1,
+          "b..sanders@enron.com": 1,
           "pr<.palmer@enron.com>": 2,
           "john.lavorato@enron.com": 1,
           "lisa.mellencamp@enron.com": 1,
-          "jeff.richter@enron.com": 1,
+          "michael.tribolet@enron.com": 4,
           "nancy.sellers@robertmondavi.com": 1,
           "tom.riley@enron.com": 1,
           "psellers@pacbell.net": 1,
@@ -3694,11 +3698,7 @@
           "karen.denne@enron.com": 3,
           "louise.kitchen@enron.com": 1,
           "janet.dietrich@enron.com": 1
-        },
-        "num_recipent": 40,
-        "date": "9/12/2001",
-        "total": 18,
-        "day": "We"
+        }
       }
     ],
     "year": 2001,
@@ -3868,7 +3868,7 @@
       },
       {
         "num": 2,
-        "name": "evan.hughes@enron.com"
+        "name": "marsha.suggs@enron.com"
       },
       {
         "num": 7,
@@ -3911,8 +3911,8 @@
         "name": "f..calger@enron.com"
       },
       {
-        "num": 3,
-        "name": "janel.guerrero@enron.com"
+        "num": 2,
+        "name": "mark.reese@enron.com"
       },
       {
         "num": 1,
@@ -3987,8 +3987,8 @@
         "name": "p..o'neil@enron.com"
       },
       {
-        "num": 2,
-        "name": "mark.reese@enron.com"
+        "num": 3,
+        "name": "janel.guerrero@enron.com"
       },
       {
         "num": 8,
@@ -4163,10 +4163,6 @@
         "name": "robert.badeer@enron.com"
       },
       {
-        "num": 2,
-        "name": "christina.liscano@enron.com"
-      },
-      {
         "num": 1,
         "name": "mdjoseph@adamsbroadwell.com"
       },
@@ -4185,6 +4181,10 @@
       {
         "num": 2,
         "name": "aida.o'neal@enron.com"
+      },
+      {
+        "num": 2,
+        "name": "sean.dookie@enron.com"
       },
       {
         "num": 1,
@@ -4224,7 +4224,7 @@
       },
       {
         "num": 2,
-        "name": "marsha.suggs@enron.com"
+        "name": "evan.hughes@enron.com"
       },
       {
         "num": 1,
@@ -4292,7 +4292,7 @@
       },
       {
         "num": 2,
-        "name": "sean.dookie@enron.com"
+        "name": "christina.liscano@enron.com"
       },
       {
         "num": 2,
@@ -4518,10 +4518,15 @@
           "19": 0,
           "18": 3
         },
+        "day": "Fr",
+        "num_recipent": 31,
+        "date": "9/21/2001",
+        "total": 23,
         "sent_detail": {
           "susan.mara@enron.com": 8,
           "f..calger@enron.com": 2,
-          "bkc7@pge.com": 2,
+          "karen.denne@enron.com": 1,
+          "cameron@perfect.com": 4,
           "mday@gmssr.com": 1,
           "d..steffes@enron.com": 6,
           "paul.kaufman@enron.com": 7,
@@ -4536,7 +4541,6 @@
           "ken@kdscommunications.com": 1,
           "michael.etringer@enron.com": 2,
           "alan.comnes@enron.com": 3,
-          "cameron@perfect.com": 4,
           "steve.swain@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "lisa.mellencamp@enron.com": 1,
@@ -4544,17 +4548,13 @@
           "leslie.lawner@enron.com": 2,
           "harry.kingerski@enron.com": 2,
           "tim.belden@enron.com": 3,
-          "karen.denne@enron.com": 1,
+          "bkc7@pge.com": 2,
           "david.parquet@enron.com": 2,
           "scottwl@hotmail.com": 1,
           "barry.tycholiz@enron.com": 2,
           "janet.dietrich@enron.com": 2,
           "tom.briggs@enron.com": 1
-        },
-        "num_recipent": 31,
-        "date": "9/21/2001",
-        "total": 23,
-        "day": "Fr"
+        }
       },
       {
         "day_num": "4",
@@ -4584,38 +4584,42 @@
           "19": 10,
           "18": 5
         },
+        "day": "Th",
+        "num_recipent": 47,
+        "date": "9/20/2001",
+        "total": 37,
         "sent_detail": {
           "e-mail<.scott@enron.com>": 2,
           "susan.mara@enron.com": 11,
           "f..calger@enron.com": 6,
           "don.black@enron.com": 5,
-          "michael.tribolet@enron.com": 6,
+          "jeff.richter@enron.com": 5,
           "lamar.frazier@enron.com": 5,
-          "kevin.keeney@enron.com": 5,
+          "hgovenar@govadv.com": 1,
           "wanda.curry@enron.com": 5,
-          "d..steffes@enron.com": 9,
+          "dan.leff@enron.com": 5,
           "kelly.higgason@enron.com": 5,
           "paul.kaufman@enron.com": 8,
           "richard.shapiro@enron.com": 10,
           "scott.gahn@enron.com": 5,
-          "hgovenar@govadv.com": 1,
-          "dan.leff@enron.com": 5,
+          "kevin.keeney@enron.com": 5,
+          "d..steffes@enron.com": 9,
           "j..kean@enron.com": 6,
           "vicki.sharp@enron.com": 5,
           "linda.robertson@enron.com": 5,
           "jeremy.blachman@enron.com": 5,
           "'lipper@enron.com": 2,
           "kristin.walsh@enron.com": 5,
-          "john.lavorato@enron.com": 5,
+          "steve.swain@enron.com": 5,
           "david.delainey@enron.com": 5,
           "alan.comnes@enron.com": 7,
           "douglass@energyattorney.com": 2,
           "colleen.sullivan@enron.com": 2,
-          "steve.swain@enron.com": 5,
+          "john.lavorato@enron.com": 5,
           "7409949@skytel.com": 1,
           "pr<.palmer@enron.com>": 5,
           "kip.lipper@sen.ca.gov": 2,
-          "jeff.richter@enron.com": 5,
+          "michael.tribolet@enron.com": 6,
           "lisa.mellencamp@enron.com": 6,
           "9167185@skytel.com": 2,
           "leslie.lawner@enron.com": 5,
@@ -4632,11 +4636,7 @@
           "jennifer.thome@enron.com": 3,
           "janet.dietrich@enron.com": 5,
           "joseph.alamo@enron.com": 5
-        },
-        "num_recipent": 47,
-        "date": "9/20/2001",
-        "total": 37,
-        "day": "Th"
+        }
       },
       {
         "day_num": "2",
@@ -4667,6 +4667,10 @@
           "19": 4,
           "18": 0
         },
+        "day": "Tu",
+        "num_recipent": 22,
+        "date": "9/18/2001",
+        "total": 30,
         "sent_detail": {
           "madeleine@madeleinetodd.com": 1,
           "9069761@skytel.com": 1,
@@ -4674,12 +4678,12 @@
           "9069876@skytel.com": 3,
           "cameron@perfect.com": 4,
           "d..steffes@enron.com": 2,
-          "jonalan.page@enron.com": 2,
+          "lanebob1@yahoo.com": 1,
           "tsrdock@mcn.org": 1,
           "richard.shapiro@enron.com": 6,
           "j..kean@enron.com": 2,
           "jdasovic@enron.com": 1,
-          "lanebob1@yahoo.com": 1,
+          "jonalan.page@enron.com": 2,
           "scottwl@hotmail.com": 1,
           "catherine.mckalip-thompson@enron.com": 1,
           "7409949@skytel.com": 1,
@@ -4690,11 +4694,7 @@
           "glen.hass@enron.com": 3,
           "barry.tycholiz@enron.com": 4,
           "jennifer.thome@enron.com": 1
-        },
-        "num_recipent": 22,
-        "date": "9/18/2001",
-        "total": 30,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "1",
@@ -4724,6 +4724,10 @@
           "19": 1,
           "18": 3
         },
+        "day": "Mo",
+        "num_recipent": 136,
+        "date": "9/17/2001",
+        "total": 21,
         "sent_detail": {
           "madeleine@madeleinetodd.com": 1,
           "susan.mara@enron.com": 7,
@@ -4756,15 +4760,15 @@
           "nancy.sellers@robertmondavi.com": 2,
           "psellers@pacbell.net": 4,
           "harry.kingerski@enron.com": 3,
-          "marsha.suggs@enron.com": 2,
+          "evan.hughes@enron.com": 2,
           "louise.kitchen@enron.com": 2,
-          "michael.etringer@enron.com": 4,
+          "tony.spruiell@enron.com": 1,
           "jeff.messina@enron.com": 2,
           "wendy.conwell@enron.com": 1,
           "d..cisneros@enron.com": 2,
           "janet.dietrich@enron.com": 3,
           "f..calger@enron.com": 4,
-          "mark.reese@enron.com": 2,
+          "janel.guerrero@enron.com": 3,
           "cameron@perfect.com": 3,
           "mday@gmssr.com": 1,
           "kelly.higgason@enron.com": 2,
@@ -4774,9 +4778,10 @@
           "douglas.huth@enron.com": 2,
           "michael.mann@enron.com": 2,
           "linda.robertson@enron.com": 3,
+          "9069876@skytel.com": 1,
           "p..o'neil@enron.com": 1,
-          "janel.guerrero@enron.com": 3,
-          "john.lavorato@enron.com": 3,
+          "mark.reese@enron.com": 2,
+          "steve.swain@enron.com": 2,
           "venkatesh.mani@enron.com": 1,
           "jubran.whalan@enron.com": 2,
           "7409949@skytel.com": 1,
@@ -4792,7 +4797,7 @@
           "9069761@skytel.com": 1,
           "leasa.lopez@enron.com": 2,
           "juan.samudio@enron.com": 2,
-          "jeff.richter@enron.com": 2,
+          "michael.tribolet@enron.com": 1,
           "chris.stokley@enron.com": 1,
           "d..steffes@enron.com": 6,
           "robert.neustaedter@enron.com": 2,
@@ -4800,22 +4805,21 @@
           "jeff_walker@i2.com": 1,
           "scott.gahn@enron.com": 3,
           "vicki.sharp@enron.com": 2,
-          "9069876@skytel.com": 1,
+          "j..kean@enron.com": 4,
           "dennis.benevides@enron.com": 2,
           "tanya.leslie@enron.com": 2,
           "kristin.walsh@enron.com": 1,
           "robert.badeer@enron.com": 2,
+          "christina.liscano@enron.com": 2,
           "jeff_dasovich@enron.com": 1,
-          "j..kean@enron.com": 4,
           "aida.o'neal@enron.com": 2,
-          "sean.dookie@enron.com": 2,
           "minal.dalia@enron.com": 1,
           "kortney.brown@enron.com": 1,
           "debora.whitehead@enron.com": 2,
           "lisa.mellencamp@enron.com": 1,
           "p..hewitt@enron.com": 2,
           "padysplace@aol.com": 1,
-          "evan.hughes@enron.com": 2,
+          "marsha.suggs@enron.com": 2,
           "tony.riley@enron.com": 2,
           "richard.leibert@enron.com": 2,
           "cwfinch@pacbell.net": 1,
@@ -4825,7 +4829,7 @@
           "david.parquet@enron.com": 3,
           "fran.deltoro@enron.com": 2,
           "george.waidelich@enron.com": 2,
-          "christina.liscano@enron.com": 2,
+          "sean.dookie@enron.com": 2,
           "vladimir.gorny@enron.com": 2,
           "richard.zdunkewicz@enron.com": 2,
           "f..herod@enron.com": 1,
@@ -4840,13 +4844,13 @@
           "wanda.curry@enron.com": 2,
           "jeremy.blachman@enron.com": 3,
           "psellers@haas.berkeley.edu": 1,
-          "tony.spruiell@enron.com": 1,
+          "michael.etringer@enron.com": 4,
           "b..sanders@enron.com": 1,
           "christian.yoder@enron.com": 1,
           "ken.gustafson@enron.com": 2,
-          "steve.swain@enron.com": 2,
+          "john.lavorato@enron.com": 3,
           "pr<.palmer@enron.com>": 1,
-          "michael.tribolet@enron.com": 1,
+          "jeff.richter@enron.com": 2,
           "susan.rance@enron.com": 1,
           "michele.sorensen@enron.com": 2,
           "s..bradford@enron.com": 1,
@@ -4861,11 +4865,7 @@
           "c..williams@enron.com": 1,
           "k..allen@enron.com": 1,
           "h..foster@enron.com": 2
-        },
-        "num_recipent": 136,
-        "date": "9/17/2001",
-        "total": 21,
-        "day": "Mo"
+        }
       },
       {
         "day_num": "6",
@@ -4896,6 +4896,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Sa",
+        "num_recipent": 37,
+        "date": "9/22/2001",
+        "total": 9,
         "sent_detail": {
           "lga@mother.com": 1,
           "cra@calretailers.com": 1,
@@ -4909,13 +4913,13 @@
           "cohnap@sce.com": 1,
           "derek.naten@roche.com": 1,
           "kmccrea@sablaw.com": 1,
-          "kip.lipper@ca.sen.gov": 1,
+          "jstewart@cmta.net": 1,
           "jdasovic@enron.com": 1,
           "brbarkovich@earthlink.net": 1,
           "michael.etringer@enron.com": 1,
           "john.redding@gene.ge.com": 1,
           "mdjoseph@adamsbroadwell.com": 1,
-          "jstewart@cmta.net": 1,
+          "kip.lipper@ca.sen.gov": 1,
           "liebmand@haynesboone.com": 1,
           "isenberg@hmot.com": 1,
           "robert.albergotti@asm.ca.gov": 1,
@@ -4934,11 +4938,7 @@
           "scottwl@hotmail.com": 1,
           "fieldejr@sce.com": 1,
           "mflorio@turn.org": 1
-        },
-        "num_recipent": 37,
-        "date": "9/22/2001",
-        "total": 9,
-        "day": "Sa"
+        }
       },
       {
         "day_num": "3",
@@ -4969,6 +4969,10 @@
           "19": 3,
           "18": 6
         },
+        "day": "We",
+        "num_recipent": 28,
+        "date": "9/19/2001",
+        "total": 31,
         "sent_detail": {
           "susan.mara@enron.com": 1,
           "9069876@skytel.com": 1,
@@ -4976,11 +4980,11 @@
           "ross.mesquita@enron.com": 1,
           "bhansen@lhom.com": 1,
           "cameron@perfect.com": 1,
-          "d..steffes@enron.com": 4,
+          "vjw@cleanpower.org": 2,
           "lanebob1@yahoo.com": 1,
           "tsrdock@mcn.org": 1,
           "richard.shapiro@enron.com": 3,
-          "vjw@cleanpower.org": 2,
+          "d..steffes@enron.com": 4,
           "eldon@direcpc.com": 1,
           "j..kean@enron.com": 2,
           "ttt@cpuc.ca.gov": 1,
@@ -4998,11 +5002,7 @@
           "ginger.dernehl@enron.com": 1,
           "karen.denne@enron.com": 3,
           "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 28,
-        "date": "9/19/2001",
-        "total": 31,
-        "day": "We"
+        }
       }
     ],
     "year": 2001,
@@ -5071,8 +5071,8 @@
         "name": "eldon@direcpc.com"
       },
       {
-        "num": 2,
-        "name": "sharon.dick@enron.com"
+        "num": 4,
+        "name": "vicki.sharp@enron.com"
       },
       {
         "num": 1,
@@ -5084,7 +5084,7 @@
       },
       {
         "num": 2,
-        "name": "pat.shortridge@enron.com"
+        "name": "stephanie.miller@enron.com"
       },
       {
         "num": 2,
@@ -5259,16 +5259,16 @@
         "name": "isenberg@hmot.com"
       },
       {
-        "num": 3,
-        "name": "mkahl@ka-pow.com"
+        "num": 9,
+        "name": "lisa.mellencamp@enron.com"
       },
       {
         "num": 1,
         "name": "maureen.mcvicker@enron.com"
       },
       {
-        "num": 4,
-        "name": "ek@a-klaw.com"
+        "num": 3,
+        "name": "mkahl@ka-pow.com"
       },
       {
         "num": 1,
@@ -5339,6 +5339,10 @@
         "name": "'.''derek@enron.com"
       },
       {
+        "num": 4,
+        "name": "ek@a-klaw.com"
+      },
+      {
         "num": 1,
         "name": "bcherry@sempra.com"
       },
@@ -5363,8 +5367,8 @@
         "name": "scott.gahn@enron.com"
       },
       {
-        "num": 4,
-        "name": "vicki.sharp@enron.com"
+        "num": 2,
+        "name": "sharon.dick@enron.com"
       },
       {
         "num": 15,
@@ -5416,7 +5420,7 @@
       },
       {
         "num": 2,
-        "name": "stephanie.miller@enron.com"
+        "name": "pat.shortridge@enron.com"
       },
       {
         "num": 2,
@@ -5459,8 +5463,8 @@
         "name": "'.''art@enron.com"
       },
       {
-        "num": 16,
-        "name": "karen.denne@enron.com"
+        "num": 3,
+        "name": "'dimare@enron.com"
       },
       {
         "num": 1,
@@ -5485,10 +5489,6 @@
       {
         "num": 1,
         "name": "eve@a-klaw.com"
-      },
-      {
-        "num": 9,
-        "name": "lisa.mellencamp@enron.com"
       },
       {
         "num": 2,
@@ -5567,8 +5567,8 @@
         "name": "michelle.maynard@enron.com"
       },
       {
-        "num": 3,
-        "name": "'dimare@enron.com"
+        "num": 16,
+        "name": "karen.denne@enron.com"
       },
       {
         "num": 1,
@@ -5622,6 +5622,10 @@
           "19": 5,
           "18": 2
         },
+        "day": "Th",
+        "num_recipent": 63,
+        "date": "9/27/2001",
+        "total": 41,
         "sent_detail": {
           "susan.mara@enron.com": 12,
           "kmccrea@sablaw.com": 1,
@@ -5630,31 +5634,28 @@
           "don.black@enron.com": 2,
           "'thompson@enron.com": 4,
           "lamar.frazier@enron.com": 2,
-          "karen.denne@enron.com": 2,
-          "stephanie.miller@enron.com": 2,
+          "'dimare@enron.com": 1,
           "cameron@perfect.com": 3,
           "dhunter@s-k-w.com": 2,
           "mday@gmssr.com": 3,
           "d..steffes@enron.com": 4,
           "kelly.higgason@enron.com": 3,
           "paul.kaufman@enron.com": 2,
-          "ek@a-klaw.com": 1,
-          "'dimare@enron.com": 1,
           "derek.naten@roche.com": 1,
           "tsrdock@mcn.org": 1,
           "richard.shapiro@enron.com": 3,
           "scott.gahn@enron.com": 2,
           "kevin.keeney@enron.com": 2,
-          "steve.swain@enron.com": 2,
           "dan.leff@enron.com": 2,
           "j..kean@enron.com": 3,
           "vicki.sharp@enron.com": 3,
           "ttt@cpuc.ca.gov": 4,
+          "jeff.dasovich@enron.com": 2,
           "wanda.curry@enron.com": 5,
           "m..tholt@enron.com": 1,
           "jeremy.blachman@enron.com": 2,
           "brbarkovich@earthlink.net": 1,
-          "smith'.'ken@enron.com": 1,
+          "stephanie.miller@enron.com": 2,
           "robert.hemstock@enron.com": 2,
           "ken@kdscommunications.com": 1,
           "scottwl@hotmail.com": 1,
@@ -5664,33 +5665,32 @@
           "david.delainey@enron.com": 2,
           "alan.comnes@enron.com": 2,
           "jstewart@cmta.net": 1,
-          "john.lavorato@enron.com": 2,
+          "steve.swain@enron.com": 2,
           "pr<.palmer@enron.com>": 2,
+          "john.lavorato@enron.com": 2,
           "mkahl@ka-pow.com": 2,
+          "wbooth@booth-law.com": 1,
           "kip.lipper@sen.ca.gov": 1,
           "mike.smith@enron.com": 3,
           "michael.tribolet@enron.com": 6,
+          "ek@a-klaw.com": 1,
           "lisa.mellencamp@enron.com": 4,
-          "jeff.dasovich@enron.com": 2,
           "leslie.lawner@enron.com": 1,
-          "wbooth@booth-law.com": 1,
+          "smith'.'ken@enron.com": 1,
           "vjw@cleanpower.org": 2,
           "harry.kingerski@enron.com": 2,
           "jeff.richter@enron.com": 2,
+          "dominic.dimare@calchamber.com": 2,
           "drothrock@camfg.com": 1,
           "tim.belden@enron.com": 2,
           "michelle.maynard@enron.com": 1,
-          "dominic.dimare@calchamber.com": 2,
+          "karen.denne@enron.com": 2,
           "'redding@enron.com": 1,
           "louise.kitchen@enron.com": 2,
           "greg.whalley@enron.com": 2,
           "linda.robertson@enron.com": 2,
           "janet.dietrich@enron.com": 2
-        },
-        "num_recipent": 63,
-        "date": "9/27/2001",
-        "total": 41,
-        "day": "Th"
+        }
       },
       {
         "day_num": "0",
@@ -5720,14 +5720,14 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "jeremy.blachman@enron.com": 1,
-          "sharon.dick@enron.com": 1
-        },
+        "day": "Su",
         "num_recipent": 2,
         "date": "9/23/2001",
         "total": 1,
-        "day": "Su"
+        "sent_detail": {
+          "jeremy.blachman@enron.com": 1,
+          "sharon.dick@enron.com": 1
+        }
       },
       {
         "day_num": "1",
@@ -5757,34 +5757,39 @@
           "19": 9,
           "18": 3
         },
+        "day": "Mo",
+        "num_recipent": 79,
+        "date": "9/24/2001",
+        "total": 34,
         "sent_detail": {
           "e-mail<.scott@enron.com>": 1,
           "susan.mara@enron.com": 10,
-          "richard.shapiro@enron.com": 10,
-          "sgovenar@govadv.com": 1,
+          "kmccrea@sablaw.com": 1,
+          "cra@calretailers.com": 1,
+          "tom.briggs@enron.com": 1,
           "f..calger@enron.com": 1,
-          "scott.gahn@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
-          "janel.guerrero@enron.com": 2,
+          "don.black@enron.com": 1,
+          "jeff.richter@enron.com": 1,
+          "john.redding@gene.ge.com": 1,
           "lamar.frazier@enron.com": 1,
-          "karen.denne@enron.com": 4,
+          "dominic.dimare@calchamber.com": 1,
           "kt@a-klaw.com": 1,
           "mflorio@turn.org": 1,
           "ray.alvarez@enron.com": 1,
-          "david.delainey@enron.com": 1,
+          "mdjoseph@adamsbroadwell.com": 1,
           "wanda.curry@enron.com": 1,
           "vjw@cleanpower.org": 1,
           "kelly.higgason@enron.com": 1,
           "debinorton@aol.com": 1,
           "paul.kaufman@enron.com": 11,
           "cohnap@sce.com": 1,
-          "cra@calretailers.com": 1,
+          "sgovenar@govadv.com": 1,
           "derek.naten@roche.com": 1,
           "ginger.dernehl@enron.com": 1,
           "l..petrochko@enron.com": 1,
           "m..landwehr@enron.com": 1,
-          "kmccrea@sablaw.com": 1,
-          "don.black@enron.com": 1,
+          "richard.shapiro@enron.com": 10,
+          "scott.gahn@enron.com": 1,
           "kevin.keeney@enron.com": 1,
           "d..steffes@enron.com": 6,
           "eldon@direcpc.com": 1,
@@ -5795,15 +5800,14 @@
           "brbarkovich@earthlink.net": 1,
           "pat.shortridge@enron.com": 1,
           "kristin.walsh@enron.com": 1,
-          "john.redding@gene.ge.com": 1,
-          "steve.swain@enron.com": 1,
-          "mdjoseph@adamsbroadwell.com": 1,
+          "janel.guerrero@enron.com": 2,
+          "john.lavorato@enron.com": 1,
+          "david.delainey@enron.com": 1,
           "alan.comnes@enron.com": 1,
           "l..nicolay@enron.com": 1,
-          "dhunter@s-k-w.com": 1,
           "jstewart@cmta.net": 1,
           "liebmand@haynesboone.com": 1,
-          "john.lavorato@enron.com": 1,
+          "steve.swain@enron.com": 1,
           "w..cantrell@enron.com": 1,
           "pr<.palmer@enron.com>": 3,
           "robert.albergotti@asm.ca.gov": 1,
@@ -5813,7 +5817,7 @@
           "sharon.dick@enron.com": 1,
           "aleck.dadson@enron.com": 1,
           "kip.lipper@sen.ca.gov": 1,
-          "jeff.richter@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
           "lys@a-klaw.com": 1,
           "lisa.mellencamp@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 1,
@@ -5824,7 +5828,7 @@
           "smutny@iepa.com": 1,
           "dan.leff@enron.com": 1,
           "tim.belden@enron.com": 2,
-          "dominic.dimare@calchamber.com": 1,
+          "karen.denne@enron.com": 4,
           "sarah.novosel@enron.com": 1,
           "drothrock@camfg.com": 1,
           "louise.kitchen@enron.com": 1,
@@ -5836,12 +5840,8 @@
           "jennifer.thome@enron.com": 3,
           "janet.dietrich@enron.com": 2,
           "joseph.alamo@enron.com": 4,
-          "tom.briggs@enron.com": 1
-        },
-        "num_recipent": 79,
-        "date": "9/24/2001",
-        "total": 34,
-        "day": "Mo"
+          "dhunter@s-k-w.com": 1
+        }
       },
       {
         "day_num": "6",
@@ -5871,23 +5871,23 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "susan.mara@enron.com": 1,
-          "b..sanders@enron.com": 1,
-          "tsrdock@mcn.org": 1,
-          "richard.shapiro@enron.com": 1,
-          "paul.kaufman@enron.com": 1,
-          "pr<.palmer@enron.com>": 1,
-          "j..kean@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
-          "lisa.mellencamp@enron.com": 1,
-          "d..steffes@enron.com": 1,
-          "karen.denne@enron.com": 1
-        },
+        "day": "Sa",
         "num_recipent": 11,
         "date": "9/29/2001",
         "total": 2,
-        "day": "Sa"
+        "sent_detail": {
+          "susan.mara@enron.com": 1,
+          "b..sanders@enron.com": 1,
+          "paul.kaufman@enron.com": 1,
+          "richard.shapiro@enron.com": 1,
+          "pr<.palmer@enron.com>": 1,
+          "lisa.mellencamp@enron.com": 1,
+          "j..kean@enron.com": 1,
+          "tsrdock@mcn.org": 1,
+          "michael.tribolet@enron.com": 1,
+          "d..steffes@enron.com": 1,
+          "karen.denne@enron.com": 1
+        }
       },
       {
         "day_num": "3",
@@ -5917,11 +5917,15 @@
           "19": 5,
           "18": 3
         },
+        "day": "We",
+        "num_recipent": 46,
+        "date": "9/26/2001",
+        "total": 33,
         "sent_detail": {
           "susan.mara@enron.com": 11,
-          "cra@calretailers.com": 1,
+          "sgovenar@govadv.com": 2,
           "eve@a-klaws.com": 1,
-          "dominic.dimare@calchamber.com": 2,
+          "karen.denne@enron.com": 5,
           "bhansen@lhom.com": 2,
           "cameron@perfect.com": 3,
           "dhunter@s-k-w.com": 1,
@@ -5930,7 +5934,7 @@
           "d..steffes@enron.com": 6,
           "eve@a-klaw.com": 1,
           "paul.kaufman@enron.com": 6,
-          "sgovenar@govadv.com": 2,
+          "cra@calretailers.com": 1,
           "tsrdock@mcn.org": 1,
           "m..landwehr@enron.com": 1,
           "richard.shapiro@enron.com": 8,
@@ -5941,34 +5945,30 @@
           "jdasovic@enron.com": 2,
           "elliot.mainzer@enron.com": 1,
           "psellers@haas.berkeley.edu": 1,
-          "nancy.sellers@robertmondavi.com": 1,
+          "leslie.lawner@enron.com": 1,
           "scottwl@hotmail.com": 1,
-          "jeff_dasovich@enron.com": 1,
-          "alan.comnes@enron.com": 1,
           "b..sanders@enron.com": 1,
+          "'dimare@enron.com": 2,
+          "alan.comnes@enron.com": 1,
+          "jeff_dasovich@enron.com": 1,
           "pr<.palmer@enron.com>": 4,
           "7409949@skytel.com": 1,
           "michael.tribolet@enron.com": 2,
-          "psellers@pacbell.net": 1,
+          "shapiro.rick@enron.com": 1,
           "lisa.mellencamp@enron.com": 1,
           "rochmanm@spurr.org": 1,
-          "karen.denne@enron.com": 5,
-          "leslie.lawner@enron.com": 1,
+          "nancy.sellers@robertmondavi.com": 1,
           "pat.shortridge@enron.com": 1,
-          "shapiro.rick@enron.com": 1,
+          "psellers@pacbell.net": 1,
           "harry.kingerski@enron.com": 2,
           "smara@enron.com": 2,
           "tim.belden@enron.com": 1,
           "brad.richter@enron.com": 1,
-          "'dimare@enron.com": 2,
+          "dominic.dimare@calchamber.com": 2,
           "mara.susan@enron.com": 1,
           "greg.piper@enron.com": 1,
           "drothrock@cmta.net": 1
-        },
-        "num_recipent": 46,
-        "date": "9/26/2001",
-        "total": 33,
-        "day": "We"
+        }
       },
       {
         "day_num": "2",
@@ -5998,20 +5998,22 @@
           "19": 1,
           "18": 3
         },
+        "day": "Tu",
+        "num_recipent": 50,
+        "date": "9/25/2001",
+        "total": 24,
         "sent_detail": {
-          "'.''derek@enron.com": 1,
           "susan.mara@enron.com": 4,
           "mflorio@mail.turn.org": 1,
           "'.''mike@enron.com": 1,
           "andrew.wu@enron.com": 1,
           "angela.wilson@enron.com": 1,
-          "john.redding@gene.ge.com": 1,
           "mflorio@turn.org": 2,
           "ray.alvarez@enron.com": 1,
           "'.''diana@enron.com": 1,
           "mday@gmssr.com": 3,
           "kelly.higgason@enron.com": 1,
-          "paul.kaufman@enron.com": 2,
+          "'.''derek@enron.com": 1,
           "'.''john@enron.com": 3,
           "bcherry@sempra.com": 1,
           "'.''evelyn@enron.com": 1,
@@ -6022,38 +6024,36 @@
           "'redding@enron.com": 1,
           "eldon@direcpc.com": 3,
           "j..kean@enron.com": 1,
+          "'.''art@enron.com": 1,
           "'.''lenny@enron.com": 1,
+          "marchris.robinson@enron.com": 1,
           "'.'tom@enron.com": 1,
           "'.''barbara@enron.com": 1,
-          "'.''art@enron.com": 1,
+          "john.redding@gene.ge.com": 1,
           "'.''dominic@enron.com": 1,
           "alan.comnes@enron.com": 1,
-          "karen.denne@enron.com": 1,
+          "dhunter@s-k-w.com": 2,
+          "paul.kaufman@enron.com": 2,
           "pr<.palmer@enron.com>": 1,
-          "lisa.mellencamp@enron.com": 1,
-          "'.''linda@enron.com": 1,
           "'.''ann@enron.com": 1,
           "mike.smith@enron.com": 1,
           "michael.tribolet@enron.com": 1,
           "'.''keith@enron.com": 1,
-          "'.''jeff@enron.com": 1,
+          "lisa.mellencamp@enron.com": 1,
           "'.'mike@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 2,
+          "'.''jeff@enron.com": 1,
           "'.''marc@enron.com": 1,
           "'.'delaney@enron.com": 1,
           "'.''bill@enron.com": 2,
-          "marchris.robinson@enron.com": 1,
+          "karen.denne@enron.com": 1,
           "jeff.dasovich@enron.com": 1,
           "'.''dorothy@enron.com": 1,
           "'.'phil@enron.com": 1,
           "'.''jack@enron.com": 1,
           "joseph.alamo@enron.com": 1,
-          "dhunter@s-k-w.com": 2
-        },
-        "num_recipent": 50,
-        "date": "9/25/2001",
-        "total": 24,
-        "day": "Tu"
+          "'.''linda@enron.com": 1
+        }
       },
       {
         "day_num": "5",
@@ -6084,6 +6084,10 @@
           "19": 0,
           "18": 2
         },
+        "day": "Fr",
+        "num_recipent": 30,
+        "date": "9/28/2001",
+        "total": 24,
         "sent_detail": {
           "susan.mara@enron.com": 5,
           "sgovenar@govadv.com": 1,
@@ -6092,17 +6096,17 @@
           "bhansen@lhom.com": 1,
           "jeff.shields@enron.com": 1,
           "wanda.curry@enron.com": 1,
-          "vjw@cleanpower.org": 1,
+          "d..steffes@enron.com": 2,
           "kelly.higgason@enron.com": 1,
           "paul.kaufman@enron.com": 3,
           "rob.bradley@enron.com": 2,
           "m..landwehr@enron.com": 4,
           "richard.shapiro@enron.com": 3,
           "hgovenar@govadv.com": 1,
-          "d..steffes@enron.com": 2,
+          "vjw@cleanpower.org": 1,
           "j..kean@enron.com": 1,
-          "ttt@cpuc.ca.gov": 4,
           "linda.robertson@enron.com": 1,
+          "ttt@cpuc.ca.gov": 4,
           "janel.guerrero@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "lisa.mellencamp@enron.com": 1,
@@ -6110,16 +6114,12 @@
           "michael.tribolet@enron.com": 1,
           "ek@a-klaw.com": 2,
           "jeff.dasovich@enron.com": 3,
-          "jennifer.thome@enron.com": 1,
+          "sue.nord@enron.com": 1,
           "karen.denne@enron.com": 3,
           "maria.arefieva@enron.com": 1,
-          "sue.nord@enron.com": 1,
+          "jennifer.thome@enron.com": 1,
           "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 30,
-        "date": "9/28/2001",
-        "total": 24,
-        "day": "Fr"
+        }
       }
     ],
     "year": 2001,
@@ -6152,8 +6152,8 @@
         "name": "m..tholt@enron.com"
       },
       {
-        "num": 5,
-        "name": "jeff.richter@enron.com"
+        "num": 16,
+        "name": "michael.tribolet@enron.com"
       },
       {
         "num": 3,
@@ -6204,6 +6204,10 @@
         "name": "paul.kaufman@enron.com"
       },
       {
+        "num": 1,
+        "name": "c..williams@enron.com"
+      },
+      {
         "num": 3,
         "name": "ginger.dernehl@enron.com"
       },
@@ -6222,10 +6226,6 @@
       {
         "num": 3,
         "name": "kevin.keeney@enron.com"
-      },
-      {
-        "num": 5,
-        "name": "steve.swain@enron.com"
       },
       {
         "num": 3,
@@ -6308,6 +6308,10 @@
         "name": "b..sanders@enron.com"
       },
       {
+        "num": 5,
+        "name": "steve.swain@enron.com"
+      },
+      {
         "num": 1,
         "name": "jklauber@llgm.com"
       },
@@ -6336,8 +6340,8 @@
         "name": "jan.cooley@enron.com"
       },
       {
-        "num": 16,
-        "name": "michael.tribolet@enron.com"
+        "num": 5,
+        "name": "jeff.richter@enron.com"
       },
       {
         "num": 3,
@@ -6354,10 +6358,6 @@
       {
         "num": 1,
         "name": "jennifer.thome@enron.com"
-      },
-      {
-        "num": 1,
-        "name": "c..williams@enron.com"
       },
       {
         "num": 6,
@@ -6401,7 +6401,7 @@
       },
       {
         "num": 2,
-        "name": "drothrock@cmta.net"
+        "name": "joseph.alamo@enron.com"
       },
       {
         "num": 1,
@@ -6425,7 +6425,7 @@
       },
       {
         "num": 2,
-        "name": "joseph.alamo@enron.com"
+        "name": "drothrock@cmta.net"
       }
     ],
     "end_date": "10/06/01",
@@ -6459,13 +6459,13 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "jeff.dasovich@enron.com": 1
-        },
+        "day": "Sa",
         "num_recipent": 1,
         "date": "10/6/2001",
         "total": 1,
-        "day": "Sa"
+        "sent_detail": {
+          "jeff.dasovich@enron.com": 1
+        }
       },
       {
         "day_num": "2",
@@ -6496,67 +6496,67 @@
           "19": 7,
           "18": 3
         },
+        "day": "Tu",
+        "num_recipent": 55,
+        "date": "10/2/2001",
+        "total": 43,
         "sent_detail": {
           "susan.mara@enron.com": 11,
           "barry.goode@gov.ca.gov": 1,
           "9069761@skytel.com": 1,
           "f..calger@enron.com": 5,
           "m..tholt@enron.com": 1,
-          "michael.tribolet@enron.com": 4,
+          "jeff.richter@enron.com": 3,
           "lamar.frazier@enron.com": 3,
           "cameron@perfect.com": 3,
           "dhunter@s-k-w.com": 3,
           "scott.gahn@enron.com": 3,
           "wanda.curry@enron.com": 4,
-          "dan.leff@enron.com": 3,
+          "d..steffes@enron.com": 7,
           "kelly.higgason@enron.com": 3,
           "paul.kaufman@enron.com": 14,
-          "ek@a-klaw.com": 3,
           "ginger.dernehl@enron.com": 1,
           "m..landwehr@enron.com": 1,
           "richard.shapiro@enron.com": 6,
           "don.black@enron.com": 3,
           "kevin.keeney@enron.com": 3,
-          "d..steffes@enron.com": 7,
+          "dan.leff@enron.com": 3,
           "eldon@direcpc.com": 1,
           "j..kean@enron.com": 4,
           "vicki.sharp@enron.com": 3,
           "robert.frank@enron.com": 1,
           "linda.robertson@enron.com": 3,
+          "jeff.dasovich@enron.com": 3,
           "jeremy.blachman@enron.com": 4,
           "9069876@skytel.com": 1,
           "stephanie.miller@enron.com": 3,
           "scottwl@hotmail.com": 2,
           "kristin.walsh@enron.com": 3,
-          "b..sanders@enron.com": 2,
+          "steve.swain@enron.com": 3,
           "david.delainey@enron.com": 3,
           "alan.comnes@enron.com": 7,
           "douglass@energyattorney.com": 1,
-          "steve.swain@enron.com": 3,
+          "b..sanders@enron.com": 2,
           "7409949@skytel.com": 1,
           "john.lavorato@enron.com": 3,
           "pr<.palmer@enron.com>": 5,
           "e-mail<.jeff@enron.com>": 1,
-          "jeff.richter@enron.com": 3,
+          "michael.tribolet@enron.com": 4,
+          "ek@a-klaw.com": 3,
           "lisa.mellencamp@enron.com": 7,
-          "jeff.dasovich@enron.com": 3,
           "nancy.sellers@robertmondavi.com": 3,
           "psellers@pacbell.net": 2,
           "harry.kingerski@enron.com": 3,
           "tim.belden@enron.com": 3,
           "karen.denne@enron.com": 5,
           "louise.kitchen@enron.com": 3,
-          "joseph.alamo@enron.com": 1,
+          "drothrock@cmta.net": 2,
           "psellers@pacbell.com": 1,
           "greg.whalley@enron.com": 3,
           "barry.tycholiz@enron.com": 1,
           "janet.dietrich@enron.com": 3,
-          "drothrock@cmta.net": 2
-        },
-        "num_recipent": 55,
-        "date": "10/2/2001",
-        "total": 43,
-        "day": "Tu"
+          "joseph.alamo@enron.com": 1
+        }
       },
       {
         "day_num": "0",
@@ -6586,14 +6586,18 @@
           "19": 0,
           "18": 0
         },
+        "day": "Su",
+        "num_recipent": 15,
+        "date": "9/30/2001",
+        "total": 2,
         "sent_detail": {
           "janel.guerrero@enron.com": 1,
-          "paul.kaufman@enron.com": 1,
+          "susan.mara@enron.com": 1,
           "david.parquet@enron.com": 1,
           "tim.belden@enron.com": 1,
           "m..landwehr@enron.com": 1,
           "richard.shapiro@enron.com": 1,
-          "susan.mara@enron.com": 1,
+          "paul.kaufman@enron.com": 1,
           "karen.denne@enron.com": 1,
           "j..kean@enron.com": 1,
           "linda.robertson@enron.com": 1,
@@ -6602,11 +6606,7 @@
           "sue.nord@enron.com": 1,
           "d..steffes@enron.com": 1,
           "pr<.palmer@enron.com>": 1
-        },
-        "num_recipent": 15,
-        "date": "9/30/2001",
-        "total": 2,
-        "day": "Su"
+        }
       },
       {
         "day_num": "4",
@@ -6637,6 +6637,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Th",
+        "num_recipent": 6,
+        "date": "10/4/2001",
+        "total": 1,
         "sent_detail": {
           "paul.kaufman@enron.com": 1,
           "gordon.savage@enron.com": 1,
@@ -6644,11 +6648,7 @@
           "steve.swain@enron.com": 1,
           "susan.mara@enron.com": 1,
           "jeff.richter@enron.com": 1
-        },
-        "num_recipent": 6,
-        "date": "10/4/2001",
-        "total": 1,
-        "day": "Th"
+        }
       },
       {
         "day_num": "1",
@@ -6678,6 +6678,10 @@
           "19": 0,
           "18": 1
         },
+        "day": "Mo",
+        "num_recipent": 28,
+        "date": "10/1/2001",
+        "total": 32,
         "sent_detail": {
           "susan.mara@enron.com": 10,
           "9069761@skytel.com": 1,
@@ -6700,18 +6704,14 @@
           "7409949@skytel.com": 1,
           "michael.tribolet@enron.com": 5,
           "lisa.mellencamp@enron.com": 5,
-          "c..williams@enron.com": 1,
+          "jennifer.thome@enron.com": 1,
           "psellers@pacbell.net": 3,
           "jeff.richter@enron.com": 1,
           "tim.belden@enron.com": 1,
           "tsrdock@mcn.org": 1,
           "karen.denne@enron.com": 3,
-          "jennifer.thome@enron.com": 1
-        },
-        "num_recipent": 28,
-        "date": "10/1/2001",
-        "total": 32,
-        "day": "Mo"
+          "c..williams@enron.com": 1
+        }
       },
       {
         "day_num": "3",
@@ -6741,6 +6741,10 @@
           "19": 2,
           "18": 4
         },
+        "day": "We",
+        "num_recipent": 26,
+        "date": "10/3/2001",
+        "total": 20,
         "sent_detail": {
           "susan.mara@enron.com": 3,
           "sgovenar@govadv.com": 1,
@@ -6768,11 +6772,7 @@
           "karen.denne@enron.com": 2,
           "pr<.palmer@enron.com>": 1,
           "thompson@enron.com": 1
-        },
-        "num_recipent": 26,
-        "date": "10/3/2001",
-        "total": 20,
-        "day": "We"
+        }
       },
       {
         "day_num": "5",
@@ -6802,25 +6802,25 @@
           "19": 2,
           "18": 0
         },
+        "day": "Fr",
+        "num_recipent": 13,
+        "date": "10/5/2001",
+        "total": 11,
         "sent_detail": {
           "richard.shapiro@enron.com": 1,
+          "mlk@pkns.com": 1,
           "dave.perrino@enron.com": 2,
           "ginger.dernehl@enron.com": 1,
           "b..sanders@enron.com": 1,
           "lisa.mellencamp@enron.com": 2,
           "40ees@enron.com": 1,
-          "d..steffes@enron.com": 1,
           "michael.tribolet@enron.com": 2,
           "barry.tycholiz@enron.com": 1,
           "stephanie.miller@enron.com": 2,
-          "mlk@pkns.com": 1,
+          "d..steffes@enron.com": 1,
           "joseph.alamo@enron.com": 1,
           "jan.cooley@enron.com": 1
-        },
-        "num_recipent": 13,
-        "date": "10/5/2001",
-        "total": 11,
-        "day": "Fr"
+        }
       }
     ],
     "year": 2001,
@@ -6873,8 +6873,8 @@
         "name": "linda.robertson@enron.com"
       },
       {
-        "num": 4,
-        "name": "stephanie.miller@enron.com"
+        "num": 1,
+        "name": "pat.shortridge@enron.com"
       },
       {
         "num": 2,
@@ -7089,8 +7089,8 @@
         "name": "leslie.lawner@enron.com"
       },
       {
-        "num": 1,
-        "name": "pat.shortridge@enron.com"
+        "num": 4,
+        "name": "stephanie.miller@enron.com"
       },
       {
         "num": 3,
@@ -7185,8 +7185,8 @@
         "name": "jeff.richter@enron.com"
       },
       {
-        "num": 1,
-        "name": "jennifer.thome@enron.com"
+        "num": 4,
+        "name": "c..williams@enron.com"
       },
       {
         "num": 1,
@@ -7209,8 +7209,8 @@
         "name": "barry.tycholiz@enron.com"
       },
       {
-        "num": 4,
-        "name": "c..williams@enron.com"
+        "num": 1,
+        "name": "jennifer.thome@enron.com"
       }
     ],
     "end_date": "10/13/01",
@@ -7245,11 +7245,14 @@
           "19": 2,
           "18": 1
         },
+        "day": "Tu",
+        "num_recipent": 36,
+        "date": "10/9/2001",
+        "total": 21,
         "sent_detail": {
           "e-mail<.scott@enron.com>": 1,
           "susan.mara@enron.com": 4,
           "9069876@skytel.com": 1,
-          "steve.walton@enron.com": 1,
           "jean.ryall@enron.com": 1,
           "andrew.wu@enron.com": 1,
           "cameron@perfect.com": 1,
@@ -7257,6 +7260,7 @@
           "elizabeth.linnell@enron.com": 3,
           "d..steffes@enron.com": 7,
           "paul.kaufman@enron.com": 3,
+          "nancy.sellers@robertmondavi.com": 3,
           "ginger.dernehl@enron.com": 2,
           "m..landwehr@enron.com": 3,
           "richard.shapiro@enron.com": 4,
@@ -7269,24 +7273,20 @@
           "l..nicolay@enron.com": 1,
           "jeff_dasovich@enron.com": 1,
           "7409949@skytel.com": 3,
-          "pr<.palmer@enron.com>": 2,
+          "steve.walton@enron.com": 1,
           "mike.smith@enron.com": 1,
           "michael.tribolet@enron.com": 1,
           "lisa.mellencamp@enron.com": 1,
-          "nancy.sellers@robertmondavi.com": 3,
-          "jennifer.thome@enron.com": 1,
+          "pr<.palmer@enron.com>": 2,
+          "c..williams@enron.com": 1,
           "psellers@pacbell.net": 2,
           "harry.kingerski@enron.com": 1,
           "dave.perrino@enron.com": 1,
           "karen.denne@enron.com": 3,
           "sarah.novosel@enron.com": 1,
-          "c..williams@enron.com": 1,
+          "jennifer.thome@enron.com": 1,
           "joseph.alamo@enron.com": 2
-        },
-        "num_recipent": 36,
-        "date": "10/9/2001",
-        "total": 21,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "3",
@@ -7316,13 +7316,18 @@
           "19": 2,
           "18": 2
         },
+        "day": "We",
+        "num_recipent": 34,
+        "date": "10/10/2001",
+        "total": 23,
         "sent_detail": {
           "susan.mara@enron.com": 6,
           "9069876@skytel.com": 1,
           "m..tholt@enron.com": 1,
-          "jeff.richter@enron.com": 1,
+          "'kelly@enron.com": 3,
           "andrew.wu@enron.com": 3,
           "joe.hartsoe@enron.com": 1,
+          "jacqueline.kelly@schwab.com": 3,
           "ray.alvarez@enron.com": 1,
           "d..steffes@enron.com": 6,
           "paul.kaufman@enron.com": 5,
@@ -7332,7 +7337,7 @@
           "linda.robertson@enron.com": 2,
           "jeremy.blachman@enron.com": 3,
           "janel.guerrero@enron.com": 1,
-          "'kelly@enron.com": 3,
+          "jean.ryall@enron.com": 2,
           "steve.swain@enron.com": 3,
           "w..cantrell@enron.com": 1,
           "lisa.mellencamp@enron.com": 1,
@@ -7340,22 +7345,17 @@
           "michael.tribolet@enron.com": 3,
           "jeff.dasovich@enron.com": 2,
           "leslie.lawner@enron.com": 1,
-          "c..williams@enron.com": 3,
+          "sue.nord@enron.com": 1,
           "harry.kingerski@enron.com": 3,
-          "jacqueline.kelly@schwab.com": 3,
+          "jeff.richter@enron.com": 1,
           "tim.belden@enron.com": 1,
-          "jean.ryall@enron.com": 2,
           "karen.denne@enron.com": 2,
           "sarah.novosel@enron.com": 1,
           "david.parquet@enron.com": 1,
           "f..calger@enron.com": 1,
-          "sue.nord@enron.com": 1,
+          "c..williams@enron.com": 3,
           "joseph.alamo@enron.com": 3
-        },
-        "num_recipent": 34,
-        "date": "10/10/2001",
-        "total": 23,
-        "day": "We"
+        }
       },
       {
         "day_num": "4",
@@ -7386,31 +7386,35 @@
           "19": 0,
           "18": 5
         },
+        "day": "Th",
+        "num_recipent": 43,
+        "date": "10/11/2001",
+        "total": 39,
         "sent_detail": {
-          "richard.shapiro@enron.com": 2,
           "susan.mara@enron.com": 5,
           "877.341.7930@skytel.com": 1,
           "gordon.savage@enron.com": 1,
           "8773417930@skytel.com": 2,
           "cra@calretailers.com": 1,
           "f..calger@enron.com": 4,
-          "janel.guerrero@enron.com": 1,
-          "karen.denne@enron.com": 7,
+          "john.redding@gene.ge.com": 1,
+          "dominic.dimare@calchamber.com": 1,
           "kt@a-klaw.com": 1,
           "dhunter@s-k-w.com": 2,
-          "vjw@cleanpower.org": 1,
+          "kmccrea@sablaw.com": 1,
+          "d..steffes@enron.com": 5,
           "josepht@hallequitiesgroup.com": 2,
           "debinorton@aol.com": 1,
           "paul.kaufman@enron.com": 10,
           "derek.naten@roche.com": 1,
-          "kmccrea@sablaw.com": 1,
+          "richard.shapiro@enron.com": 2,
           "edith.turnipseed@enron.com": 1,
-          "d..steffes@enron.com": 5,
+          "vjw@cleanpower.org": 1,
           "j..kean@enron.com": 1,
           "michael.mcdonald@enron.com": 1,
           "jdasovic@enron.com": 1,
           "brbarkovich@earthlink.net": 1,
-          "john.redding@gene.ge.com": 1,
+          "janel.guerrero@enron.com": 1,
           "shirleen.glasin@enron.com": 1,
           "jstewart@cmta.net": 1,
           "liebmand@haynesboone.com": 1,
@@ -7426,15 +7430,11 @@
           "lga@mother.com": 1,
           "drothrock@camfg.com": 1,
           "tim.belden@enron.com": 2,
-          "dominic.dimare@calchamber.com": 1,
+          "karen.denne@enron.com": 7,
           "david.parquet@enron.com": 2,
           "sue.nord@enron.com": 1,
           "mflorio@turn.org": 1
-        },
-        "num_recipent": 43,
-        "date": "10/11/2001",
-        "total": 39,
-        "day": "Th"
+        }
       },
       {
         "day_num": "1",
@@ -7464,20 +7464,24 @@
           "19": 0,
           "18": 3
         },
+        "day": "Mo",
+        "num_recipent": 30,
+        "date": "10/8/2001",
+        "total": 15,
         "sent_detail": {
           "susan.mara@enron.com": 2,
           "f..calger@enron.com": 1,
           "m..tholt@enron.com": 1,
-          "jeff.richter@enron.com": 1,
-          "karen.denne@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
+          "bryan.gottfredson@enron.com": 1,
           "mday@gmssr.com": 1,
-          "vjw@cleanpower.org": 1,
+          "d..steffes@enron.com": 3,
           "paul.kaufman@enron.com": 1,
           "j..kean@enron.com": 1,
           "m..landwehr@enron.com": 2,
           "richard.shapiro@enron.com": 1,
           "bukhvalo@haas.berkeley.edu": 1,
-          "d..steffes@enron.com": 3,
+          "vjw@cleanpower.org": 1,
           "david.parquet@enron.com": 1,
           "ttt@cpuc.ca.gov": 1,
           "steve.montovano@enron.com": 1,
@@ -7487,19 +7491,15 @@
           "robert.badeer@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "kip.lipper@sen.ca.gov": 1,
-          "michael.tribolet@enron.com": 1,
+          "jeff.richter@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 2,
           "psellers@pacbell.net": 1,
           "harry.kingerski@enron.com": 1,
           "tim.belden@enron.com": 1,
-          "bryan.gottfredson@enron.com": 1,
+          "karen.denne@enron.com": 1,
           "sarah.novosel@enron.com": 1,
           "barry.tycholiz@enron.com": 2
-        },
-        "num_recipent": 30,
-        "date": "10/8/2001",
-        "total": 15,
-        "day": "Mo"
+        }
       },
       {
         "day_num": "0",
@@ -7529,6 +7529,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Su",
+        "num_recipent": 12,
+        "date": "10/7/2001",
+        "total": 6,
         "sent_detail": {
           "susan.mara@enron.com": 3,
           "harry.kingerski@enron.com": 1,
@@ -7542,11 +7546,7 @@
           "tsrdock@mcn.org": 1,
           "steve.montovano@enron.com": 1,
           "d..steffes@enron.com": 4
-        },
-        "num_recipent": 12,
-        "date": "10/7/2001",
-        "total": 6,
-        "day": "Su"
+        }
       },
       {
         "day_num": "5",
@@ -7577,6 +7577,10 @@
           "19": 1,
           "18": 0
         },
+        "day": "Fr",
+        "num_recipent": 23,
+        "date": "10/12/2001",
+        "total": 19,
         "sent_detail": {
           "susan.mara@enron.com": 1,
           "f..calger@enron.com": 1,
@@ -7589,7 +7593,7 @@
           "eldon@direcpc.com": 2,
           "jdasovic@enron.com": 1,
           "stephanie.miller@enron.com": 1,
-          "michael.etringer@enron.com": 3,
+          "scottwl@hotmail.com": 1,
           "b..sanders@enron.com": 1,
           "steve.swain@enron.com": 4,
           "w..cantrell@enron.com": 1,
@@ -7598,14 +7602,10 @@
           "nancy.sellers@robertmondavi.com": 4,
           "psellers@pacbell.net": 1,
           "tim.belden@enron.com": 1,
-          "scottwl@hotmail.com": 1,
+          "michael.etringer@enron.com": 3,
           "barry.tycholiz@enron.com": 1,
           "douglas.porter@sce.com": 1
-        },
-        "num_recipent": 23,
-        "date": "10/12/2001",
-        "total": 19,
-        "day": "Fr"
+        }
       }
     ],
     "year": 2001,
@@ -7620,10 +7620,6 @@
       {
         "num": 20,
         "name": "susan.mara@enron.com"
-      },
-      {
-        "num": 1,
-        "name": "don.black@enron.com"
       },
       {
         "num": 5,
@@ -7682,8 +7678,8 @@
         "name": "david.delainey@enron.com"
       },
       {
-        "num": 1,
-        "name": "tony.pryor@enron.com"
+        "num": 5,
+        "name": "alan.comnes@enron.com"
       },
       {
         "num": 1,
@@ -7771,7 +7767,7 @@
       },
       {
         "num": 1,
-        "name": "wanda.curry@enron.com"
+        "name": "don.black@enron.com"
       },
       {
         "num": 1,
@@ -7836,6 +7832,10 @@
       {
         "num": 3,
         "name": "sarah.novosel@enron.com"
+      },
+      {
+        "num": 1,
+        "name": "wanda.curry@enron.com"
       },
       {
         "num": 4,
@@ -7990,8 +7990,8 @@
         "name": "dan.leff@enron.com"
       },
       {
-        "num": 5,
-        "name": "alan.comnes@enron.com"
+        "num": 1,
+        "name": "tony.pryor@enron.com"
       },
       {
         "num": 2,
@@ -8125,6 +8125,10 @@
           "19": 2,
           "18": 1
         },
+        "day": "Tu",
+        "num_recipent": 34,
+        "date": "10/16/2001",
+        "total": 17,
         "sent_detail": {
           "e-mail<.scott@enron.com>": 1,
           "susan.mara@enron.com": 2,
@@ -8160,11 +8164,7 @@
           "jennifer.thome@enron.com": 1,
           "janet.dietrich@enron.com": 1,
           "joseph.alamo@enron.com": 2
-        },
-        "num_recipent": 34,
-        "date": "10/16/2001",
-        "total": 17,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "5",
@@ -8194,6 +8194,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Fr",
+        "num_recipent": 48,
+        "date": "10/19/2001",
+        "total": 20,
         "sent_detail": {
           "rachel@cleanpower.org": 1,
           "e-mail<'.'mark@enron.com>": 1,
@@ -8206,10 +8210,9 @@
           "laura.schwartz@enron.com": 1,
           "lindy.donoho@enron.com": 1,
           "ray.alvarez@enron.com": 1,
-          "paul'.'amirault@enron.com": 1,
+          "sarah.novosel@enron.com": 2,
           "d..steffes@enron.com": 2,
-          "alan.comnes@enron.com": 1,
-          "mday@enron.com": 1,
+          "tony.pryor@enron.com": 1,
           "paul.kaufman@enron.com": 1,
           "m..landwehr@enron.com": 2,
           "richard.shapiro@enron.com": 1,
@@ -8221,8 +8224,9 @@
           "hilda.bourgeois-galloway@enron.com": 1,
           "kay.miller@enron.com": 1,
           "llorenz@socalgas.com": 1,
+          "tk.lohman@enron.com": 1,
           "scottwl@hotmail.com": 1,
-          "tony.pryor@enron.com": 1,
+          "alan.comnes@enron.com": 1,
           "steve.swain@enron.com": 2,
           "lorraine.lindberg@enron.com": 1,
           "7409949@skytel.com": 1,
@@ -8236,18 +8240,14 @@
           "sf'.'jeff@enron.com": 1,
           "psellers@pacbell.net": 1,
           "glen.hass@enron.com": 4,
-          "sarah.novosel@enron.com": 2,
-          "tk.lohman@enron.com": 1,
+          "paul'.'amirault@enron.com": 1,
+          "mday@enron.com": 1,
           "blair.lichtenwalter@enron.com": 1,
           "teb.lokey@enron.com": 1,
           "tim.belden@enron.com": 1,
           "f..calger@enron.com": 1,
           "samuel.wehn@enron.com": 1
-        },
-        "num_recipent": 48,
-        "date": "10/19/2001",
-        "total": 20,
-        "day": "Fr"
+        }
       },
       {
         "day_num": "4",
@@ -8278,6 +8278,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Th",
+        "num_recipent": 16,
+        "date": "10/18/2001",
+        "total": 16,
         "sent_detail": {
           "rachel@cleanpower.org": 1,
           "susan.mara@enron.com": 1,
@@ -8285,21 +8289,17 @@
           "david.parquet@enron.com": 1,
           "glen.hass@enron.com": 3,
           "bhanson@lhom.com": 1,
-          "cameron@perfect.com": 2,
-          "vjw@cleanpower.org": 1,
-          "misha.siegel@enron.com": 1,
           "bkc7@pge.com": 1,
-          "scottwl@hotmail.com": 2,
-          "'cherry@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
+          "misha.siegel@enron.com": 1,
+          "cameron@perfect.com": 2,
           "m..landwehr@enron.com": 3,
           "michael.etringer@enron.com": 2,
+          "'cherry@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
+          "vjw@cleanpower.org": 1,
+          "scottwl@hotmail.com": 2,
           "hilda.bourgeois-galloway@enron.com": 1
-        },
-        "num_recipent": 16,
-        "date": "10/18/2001",
-        "total": 16,
-        "day": "Th"
+        }
       },
       {
         "day_num": "3",
@@ -8329,6 +8329,10 @@
           "19": 4,
           "18": 0
         },
+        "day": "We",
+        "num_recipent": 57,
+        "date": "10/17/2001",
+        "total": 34,
         "sent_detail": {
           "susan.mara@enron.com": 8,
           "kmccrea@sablaw.com": 1,
@@ -8342,7 +8346,6 @@
           "alexamms@sce.com": 1,
           "mday@gmssr.com": 3,
           "dan.leff@enron.com": 1,
-          "avramsiegel@home.com": 1,
           "eldon@direcpc.com": 3,
           "paul.kaufman@enron.com": 6,
           "ginger.dernehl@enron.com": 1,
@@ -8364,9 +8367,10 @@
           "angela.schwarz@enron.com": 1,
           "alan.comnes@enron.com": 2,
           "rita.hartfield@enron.com": 2,
+          "joe.hartsoe@enron.com": 1,
           "paulamirault@aec.ca": 1,
           "alexanms@sce.com": 2,
-          "maureen.mcvicker@enron.com": 2,
+          "avramsiegel@home.com": 1,
           "elyse.kalmans@enron.com": 1,
           "barry.tycholiz@enron.com": 2,
           "ewo@jmbm.com": 1,
@@ -8382,16 +8386,12 @@
           "david.parquet@enron.com": 2,
           "kirsten.bellas@enron.com": 1,
           "glen.hass@enron.com": 1,
-          "joe.hartsoe@enron.com": 1,
+          "maureen.mcvicker@enron.com": 2,
           "c..williams@enron.com": 2,
           "burkee@cts.com": 1,
           "joseph.alamo@enron.com": 2,
           "eric.letke@enron.com": 1
-        },
-        "num_recipent": 57,
-        "date": "10/17/2001",
-        "total": 34,
-        "day": "We"
+        }
       },
       {
         "day_num": "1",
@@ -8421,25 +8421,28 @@
           "19": 0,
           "18": 2
         },
+        "day": "Mo",
+        "num_recipent": 46,
+        "date": "10/15/2001",
+        "total": 29,
         "sent_detail": {
           "susan.mara@enron.com": 4,
           "f..calger@enron.com": 1,
-          "scott.gahn@enron.com": 1,
+          "don.black@enron.com": 1,
           "jean.ryall@enron.com": 2,
           "rory@carmelnet.com": 1,
           "lamar.frazier@enron.com": 1,
-          "karen.denne@enron.com": 1,
           "cameron@perfect.com": 7,
           "wanda.curry@enron.com": 1,
-          "dan.leff@enron.com": 1,
+          "d..steffes@enron.com": 5,
           "kelly.higgason@enron.com": 1,
           "paul.kaufman@enron.com": 2,
-          "ek@a-klaw.com": 1,
+          "lynnek@rppi.org": 1,
           "m..landwehr@enron.com": 1,
           "richard.shapiro@enron.com": 2,
-          "don.black@enron.com": 1,
+          "scott.gahn@enron.com": 1,
           "kevin.keeney@enron.com": 1,
-          "d..steffes@enron.com": 5,
+          "dan.leff@enron.com": 1,
           "eldon@direcpc.com": 2,
           "j..kean@enron.com": 1,
           "vicki.sharp@enron.com": 1,
@@ -8454,25 +8457,22 @@
           "steve.swain@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
           "lisa.mellencamp@enron.com": 2,
+          "bkc7@pge.com": 1,
           "michael.tribolet@enron.com": 3,
           "steve.montovano@enron.com": 1,
-          "lynnek@rppi.org": 1,
+          "ek@a-klaw.com": 1,
           "nancy.sellers@robertmondavi.com": 1,
           "psellers@pacbell.net": 1,
           "harry.kingerski@enron.com": 2,
           "jeff.richter@enron.com": 1,
           "tim.belden@enron.com": 1,
-          "bkc7@pge.com": 1,
+          "karen.denne@enron.com": 1,
           "glen.hass@enron.com": 1,
           "barry.tycholiz@enron.com": 1,
           "william.sellers@wright.edu": 1,
           "janet.dietrich@enron.com": 1,
           "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 46,
-        "date": "10/15/2001",
-        "total": 29,
-        "day": "Mo"
+        }
       },
       {
         "day_num": "6",
@@ -8503,19 +8503,23 @@
           "19": 0,
           "18": 0
         },
+        "day": "Sa",
+        "num_recipent": 33,
+        "date": "10/20/2001",
+        "total": 4,
         "sent_detail": {
           "susan.mara@enron.com": 3,
           "f..calger@enron.com": 1,
-          "jeff.richter@enron.com": 1,
+          "michael.tribolet@enron.com": 1,
           "lamar.frazier@enron.com": 2,
           "ray.alvarez@enron.com": 1,
-          "f..herod@enron.com": 1,
-          "d..steffes@enron.com": 2,
+          "sarah.novosel@enron.com": 1,
+          "dan.leff@enron.com": 2,
           "paul.kaufman@enron.com": 2,
           "j..kean@enron.com": 2,
           "m..landwehr@enron.com": 1,
           "richard.shapiro@enron.com": 3,
-          "dan.leff@enron.com": 2,
+          "d..steffes@enron.com": 2,
           "david.parquet@enron.com": 1,
           "vicki.sharp@enron.com": 2,
           "linda.robertson@enron.com": 1,
@@ -8526,22 +8530,18 @@
           "steve.swain@enron.com": 1,
           "lisa.mellencamp@enron.com": 1,
           "mike.smith@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
+          "jeff.richter@enron.com": 1,
           "jeff.dasovich@enron.com": 1,
           "evan.hughes@enron.com": 2,
           "tim.belden@enron.com": 1,
           "karen.denne@enron.com": 1,
-          "sarah.novosel@enron.com": 1,
+          "f..herod@enron.com": 1,
           "scottwl@hotmail.com": 1,
           "diann.huddleson@enron.com": 1,
           "barry.tycholiz@enron.com": 1,
           "janet.dietrich@enron.com": 2,
           "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 33,
-        "date": "10/20/2001",
-        "total": 4,
-        "day": "Sa"
+        }
       }
     ],
     "year": 2001,
@@ -8549,6 +8549,10 @@
   },
   {
     "recipients": [
+      {
+        "num": 4,
+        "name": "brad.richter@enron.com"
+      },
       {
         "num": 18,
         "name": "susan.mara@enron.com"
@@ -8610,8 +8614,8 @@
         "name": "j..noske@enron.com"
       },
       {
-        "num": 2,
-        "name": "lorraine.lindberg@enron.com"
+        "num": 20,
+        "name": "d..steffes@enron.com"
       },
       {
         "num": 1,
@@ -8620,10 +8624,6 @@
       {
         "num": 1,
         "name": "lisa.mellencamp@enron.com"
-      },
-      {
-        "num": 1,
-        "name": "b..sanders@enron.com"
       },
       {
         "num": 17,
@@ -8639,7 +8639,7 @@
       },
       {
         "num": 4,
-        "name": "brad.richter@enron.com"
+        "name": "ginger.dernehl@enron.com"
       },
       {
         "num": 3,
@@ -8654,8 +8654,12 @@
         "name": "aaronmendelson@hotmail.com"
       },
       {
-        "num": 20,
-        "name": "d..steffes@enron.com"
+        "num": 2,
+        "name": "steve.swain@enron.com"
+      },
+      {
+        "num": 2,
+        "name": "lorraine.lindberg@enron.com"
       },
       {
         "num": 1,
@@ -8730,12 +8734,12 @@
         "name": "shirleen.glasin@enron.com"
       },
       {
-        "num": 3,
-        "name": "jeff_dasovich@enron.com"
+        "num": 1,
+        "name": "b..sanders@enron.com"
       },
       {
-        "num": 2,
-        "name": "steve.swain@enron.com"
+        "num": 3,
+        "name": "jeff_dasovich@enron.com"
       },
       {
         "num": 1,
@@ -8754,12 +8758,12 @@
         "name": "jdasovic@enron.com"
       },
       {
-        "num": 1,
-        "name": "dave.kistler@enron.com"
+        "num": 2,
+        "name": "wbooth@booth-law.com"
       },
       {
-        "num": 2,
-        "name": "courtney_abernathy@yahoo.com"
+        "num": 1,
+        "name": "jrredding@aol.com"
       },
       {
         "num": 1,
@@ -8794,8 +8798,8 @@
         "name": "mendelso@haas.berkeley.edu"
       },
       {
-        "num": 2,
-        "name": "wbooth@booth-law.com"
+        "num": 1,
+        "name": "dave.kistler@enron.com"
       },
       {
         "num": 4,
@@ -8818,8 +8822,8 @@
         "name": "mbaldwin@igservice.com"
       },
       {
-        "num": 4,
-        "name": "ginger.dernehl@enron.com"
+        "num": 2,
+        "name": "courtney_abernathy@yahoo.com"
       },
       {
         "num": 3,
@@ -8864,10 +8868,6 @@
       {
         "num": 3,
         "name": "joseph.alamo@enron.com"
-      },
-      {
-        "num": 1,
-        "name": "jrredding@aol.com"
       }
     ],
     "end_date": "10/27/01",
@@ -8902,29 +8902,29 @@
           "19": 1,
           "18": 0
         },
+        "day": "We",
+        "num_recipent": 17,
+        "date": "10/24/2001",
+        "total": 24,
         "sent_detail": {
           "susan.mara@enron.com": 4,
           "rmp@cpuc.ca.gov": 1,
-          "paul.kaufman@enron.com": 2,
           "shirleen.glasin@enron.com": 1,
           "tim.belden@enron.com": 3,
           "mbaldwin@igservice.com": 1,
           "richard.shapiro@enron.com": 1,
+          "lorraine.lindberg@enron.com": 1,
+          "paul.kaufman@enron.com": 2,
           "karen.denne@enron.com": 1,
-          "d..steffes@enron.com": 2,
           "mollycoffin@hotmail.com": 3,
-          "laurie.malone@enron.com": 1,
+          "jeff.dasovich@enron.com": 1,
           "barry.tycholiz@enron.com": 4,
           "9069876@skytel.com": 2,
           "c..williams@enron.com": 1,
-          "lorraine.lindberg@enron.com": 1,
-          "jeff.dasovich@enron.com": 1,
+          "d..steffes@enron.com": 2,
+          "laurie.malone@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 17,
-        "date": "10/24/2001",
-        "total": 24,
-        "day": "We"
+        }
       },
       {
         "day_num": "4",
@@ -8954,43 +8954,43 @@
           "19": 5,
           "18": 3
         },
+        "day": "Th",
+        "num_recipent": 31,
+        "date": "10/25/2001",
+        "total": 39,
         "sent_detail": {
-          "brad.richter@enron.com": 3,
           "susan.mara@enron.com": 5,
           "f..calger@enron.com": 1,
           "laird.dyer@enron.com": 1,
           "jean.ryall@enron.com": 1,
-          "karen.denne@enron.com": 1,
           "bhansen@lhom.com": 1,
           "cameron@perfect.com": 1,
           "ray.alvarez@enron.com": 1,
-          "vjw@cleanpower.org": 1,
+          "d..steffes@enron.com": 5,
+          "mara.bronstein@enron.com": 2,
           "paul.kaufman@enron.com": 10,
           "ginger.dernehl@enron.com": 3,
           "m..landwehr@enron.com": 2,
           "richard.shapiro@enron.com": 1,
-          "d..steffes@enron.com": 5,
+          "vjw@cleanpower.org": 1,
           "david.parquet@enron.com": 3,
           "linda.robertson@enron.com": 1,
           "lydia.cannon@enron.com": 1,
           "mary.schoen@enron.com": 1,
           "alan.comnes@enron.com": 3,
           "j..kean@enron.com": 1,
-          "wbooth@booth-law.com": 1,
-          "nancy.sellers@robertmondavi.com": 3,
           "dave.kistler@enron.com": 1,
-          "tim.belden@enron.com": 1,
           "courtney_abernathy@yahoo.com": 2,
-          "mara.bronstein@enron.com": 2,
+          "nancy.sellers@robertmondavi.com": 3,
+          "wbooth@booth-law.com": 1,
+          "tim.belden@enron.com": 1,
+          "brad.richter@enron.com": 3,
+          "karen.denne@enron.com": 1,
           "sarah.novosel@enron.com": 1,
           "mollycoffin@hotmail.com": 1,
           "barry.tycholiz@enron.com": 3,
           "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 31,
-        "date": "10/25/2001",
-        "total": 39,
-        "day": "Th"
+        }
       },
       {
         "day_num": "1",
@@ -9020,58 +9020,58 @@
           "19": 3,
           "18": 8
         },
+        "day": "Mo",
+        "num_recipent": 46,
+        "date": "10/22/2001",
+        "total": 37,
         "sent_detail": {
           "susan.mara@enron.com": 6,
           "cra@calretailers.com": 1,
           "f..calger@enron.com": 2,
           "laird.dyer@enron.com": 1,
-          "karen.denne@enron.com": 3,
+          "dominic.dimare@calchamber.com": 1,
           "cameron@perfect.com": 3,
           "dhunter@s-k-w.com": 1,
-          "d..steffes@enron.com": 5,
           "lorraine.lindberg@enron.com": 1,
           "paul.kaufman@enron.com": 2,
-          "ginger.dernehl@enron.com": 1,
           "brad.richter@enron.com": 1,
           "m..landwehr@enron.com": 1,
           "richard.shapiro@enron.com": 3,
           "j..noske@enron.com": 1,
           "j..kean@enron.com": 3,
           "linda.robertson@enron.com": 1,
+          "tsrdock@mcn.org": 2,
           "michael.mcdonald@enron.com": 1,
           "mona.l.petrochko@enron.com": 1,
           "djsmith@s-k-w.com": 1,
           "psellers@haas.berkeley.edu": 1,
-          "mikahl@ka-pow.com": 1,
+          "nancy.sellers@robertmondavi.com": 1,
           "michael.etringer@enron.com": 1,
           "janel.guerrero@enron.com": 1,
-          "steve.swain@enron.com": 1,
-          "alan.comnes@enron.com": 1,
           "jeff_dasovich@enron.com": 1,
+          "alan.comnes@enron.com": 1,
+          "steve.swain@enron.com": 1,
           "m..tholt@enron.com": 1,
           "pr<.palmer@enron.com>": 1,
+          "d..steffes@enron.com": 5,
           "jrredding@aol.com": 1,
           "jeff.richter@enron.com": 2,
           "ek@a-klaw.com": 4,
           "jeff.dasovich@enron.com": 1,
-          "nancy.sellers@robertmondavi.com": 1,
+          "mikahl@ka-pow.com": 1,
           "wbooth@booth-law.com": 1,
           "psellers@pacbell.net": 1,
           "tim.belden@enron.com": 1,
-          "tsrdock@mcn.org": 2,
-          "dominic.dimare@calchamber.com": 1,
+          "ginger.dernehl@enron.com": 1,
+          "karen.denne@enron.com": 3,
           "sarah.novosel@enron.com": 1,
           "david.parquet@enron.com": 1,
           "vjw@cleanpower.org": 2,
-          "drothrock@cmta.net": 4,
+          "joseph.alamo@enron.com": 2,
           "barry.tycholiz@enron.com": 1,
           "sue.nord@enron.com": 1,
-          "joseph.alamo@enron.com": 2
-        },
-        "num_recipent": 46,
-        "date": "10/22/2001",
-        "total": 37,
-        "day": "Mo"
+          "drothrock@cmta.net": 4
+        }
       },
       {
         "day_num": "2",
@@ -9101,6 +9101,10 @@
           "19": 2,
           "18": 0
         },
+        "day": "Tu",
+        "num_recipent": 41,
+        "date": "10/23/2001",
+        "total": 34,
         "sent_detail": {
           "susan.mara@enron.com": 3,
           "richard.shapiro@enron.com": 3,
@@ -9109,27 +9113,27 @@
           "cameron@perfect.com": 3,
           "skmaloney@yahoo.com": 2,
           "wanda.curry@enron.com": 7,
-          "d..steffes@enron.com": 6,
+          "vjw@cleanpower.org": 1,
+          "b..sanders@enron.com": 1,
           "paul.kaufman@enron.com": 3,
           "wes.colwell@enron.com": 1,
           "mendelso@haas.berkeley.edu": 1,
           "tomb@crossborderenergy.com": 2,
-          "steve.swain@enron.com": 1,
-          "vjw@cleanpower.org": 1,
+          "d..steffes@enron.com": 6,
           "eldon@direcpc.com": 1,
           "mollycoffin@hotmail.com": 4,
           "vicki.sharp@enron.com": 1,
           "jdasovic@enron.com": 1,
-          "j..kean@enron.com": 1,
           "michael.etringer@enron.com": 3,
           "janel.guerrero@enron.com": 1,
           "mary.schoen@enron.com": 1,
           "jeff_dasovich@enron.com": 2,
-          "b..sanders@enron.com": 1,
+          "steve.swain@enron.com": 1,
+          "j..kean@enron.com": 1,
           "7409949@skytel.com": 1,
-          "lisa.mellencamp@enron.com": 1,
           "mike.smith@enron.com": 1,
           "michael.tribolet@enron.com": 3,
+          "lisa.mellencamp@enron.com": 1,
           "jeff.dasovich@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 2,
           "psellers@pacbell.net": 3,
@@ -9143,11 +9147,7 @@
           "c..williams@enron.com": 1,
           "janet.dietrich@enron.com": 1,
           "drothrock@cmta.net": 3
-        },
-        "num_recipent": 41,
-        "date": "10/23/2001",
-        "total": 34,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "5",
@@ -9177,14 +9177,14 @@
           "19": 0,
           "18": 2
         },
-        "sent_detail": {
-          "c..williams@enron.com": 2,
-          "d..steffes@enron.com": 2
-        },
+        "day": "Fr",
         "num_recipent": 2,
         "date": "10/26/2001",
         "total": 3,
-        "day": "Fr"
+        "sent_detail": {
+          "c..williams@enron.com": 2,
+          "d..steffes@enron.com": 2
+        }
       }
     ],
     "year": 2001,
@@ -9314,7 +9314,7 @@
       },
       {
         "num": 1,
-        "name": "peggy.mahoney@enron.com"
+        "name": "simon.brod@enron.com"
       },
       {
         "num": 2,
@@ -9486,6 +9486,10 @@
       },
       {
         "num": 1,
+        "name": "peggy.mahoney@enron.com"
+      },
+      {
+        "num": 1,
         "name": "jeff.dasovich@enron.com"
       },
       {
@@ -9598,10 +9602,6 @@
       },
       {
         "num": 1,
-        "name": "simon.brod@enron.com"
-      },
-      {
-        "num": 1,
         "name": "stephen.asplin@enron.com"
       },
       {
@@ -9661,6 +9661,10 @@
           "19": 0,
           "18": 1
         },
+        "day": "Fr",
+        "num_recipent": 29,
+        "date": "11/2/2001",
+        "total": 17,
         "sent_detail": {
           "susan.mara@enron.com": 4,
           "lamar.frazier@enron.com": 1,
@@ -9674,13 +9678,13 @@
           "j..noske@enron.com": 1,
           "psellers49@yahoo.com": 1,
           "j..kean@enron.com": 2,
-          "jdasovic@enron.com": 1,
+          "jeremy.blachman@enron.com": 1,
           "ken@kdscommunications.com": 1,
           "scottwl@hotmail.com": 1,
           "pr<.palmer@enron.com>": 1,
           "alison.smith@enron.com": 1,
           "lisa.mellencamp@enron.com": 4,
-          "jeremy.blachman@enron.com": 1,
+          "jdasovic@enron.com": 1,
           "mike.smith@enron.com": 1,
           "michael.tribolet@enron.com": 2,
           "w..delainey@enron.com": 1,
@@ -9691,11 +9695,7 @@
           "barry.tycholiz@enron.com": 2,
           "c..williams@enron.com": 2,
           "janet.dietrich@enron.com": 1
-        },
-        "num_recipent": 29,
-        "date": "11/2/2001",
-        "total": 17,
-        "day": "Fr"
+        }
       },
       {
         "day_num": "2",
@@ -9726,6 +9726,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Tu",
+        "num_recipent": 17,
+        "date": "10/30/2001",
+        "total": 9,
         "sent_detail": {
           "susan.mara@enron.com": 2,
           "e-mail<'.'mike@enron.com>": 1,
@@ -9736,19 +9740,15 @@
           "j..kean@enron.com": 1,
           "vicki.sharp@enron.com": 1,
           "skmaloney@yahoo.com": 1,
-          "jeff.dasovich@enron.com": 1,
+          "joseph.alamo@enron.com": 2,
           "diann.huddleson@enron.com": 1,
           "michael.tribolet@enron.com": 2,
           "wanda.curry@enron.com": 3,
           "c..williams@enron.com": 1,
           "d..steffes@enron.com": 3,
-          "joseph.alamo@enron.com": 2,
+          "jeff.dasovich@enron.com": 1,
           "mary.schoen@enron.com": 1
-        },
-        "num_recipent": 17,
-        "date": "10/30/2001",
-        "total": 9,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "0",
@@ -9778,6 +9778,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Su",
+        "num_recipent": 7,
+        "date": "10/28/2001",
+        "total": 2,
         "sent_detail": {
           "susan.mara@enron.com": 1,
           "lisa.mellencamp@enron.com": 1,
@@ -9786,11 +9790,7 @@
           "wanda.curry@enron.com": 1,
           "d..steffes@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 7,
-        "date": "10/28/2001",
-        "total": 2,
-        "day": "Su"
+        }
       },
       {
         "day_num": "4",
@@ -9820,6 +9820,10 @@
           "19": 0,
           "18": 2
         },
+        "day": "Th",
+        "num_recipent": 49,
+        "date": "11/1/2001",
+        "total": 7,
         "sent_detail": {
           "susan.mara@enron.com": 1,
           "shelanski@law.berkeley.edu": 1,
@@ -9831,50 +9835,46 @@
           "jan.haizmann@enron.com": 1,
           "paul.hennemeyer@enron.com": 1,
           "elizabeth.linnell@enron.com": 1,
-          "d..steffes@enron.com": 1,
-          "eldon@direcpc.com": 1,
+          "patrick.barouki@enron.com": 1,
+          "teun.van@enron.com": 1,
           "paul.kaufman@enron.com": 1,
           "alfredo.huertas@enron.com": 1,
           "ross.sankey@enron.com": 1,
           "ginger.dernehl@enron.com": 1,
           "l..petrochko@enron.com": 1,
           "richard.shapiro@enron.com": 3,
-          "patrick.barouki@enron.com": 1,
-          "teun.van@enron.com": 1,
+          "d..steffes@enron.com": 1,
+          "eldon@direcpc.com": 1,
           "paul.mead@enron.com": 1,
           "nick.elms@enron.com": 1,
           "robert.frank@enron.com": 1,
           "doug.wood@enron.com": 1,
           "paul.dawson@enron.com": 1,
           "robert.hemstock@enron.com": 1,
-          "mustafa.hussain@enron.com": 1,
+          "pierre.de@enron.com": 1,
           "scottwl@hotmail.com": 1,
           "pamela.milano@enron.com": 1,
           "alan.comnes@enron.com": 1,
-          "pierre.de@enron.com": 1,
+          "mustafa.hussain@enron.com": 1,
           "kyran.hanks@enron.com": 1,
           "j..kean@enron.com": 1,
           "david.gonzalez@enron.com": 1,
           "mabel.pigmans@enron.com": 1,
           "michael.tribolet@enron.com": 1,
           "simon.brod@enron.com": 1,
-          "antoine.duvauchelle@enron.com": 1,
+          "psellers@pacbell.net": 1,
           "merle.glen@enron.com": 1,
           "amber.keenan@enron.com": 1,
           "stephen.asplin@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 2,
           "raphael.brun@enron.com": 1,
-          "psellers@pacbell.net": 1,
+          "antoine.duvauchelle@enron.com": 1,
           "philip.davies@enron.com": 1,
           "alexandre.favand@enron.com": 1,
           "nailia.dindarova@enron.com": 1,
           "didier.magne@enron.com": 1,
           "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 49,
-        "date": "11/1/2001",
-        "total": 7,
-        "day": "Th"
+        }
       },
       {
         "day_num": "6",
@@ -9905,6 +9905,10 @@
           "19": 0,
           "18": 0
         },
+        "day": "Sa",
+        "num_recipent": 6,
+        "date": "11/3/2001",
+        "total": 5,
         "sent_detail": {
           "susan.mara@enron.com": 2,
           "douglass@energyattorney.com": 1,
@@ -9912,11 +9916,7 @@
           "steve.swain@enron.com": 1,
           "janelle.scheuer@enron.com": 1,
           "ek@a-klaw.com": 1
-        },
-        "num_recipent": 6,
-        "date": "11/3/2001",
-        "total": 5,
-        "day": "Sa"
+        }
       },
       {
         "day_num": "3",
@@ -9946,25 +9946,25 @@
           "19": 1,
           "18": 3
         },
+        "day": "We",
+        "num_recipent": 13,
+        "date": "10/31/2001",
+        "total": 7,
         "sent_detail": {
+          "psellers@pacbell.net": 2,
           "paul.kaufman@enron.com": 1,
           "steve.swain@enron.com": 1,
           "borenste@haas.berkeley.edu": 1,
           "'thompson@enron.com": 1,
           "susan.mara@enron.com": 2,
-          "barry.tycholiz@enron.com": 2,
           "lisa.mellencamp@enron.com": 1,
           "ttt@cpuc.ca.gov": 1,
           "diann.huddleson@enron.com": 1,
           "michael.tribolet@enron.com": 1,
-          "psellers@pacbell.net": 2,
+          "barry.tycholiz@enron.com": 2,
           "wanda.curry@enron.com": 1,
           "d..steffes@enron.com": 2
-        },
-        "num_recipent": 13,
-        "date": "10/31/2001",
-        "total": 7,
-        "day": "We"
+        }
       },
       {
         "day_num": "1",
@@ -9994,22 +9994,26 @@
           "19": 1,
           "18": 6
         },
+        "day": "Mo",
+        "num_recipent": 51,
+        "date": "10/29/2001",
+        "total": 27,
         "sent_detail": {
           "susan.mara@enron.com": 6,
-          "barry.tycholiz@enron.com": 5,
           "david.parquet@enron.com": 2,
-          "michael.tribolet@enron.com": 3,
+          "jeff.richter@enron.com": 2,
           "peggy.mahoney@enron.com": 1,
           "lamar.frazier@enron.com": 1,
           "laura.schwartz@enron.com": 1,
           "wanda.curry@enron.com": 2,
-          "assoc.'.'california@enron.com": 1,
+          "d..steffes@enron.com": 3,
           "laurie.malone@enron.com": 2,
-          "drothrock@cmta.net": 2,
           "paul.kaufman@enron.com": 4,
+          "jan.cooley@enron.com": 1,
           "m..landwehr@enron.com": 1,
           "richard.shapiro@enron.com": 5,
-          "d..steffes@enron.com": 3,
+          "steve.swain@enron.com": 3,
+          "assoc.'.'california@enron.com": 1,
           "j..kean@enron.com": 2,
           "vicki.sharp@enron.com": 3,
           "ttt@cpuc.ca.gov": 1,
@@ -10025,32 +10029,28 @@
           "alan.comnes@enron.com": 1,
           "shirleen.glasin@enron.com": 1,
           "b..sanders@enron.com": 2,
-          "steve.swain@enron.com": 3,
-          "dan.leff@enron.com": 1,
           "lisa.mellencamp@enron.com": 3,
           "mike.smith@enron.com": 1,
-          "jeff.richter@enron.com": 2,
+          "michael.tribolet@enron.com": 3,
+          "linda.robertson@enron.com": 2,
           "cynthia.biggs@travelpark.com": 2,
-          "c..williams@enron.com": 3,
+          "sue.nord@enron.com": 1,
           "psellers@pacbell.net": 1,
-          "evan.hughes@enron.com": 1,
+          "joseph.alamo@enron.com": 1,
+          "dan.leff@enron.com": 1,
           "tim.belden@enron.com": 2,
           "mbaldwin@igservice.com": 3,
           "karen.denne@enron.com": 1,
           "f..herod@enron.com": 1,
-          "jan.cooley@enron.com": 1,
+          "evan.hughes@enron.com": 1,
           "vjw@cleanpower.org": 1,
           "michael.etringer@enron.com": 1,
-          "linda.robertson@enron.com": 2,
+          "barry.tycholiz@enron.com": 5,
           "f..calger@enron.com": 2,
-          "sue.nord@enron.com": 1,
+          "c..williams@enron.com": 3,
           "janet.dietrich@enron.com": 1,
-          "joseph.alamo@enron.com": 1
-        },
-        "num_recipent": 51,
-        "date": "10/29/2001",
-        "total": 27,
-        "day": "Mo"
+          "drothrock@cmta.net": 2
+        }
       }
     ],
     "year": 2001,
@@ -10058,10 +10058,6 @@
   },
   {
     "recipients": [
-      {
-        "num": 1,
-        "name": "pat.shortridge@enron.com"
-      },
       {
         "num": 13,
         "name": "susan.mara@enron.com"
@@ -10083,8 +10079,8 @@
         "name": "m..tholt@enron.com"
       },
       {
-        "num": 7,
-        "name": "michael.tribolet@enron.com"
+        "num": 1,
+        "name": "jeff.richter@enron.com"
       },
       {
         "num": 2,
@@ -10180,7 +10176,7 @@
       },
       {
         "num": 1,
-        "name": "stephanie.miller@enron.com"
+        "name": "pat.shortridge@enron.com"
       },
       {
         "num": 1,
@@ -10216,6 +10212,10 @@
       },
       {
         "num": 1,
+        "name": "wbooth@booth-law.com"
+      },
+      {
+        "num": 1,
         "name": "avramsiegel@home.com"
       },
       {
@@ -10223,8 +10223,8 @@
         "name": "mike.smith@enron.com"
       },
       {
-        "num": 1,
-        "name": "jeff.richter@enron.com"
+        "num": 7,
+        "name": "michael.tribolet@enron.com"
       },
       {
         "num": 6,
@@ -10236,7 +10236,7 @@
       },
       {
         "num": 1,
-        "name": "wbooth@booth-law.com"
+        "name": "stephanie.miller@enron.com"
       },
       {
         "num": 2,
@@ -10322,6 +10322,10 @@
           "19": 4,
           "18": 1
         },
+        "day": "We",
+        "num_recipent": 14,
+        "date": "11/7/2001",
+        "total": 21,
         "sent_detail": {
           "paul.kaufman@enron.com": 5,
           "alan.comnes@enron.com": 1,
@@ -10337,11 +10341,7 @@
           "lisa.mellencamp@enron.com": 3,
           "d..steffes@enron.com": 2,
           "lydia.cannon@enron.com": 1
-        },
-        "num_recipent": 14,
-        "date": "11/7/2001",
-        "total": 21,
-        "day": "We"
+        }
       },
       {
         "day_num": "1",
@@ -10371,29 +10371,29 @@
           "19": 2,
           "18": 3
         },
-        "sent_detail": {
-          "susan.mara@enron.com": 1,
-          "steve.swain@enron.com": 1,
-          "psellers@pacbell.net": 1,
-          "jeff.richter@enron.com": 1,
-          "david.parquet@enron.com": 1,
-          "tim.belden@enron.com": 1,
-          "richard.shapiro@enron.com": 1,
-          "lisa.mellencamp@enron.com": 1,
-          "lisa.yoho@enron.com": 1,
-          "michael.etringer@enron.com": 1,
-          "michael.mcdonald@enron.com": 1,
-          "michael.tribolet@enron.com": 2,
-          "barry.tycholiz@enron.com": 2,
-          "wanda.curry@enron.com": 1,
-          "d..steffes@enron.com": 1,
-          "joseph.alamo@enron.com": 1,
-          "nancy.sellers@robertmondavi.com": 1
-        },
+        "day": "Mo",
         "num_recipent": 17,
         "date": "11/5/2001",
         "total": 11,
-        "day": "Mo"
+        "sent_detail": {
+          "susan.mara@enron.com": 1,
+          "richard.shapiro@enron.com": 1,
+          "psellers@pacbell.net": 1,
+          "david.parquet@enron.com": 1,
+          "tim.belden@enron.com": 1,
+          "steve.swain@enron.com": 1,
+          "michael.tribolet@enron.com": 2,
+          "lisa.mellencamp@enron.com": 1,
+          "lisa.yoho@enron.com": 1,
+          "joseph.alamo@enron.com": 1,
+          "michael.mcdonald@enron.com": 1,
+          "jeff.richter@enron.com": 1,
+          "barry.tycholiz@enron.com": 2,
+          "wanda.curry@enron.com": 1,
+          "d..steffes@enron.com": 1,
+          "michael.etringer@enron.com": 1,
+          "nancy.sellers@robertmondavi.com": 1
+        }
       },
       {
         "day_num": "5",
@@ -10423,6 +10423,10 @@
           "19": 3,
           "18": 1
         },
+        "day": "Fr",
+        "num_recipent": 7,
+        "date": "11/9/2001",
+        "total": 7,
         "sent_detail": {
           "karen.denne@enron.com": 1,
           "aida.o'neal@enron.com": 1,
@@ -10431,11 +10435,7 @@
           "bortman@haas.berkeley.edu": 1,
           "drothrock@cmta.net": 1,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 7,
-        "date": "11/9/2001",
-        "total": 7,
-        "day": "Fr"
+        }
       },
       {
         "day_num": "0",
@@ -10465,15 +10465,15 @@
           "19": 0,
           "18": 0
         },
+        "day": "Su",
+        "num_recipent": 3,
+        "date": "11/4/2001",
+        "total": 1,
         "sent_detail": {
           "eldon@direcpc.com": 1,
           "psellers@pacbell.net": 1,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 3,
-        "date": "11/4/2001",
-        "total": 1,
-        "day": "Su"
+        }
       },
       {
         "day_num": "4",
@@ -10504,7 +10504,12 @@
           "19": 5,
           "18": 2
         },
+        "day": "Th",
+        "num_recipent": 38,
+        "date": "11/8/2001",
+        "total": 22,
         "sent_detail": {
+          "pat.shortridge@enron.com": 1,
           "susan.mara@enron.com": 6,
           "kmccrea@sablaw.com": 1,
           "m..tholt@enron.com": 2,
@@ -10512,13 +10517,13 @@
           "ray.alvarez@enron.com": 1,
           "wanda.curry@enron.com": 2,
           "bortman@haas.berkeley.edu": 2,
-          "d..steffes@enron.com": 4,
+          "dan.leff@enron.com": 1,
           "paul.kaufman@enron.com": 3,
           "l..petrochko@enron.com": 3,
           "m..landwehr@enron.com": 1,
           "richard.shapiro@enron.com": 4,
           "dcarroll@dbsr.com": 1,
-          "dan.leff@enron.com": 1,
+          "d..steffes@enron.com": 4,
           "joan.wagner@bus.utexas.edu": 1,
           "j..kean@enron.com": 1,
           "vicki.sharp@enron.com": 1,
@@ -10531,11 +10536,10 @@
           "steve.swain@enron.com": 2,
           "lisa.mellencamp@enron.com": 2,
           "tj@haas.berkeley.edu": 2,
-          "wbooth@booth-law.com": 1,
           "mike.smith@enron.com": 1,
           "michael.tribolet@enron.com": 2,
           "nancy.sellers@robertmondavi.com": 1,
-          "pat.shortridge@enron.com": 1,
+          "wbooth@booth-law.com": 1,
           "dave.perrino@enron.com": 1,
           "evan.hughes@enron.com": 1,
           "diann.huddleson@enron.com": 2,
@@ -10543,11 +10547,7 @@
           "c..williams@enron.com": 2,
           "janet.dietrich@enron.com": 1,
           "drothrock@cmta.net": 1
-        },
-        "num_recipent": 38,
-        "date": "11/8/2001",
-        "total": 22,
-        "day": "Th"
+        }
       },
       {
         "day_num": "2",
@@ -10578,6 +10578,10 @@
           "19": 2,
           "18": 2
         },
+        "day": "Tu",
+        "num_recipent": 8,
+        "date": "11/6/2001",
+        "total": 13,
         "sent_detail": {
           "susan.mara@enron.com": 4,
           "sgovenar@govadv.com": 1,
@@ -10587,11 +10591,7 @@
           "avramsiegel@home.com": 1,
           "d..steffes@enron.com": 2,
           "drothrock@cmta.net": 2
-        },
-        "num_recipent": 8,
-        "date": "11/6/2001",
-        "total": 13,
-        "day": "Tu"
+        }
       }
     ],
     "year": 2001,
@@ -10608,8 +10608,8 @@
         "name": "susan.mara@enron.com"
       },
       {
-        "num": 3,
-        "name": "richard.shapiro@enron.com"
+        "num": 1,
+        "name": "kmccrea@sablaw.com"
       },
       {
         "num": 1,
@@ -10680,8 +10680,8 @@
         "name": "l..petrochko@enron.com"
       },
       {
-        "num": 1,
-        "name": "kmccrea@sablaw.com"
+        "num": 3,
+        "name": "richard.shapiro@enron.com"
       },
       {
         "num": 3,
@@ -10803,32 +10803,32 @@
           "19": 1,
           "18": 0
         },
+        "day": "Mo",
+        "num_recipent": 20,
+        "date": "11/12/2001",
+        "total": 8,
         "sent_detail": {
           "susan.mara@enron.com": 3,
-          "richard.shapiro@enron.com": 2,
+          "kmccrea@sablaw.com": 1,
           "'.'delaney@enron.com": 1,
           "cra@calretailers.com": 1,
           "ginger.dernehl@enron.com": 1,
           "drothrock@camfg.com": 1,
-          "kmccrea@sablaw.com": 1,
+          "richard.shapiro@enron.com": 2,
           "dominic.dimare@calchamber.com": 1,
+          "barry.tycholiz@enron.com": 1,
           "mkahl@ka-pow.com": 2,
           "wbooth@booth-law.com": 1,
           "john.redding@gene.ge.com": 1,
-          "brbarkovich@earthlink.net": 1,
-          "ek@a-klaw.com": 1,
-          "michael.tribolet@enron.com": 1,
-          "barry.tycholiz@enron.com": 1,
-          "wanda.curry@enron.com": 1,
-          "lisa.mellencamp@enron.com": 1,
-          "d..steffes@enron.com": 1,
           "jeff.dasovich@enron.com": 2,
+          "michael.tribolet@enron.com": 1,
+          "brbarkovich@earthlink.net": 1,
+          "wanda.curry@enron.com": 1,
+          "ek@a-klaw.com": 1,
+          "d..steffes@enron.com": 1,
+          "lisa.mellencamp@enron.com": 1,
           "derek.naten@roche.com": 1
-        },
-        "num_recipent": 20,
-        "date": "11/12/2001",
-        "total": 8,
-        "day": "Mo"
+        }
       },
       {
         "day_num": "5",
@@ -10858,15 +10858,15 @@
           "19": 0,
           "18": 0
         },
+        "day": "Fr",
+        "num_recipent": 3,
+        "date": "11/16/2001",
+        "total": 1,
         "sent_detail": {
           "hornbeck@haas.berkeley.edu": 1,
           "chris_hornbeck@sp.gap.com": 1,
           "tamborni@haas.berkeley.edu": 1
-        },
-        "num_recipent": 3,
-        "date": "11/16/2001",
-        "total": 1,
-        "day": "Fr"
+        }
       },
       {
         "day_num": "4",
@@ -10896,15 +10896,15 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "cameron@perfect.com": 1,
-          "sgovenar@govadv.com": 1,
-          "scottwl@hotmail.com": 1
-        },
+        "day": "Th",
         "num_recipent": 3,
         "date": "11/15/2001",
         "total": 3,
-        "day": "Th"
+        "sent_detail": {
+          "cameron@perfect.com": 1,
+          "scottwl@hotmail.com": 1,
+          "sgovenar@govadv.com": 1
+        }
       },
       {
         "day_num": "2",
@@ -10935,6 +10935,10 @@
           "19": 1,
           "18": 1
         },
+        "day": "Tu",
+        "num_recipent": 14,
+        "date": "11/13/2001",
+        "total": 14,
         "sent_detail": {
           "susan.mara@enron.com": 1,
           "psellers@pacbell.net": 2,
@@ -10950,11 +10954,7 @@
           "d..steffes@enron.com": 2,
           "jeff.dasovich@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 14,
-        "date": "11/13/2001",
-        "total": 14,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "3",
@@ -10985,25 +10985,25 @@
           "19": 3,
           "18": 1
         },
-        "sent_detail": {
-          "e-mail<.scott@enron.com>": 1,
-          "susan.mara@enron.com": 1,
-          "ddr0@pge.com": 1,
-          "9069876@skytel.com": 2,
-          "karen.denne@enron.com": 1,
-          "cristina.zavala@enron.com": 2,
-          "d..steffes@enron.com": 1,
-          "stephanie.miller@enron.com": 2,
-          "ttt@cpuc.ca.gov": 1,
-          "avramsiegel@home.com": 1,
-          "ek@a-klaw.com": 1,
-          "phil.polsky@enron.com": 2,
-          "scottwl@hotmail.com": 1
-        },
+        "day": "We",
         "num_recipent": 13,
         "date": "11/14/2001",
         "total": 15,
-        "day": "We"
+        "sent_detail": {
+          "e-mail<.scott@enron.com>": 1,
+          "susan.mara@enron.com": 1,
+          "stephanie.miller@enron.com": 2,
+          "ek@a-klaw.com": 1,
+          "9069876@skytel.com": 2,
+          "karen.denne@enron.com": 1,
+          "cristina.zavala@enron.com": 2,
+          "phil.polsky@enron.com": 2,
+          "ttt@cpuc.ca.gov": 1,
+          "avramsiegel@home.com": 1,
+          "ddr0@pge.com": 1,
+          "d..steffes@enron.com": 1,
+          "scottwl@hotmail.com": 1
+        }
       }
     ],
     "year": 2001,
@@ -11069,10 +11069,6 @@
       },
       {
         "num": 1,
-        "name": "colleenfsilva@yahoo.com"
-      },
-      {
-        "num": 1,
         "name": "gregoryklatt@earthlink.net"
       },
       {
@@ -11101,11 +11097,7 @@
       },
       {
         "num": 1,
-        "name": "ek@a-klaw.com"
-      },
-      {
-        "num": 1,
-        "name": "eduncan2@arterhadden.com"
+        "name": "ddr0@pge.com"
       },
       {
         "num": 1,
@@ -11153,11 +11145,7 @@
       },
       {
         "num": 1,
-        "name": "janelle.scheuer@enron.com"
-      },
-      {
-        "num": 1,
-        "name": "m..tholt@enron.com"
+        "name": "kebler.curtis@enron.com"
       },
       {
         "num": 1,
@@ -11196,12 +11184,16 @@
         "name": "drew.fossum@enron.com"
       },
       {
+        "num": 1,
+        "name": "w..cantrell@enron.com"
+      },
+      {
         "num": 2,
         "name": "jeff_dasovich@enron.com"
       },
       {
         "num": 1,
-        "name": "w..cantrell@enron.com"
+        "name": "m..tholt@enron.com"
       },
       {
         "num": 1,
@@ -11236,12 +11228,12 @@
         "name": "michael.tribolet@enron.com"
       },
       {
-        "num": 3,
-        "name": "psellers@pacbell.net"
+        "num": 1,
+        "name": "pigott.jack@enron.com"
       },
       {
         "num": 1,
-        "name": "ddr0@pge.com"
+        "name": "ek@a-klaw.com"
       },
       {
         "num": 1,
@@ -11265,7 +11257,11 @@
       },
       {
         "num": 1,
-        "name": "pigott.jack@enron.com"
+        "name": "harlan.murphy@enron.com"
+      },
+      {
+        "num": 3,
+        "name": "psellers@pacbell.net"
       },
       {
         "num": 1,
@@ -11305,7 +11301,7 @@
       },
       {
         "num": 1,
-        "name": "b.smith@enron.com"
+        "name": "janelle.scheuer@enron.com"
       },
       {
         "num": 1,
@@ -11313,7 +11309,7 @@
       },
       {
         "num": 1,
-        "name": "kebler.curtis@enron.com"
+        "name": "colleenfsilva@yahoo.com"
       },
       {
         "num": 1,
@@ -11325,7 +11321,11 @@
       },
       {
         "num": 1,
-        "name": "harlan.murphy@enron.com"
+        "name": "b.smith@enron.com"
+      },
+      {
+        "num": 1,
+        "name": "eduncan2@arterhadden.com"
       },
       {
         "num": 1,
@@ -11368,33 +11368,38 @@
           "19": 5,
           "18": 0
         },
+        "day": "Tu",
+        "num_recipent": 54,
+        "date": "11/20/2001",
+        "total": 17,
         "sent_detail": {
           "douglass'.'dan@enron.com": 1,
           "susan.mara@enron.com": 1,
           "miessner.charles@enron.com": 1,
           "pelote.roger@enron.com": 1,
-          "hickok.randy@enron.com": 1,
+          "david.parquet@enron.com": 1,
           "mollon.janie@enron.com": 1,
           "sandler.vicki@enron.com": 1,
           "cameron@perfect.com": 2,
           "tracy.fairchild@edelman.com": 1,
           "bcragg@gmssr.com": 1,
           "blood.peter@enron.com": 1,
+          "colleenfsilva@yahoo.com": 1,
           "gregoryklatt@earthlink.net": 1,
           "ackerman.gary@enron.com": 1,
           "cazalet.ed@enron.com": 1,
           "nichol.rob@enron.com": 1,
-          "ddr0@pge.com": 1,
+          "ek@a-klaw.com": 1,
+          "eduncan2@arterhadden.com": 1,
           "gardiner.corby@enron.com": 1,
           "blue.greg@enron.com": 1,
           "richard.shapiro@enron.com": 1,
           "hatton.curt@enron.com": 1,
           "eldon@direcpc.com": 2,
-          "david.parquet@enron.com": 1,
+          "hickok.randy@enron.com": 1,
           "erica.manuel@edelman.com": 1,
           "arm@enron.com": 1,
           "bulk.max@enron.com": 1,
-          "kebler.curtis@enron.com": 1,
           "shea.karen@enron.com": 1,
           "psellers@haas.berkeley.edu": 1,
           "scottwl@hotmail.com": 2,
@@ -11406,28 +11411,23 @@
           "torgerson.todd@enron.com": 1,
           "'fairchild@enron.com": 1,
           "michael.tribolet@enron.com": 2,
-          "pigott.jack@enron.com": 1,
-          "ek@a-klaw.com": 1,
+          "psellers@pacbell.net": 3,
+          "ddr0@pge.com": 1,
           "baker.carolyn@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 4,
-          "harlan.murphy@enron.com": 1,
-          "psellers@pacbell.net": 3,
+          "pigott.jack@enron.com": 1,
           "victor.browner@enron.com": 1,
           "9069876@skytel.com": 1,
           "michelle.maynard@enron.com": 1,
           "h..foster@enron.com": 1,
           "schleimer.steve@enron.com": 1,
           "hoekstra.alden@enron.com": 1,
-          "colleenfsilva@yahoo.com": 1,
+          "kebler.curtis@enron.com": 1,
           "vaughn.george@enron.com": 1,
           "nguyen.nam@enron.com": 1,
-          "eduncan2@arterhadden.com": 1,
+          "harlan.murphy@enron.com": 1,
           "johnson.tamara@enron.com": 1
-        },
-        "num_recipent": 54,
-        "date": "11/20/2001",
-        "total": 17,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "3",
@@ -11458,6 +11458,10 @@
           "19": 0,
           "18": 3
         },
+        "day": "We",
+        "num_recipent": 22,
+        "date": "11/21/2001",
+        "total": 11,
         "sent_detail": {
           "sgovenar@govadv.com": 1,
           "m..tholt@enron.com": 1,
@@ -11481,11 +11485,7 @@
           "glen.hass@enron.com": 1,
           "drew.fossum@enron.com": 1,
           "barry.tycholiz@enron.com": 1
-        },
-        "num_recipent": 22,
-        "date": "11/21/2001",
-        "total": 11,
-        "day": "We"
+        }
       },
       {
         "day_num": "1",
@@ -11515,8 +11515,11 @@
           "19": 4,
           "18": 0
         },
+        "day": "Mo",
+        "num_recipent": 13,
+        "date": "11/19/2001",
+        "total": 13,
         "sent_detail": {
-          "b.smith@enron.com": 1,
           "lga@mother.com": 1,
           "shelanski@mail.law.berkeley.edu": 1,
           "jbennett@gmssr.com": 1,
@@ -11524,16 +11527,13 @@
           "richard.shapiro@enron.com": 3,
           "david.parquet@enron.com": 1,
           "mflorio@turn.org": 1,
+          "janelle.scheuer@enron.com": 1,
           "michael.tribolet@enron.com": 1,
           "deverell@fluid.com": 1,
           "stephanie.miller@enron.com": 1,
           "d..steffes@enron.com": 1,
-          "janelle.scheuer@enron.com": 1
-        },
-        "num_recipent": 13,
-        "date": "11/19/2001",
-        "total": 13,
-        "day": "Mo"
+          "b.smith@enron.com": 1
+        }
       }
     ],
     "year": 2001,
@@ -11547,7 +11547,7 @@
       },
       {
         "num": 3,
-        "name": "9069876@skytel.com"
+        "name": "douglass@energyattorney.com"
       },
       {
         "num": 1,
@@ -11619,7 +11619,7 @@
       },
       {
         "num": 3,
-        "name": "douglass@energyattorney.com"
+        "name": "9069876@skytel.com"
       },
       {
         "num": 4,
@@ -11737,9 +11737,13 @@
           "19": 2,
           "18": 0
         },
+        "day": "Th",
+        "num_recipent": 15,
+        "date": "11/29/2001",
+        "total": 8,
         "sent_detail": {
+          "gigicoe@mindspring.com": 1,
           "susan.mara@enron.com": 1,
-          "michael.tribolet@enron.com": 1,
           "alan.comnes@enron.com": 1,
           "ginger.dernehl@enron.com": 1,
           "9069876@skytel.com": 1,
@@ -11747,17 +11751,13 @@
           "richard.shapiro@enron.com": 1,
           "eldon@direcpc.com": 1,
           "bkc7@pge.com": 2,
-          "harry.kingerski@enron.com": 1,
           "'cherry@enron.com": 2,
-          "gigicoe@mindspring.com": 1,
+          "michael.tribolet@enron.com": 1,
+          "nancy.sellers@robertmondavi.com": 1,
           "d..smith@enron.com": 1,
           "d..steffes@enron.com": 1,
-          "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 15,
-        "date": "11/29/2001",
-        "total": 8,
-        "day": "Th"
+          "harry.kingerski@enron.com": 1
+        }
       },
       {
         "day_num": "1",
@@ -11787,25 +11787,25 @@
           "19": 1,
           "18": 1
         },
+        "day": "Mo",
+        "num_recipent": 13,
+        "date": "11/26/2001",
+        "total": 8,
         "sent_detail": {
           "tom.riley@enron.com": 1,
           "susan.mara@enron.com": 2,
+          "evan.hughes@enron.com": 1,
           "douglass@energyattorney.com": 1,
-          "janelle.scheuer@enron.com": 2,
           "geoff.pollard@enron.com": 2,
           "lamar.frazier@enron.com": 1,
-          "evan.hughes@enron.com": 1,
+          "janelle.scheuer@enron.com": 2,
           "diann.huddleson@enron.com": 1,
           "rebecca.fite@enron.com": 1,
           "stephanie.miller@enron.com": 1,
           "d..steffes@enron.com": 1,
           "gtmcgourty@ucdavis.edu": 1,
           "b.smith@enron.com": 1
-        },
-        "num_recipent": 13,
-        "date": "11/26/2001",
-        "total": 8,
-        "day": "Mo"
+        }
       },
       {
         "day_num": "3",
@@ -11836,14 +11836,18 @@
           "19": 3,
           "18": 0
         },
+        "day": "We",
+        "num_recipent": 15,
+        "date": "11/28/2001",
+        "total": 9,
         "sent_detail": {
           "tom.riley@enron.com": 1,
           "susan.mara@enron.com": 4,
-          "geoff.pollard@enron.com": 2,
+          "bill.chen@aesmail.com": 1,
           "arem@electric.com": 1,
           "douglass@energyattorney.com": 1,
           "jsmollon@newwestenergy.com": 1,
-          "bill.chen@aesmail.com": 1,
+          "geoff.pollard@enron.com": 2,
           "lamar.frazier@enron.com": 1,
           "evan.hughes@enron.com": 1,
           "cameron@perfect.com": 1,
@@ -11852,11 +11856,7 @@
           "d..steffes@enron.com": 1,
           "joseph.alamo@enron.com": 2,
           "b.smith@enron.com": 1
-        },
-        "num_recipent": 15,
-        "date": "11/28/2001",
-        "total": 9,
-        "day": "We"
+        }
       },
       {
         "day_num": "2",
@@ -11887,6 +11887,10 @@
           "19": 1,
           "18": 3
         },
+        "day": "Tu",
+        "num_recipent": 13,
+        "date": "11/27/2001",
+        "total": 10,
         "sent_detail": {
           "paul.kaufman@enron.com": 1,
           "psellers@pacbell.net": 1,
@@ -11901,11 +11905,7 @@
           "borenste@haas.berkeley.edu": 1,
           "joseph.alamo@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 13,
-        "date": "11/27/2001",
-        "total": 10,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "6",
@@ -11936,21 +11936,21 @@
           "19": 0,
           "18": 0
         },
+        "day": "Sa",
+        "num_recipent": 9,
+        "date": "12/1/2001",
+        "total": 3,
         "sent_detail": {
           "psellers@pacbell.net": 1,
           "richard.shapiro@enron.com": 1,
-          "bkc7@pge.com": 1,
-          "eldon@direcpc.com": 1,
           "cameron@perfect.com": 1,
+          "eldon@direcpc.com": 1,
+          "bkc7@pge.com": 1,
           "'cherry@enron.com": 1,
           "jdasovic@enron.com": 2,
           "scottwl@hotmail.com": 1,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 9,
-        "date": "12/1/2001",
-        "total": 3,
-        "day": "Sa"
+        }
       },
       {
         "day_num": "5",
@@ -11980,6 +11980,10 @@
           "19": 3,
           "18": 0
         },
+        "day": "Fr",
+        "num_recipent": 6,
+        "date": "11/30/2001",
+        "total": 6,
         "sent_detail": {
           "ginger.dernehl@enron.com": 1,
           "9069876@skytel.com": 2,
@@ -11987,11 +11991,7 @@
           "ann.hill@enron.com": 1,
           "mday@gmssr.com": 1,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 6,
-        "date": "11/30/2001",
-        "total": 6,
-        "day": "Fr"
+        }
       }
     ],
     "year": 2001,
@@ -12056,10 +12056,6 @@
         "name": "d..steffes@enron.com"
       },
       {
-        "num": 1,
-        "name": "scn1@pge.com"
-      },
-      {
         "num": 3,
         "name": "paul.kaufman@enron.com"
       },
@@ -12078,6 +12074,10 @@
       {
         "num": 5,
         "name": "richard.shapiro@enron.com"
+      },
+      {
+        "num": 1,
+        "name": "swf5@pge.com"
       },
       {
         "num": 1,
@@ -12113,7 +12113,7 @@
       },
       {
         "num": 1,
-        "name": "swf5@pge.com"
+        "name": "scn1@pge.com"
       },
       {
         "num": 1,
@@ -12205,10 +12205,6 @@
       },
       {
         "num": 1,
-        "name": "dgrueneich@gralegal.com"
-      },
-      {
-        "num": 1,
         "name": "frank@enron.com"
       },
       {
@@ -12230,6 +12226,10 @@
       {
         "num": 1,
         "name": "clt7@pge.com"
+      },
+      {
+        "num": 1,
+        "name": "dgrueneich@gralegal.com"
       },
       {
         "num": 1,
@@ -12272,13 +12272,13 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "lynnelh@pacbell.net": 1
-        },
+        "day": "Sa",
         "num_recipent": 1,
         "date": "12/8/2001",
         "total": 1,
-        "day": "Sa"
+        "sent_detail": {
+          "lynnelh@pacbell.net": 1
+        }
       },
       {
         "day_num": "5",
@@ -12309,6 +12309,10 @@
           "19": 1,
           "18": 1
         },
+        "day": "Fr",
+        "num_recipent": 10,
+        "date": "12/7/2001",
+        "total": 9,
         "sent_detail": {
           "psellers@pacbell.net": 1,
           "ginger.dernehl@enron.com": 2,
@@ -12317,14 +12321,10 @@
           "eldon@direcpc.com": 1,
           "cameron@perfect.com": 1,
           "lynnelh@pacbell.net": 2,
-          "nancy.sellers@robertmondavi.com": 2,
+          "angela.schwarz@enron.com": 1,
           "d..smith@enron.com": 1,
-          "angela.schwarz@enron.com": 1
-        },
-        "num_recipent": 10,
-        "date": "12/7/2001",
-        "total": 9,
-        "day": "Fr"
+          "nancy.sellers@robertmondavi.com": 2
+        }
       },
       {
         "day_num": "3",
@@ -12355,28 +12355,28 @@
           "19": 1,
           "18": 0
         },
+        "day": "We",
+        "num_recipent": 16,
+        "date": "12/5/2001",
+        "total": 12,
         "sent_detail": {
-          "eldon@direcpc.com": 1,
+          "bhansen@lhom.com": 1,
           "psellers@pacbell.net": 1,
           "sgovenar@govadv.com": 1,
           "9069876@skytel.com": 2,
           "otis_cat@rocketmail.com": 1,
           "karen.denne@enron.com": 1,
           "hgovenar@govadv.com": 1,
-          "bhansen@lhom.com": 1,
+          "eldon@direcpc.com": 1,
           "wallace@haas.berkeley.edu": 1,
           "avramsiegel@attbi.com": 1,
-          "scottwl@hotmail.com": 2,
+          "drothrock@cmta.net": 1,
           "michael.tribolet@enron.com": 1,
           "charrylising@yahoo.com": 1,
           "josephtambornino@yahoo.com": 1,
-          "drothrock@cmta.net": 1,
+          "scottwl@hotmail.com": 2,
           "nancy.sellers@robertmondavi.com": 2
-        },
-        "num_recipent": 16,
-        "date": "12/5/2001",
-        "total": 12,
-        "day": "We"
+        }
       },
       {
         "day_num": "1",
@@ -12406,16 +12406,16 @@
           "19": 2,
           "18": 0
         },
+        "day": "Mo",
+        "num_recipent": 4,
+        "date": "12/3/2001",
+        "total": 4,
         "sent_detail": {
           "9069876@skytel.com": 1,
           "catherine.mckalip-thompson@enron.com": 1,
           "d..steffes@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 4,
-        "date": "12/3/2001",
-        "total": 4,
-        "day": "Mo"
+        }
       },
       {
         "day_num": "2",
@@ -12445,8 +12445,13 @@
           "19": 0,
           "18": 0
         },
+        "day": "Tu",
+        "num_recipent": 15,
+        "date": "12/4/2001",
+        "total": 4,
         "sent_detail": {
           "paul.kaufman@enron.com": 1,
+          "linda.robertson@enron.com": 1,
           "alan.comnes@enron.com": 1,
           "l..nicolay@enron.com": 1,
           "sue@sheltercorp.com": 2,
@@ -12457,15 +12462,10 @@
           "joe.hartsoe@enron.com": 1,
           "steve.montovano@enron.com": 1,
           "margo.reyna@enron.com": 1,
-          "linda.robertson@enron.com": 1,
           "elizabeth.linnell@enron.com": 1,
           "d..steffes@enron.com": 2,
           "harry.kingerski@enron.com": 1
-        },
-        "num_recipent": 15,
-        "date": "12/4/2001",
-        "total": 4,
-        "day": "Tu"
+        }
       },
       {
         "day_num": "4",
@@ -12495,6 +12495,10 @@
           "19": 4,
           "18": 4
         },
+        "day": "Th",
+        "num_recipent": 32,
+        "date": "12/6/2001",
+        "total": 15,
         "sent_detail": {
           "paul'.'sivley@enron.com": 1,
           "c5cheng@yahoo.com": 1,
@@ -12502,16 +12506,14 @@
           "david.parquet@enron.com": 1,
           "shelanski@mail.law.berkeley.edu": 1,
           "lamar.frazier@enron.com": 1,
-          "robertholt@pacbell.net": 1,
           "dasovichd@home.com": 1,
-          "clt7@pge.com": 1,
-          "d..steffes@enron.com": 1,
+          "samuel.wehn@enron.com": 1,
+          "scn1@pge.com": 1,
           "paul.kaufman@enron.com": 2,
           "ginger.dernehl@enron.com": 1,
           "richard.shapiro@enron.com": 2,
-          "samuel.wehn@enron.com": 1,
+          "d..steffes@enron.com": 1,
           "michelle.lokay@enron.com": 1,
-          "swf5@pge.com": 1,
           "vardanian@enron.com": 1,
           "angela.schwarz@enron.com": 3,
           "jav7@pge.com": 1,
@@ -12519,20 +12521,18 @@
           "mosley@enron.com": 1,
           "jeff_dasovich@enron.com": 1,
           "lisa.mellencamp@enron.com": 1,
-          "scn1@pge.com": 1,
+          "swf5@pge.com": 1,
           "dasovich63@hotmail.com": 1,
           "michael.tribolet@enron.com": 1,
           "jkm8@pge.com": 1,
           "psellers@pacbell.net": 1,
+          "dgrueneich@gralegal.com": 1,
           "frank@enron.com": 1,
-          "thomas@enron.com": 1,
+          "robertholt@pacbell.net": 1,
           "ng@enron.com": 1,
-          "dgrueneich@gralegal.com": 1
-        },
-        "num_recipent": 32,
-        "date": "12/6/2001",
-        "total": 15,
-        "day": "Th"
+          "clt7@pge.com": 1,
+          "thomas@enron.com": 1
+        }
       }
     ],
     "year": 2001,
@@ -12570,15 +12570,11 @@
       },
       {
         "num": 1,
-        "name": "wade.stubblefield@enron.com"
+        "name": "chrisjneale@hotmail.com"
       },
       {
         "num": 3,
         "name": "bkc7@pge.com"
-      },
-      {
-        "num": 1,
-        "name": "'mountford@enron.com"
       },
       {
         "num": 1,
@@ -12629,8 +12625,8 @@
         "name": "abernath@haas.berkeley.edu"
       },
       {
-        "num": 3,
-        "name": "'cherry@enron.com"
+        "num": 1,
+        "name": "'mountford@enron.com"
       },
       {
         "num": 2,
@@ -12650,7 +12646,7 @@
       },
       {
         "num": 1,
-        "name": "pfa1@pge.com"
+        "name": "fitzgerald@enron.com"
       },
       {
         "num": 2,
@@ -12686,11 +12682,11 @@
       },
       {
         "num": 1,
-        "name": "chrisjneale@hotmail.com"
+        "name": "wade.stubblefield@enron.com"
       },
       {
-        "num": 2,
-        "name": "psellers@pacbell.net"
+        "num": 1,
+        "name": "amm8@pge.com"
       },
       {
         "num": 3,
@@ -12701,8 +12697,8 @@
         "name": "scofer@llgm.com"
       },
       {
-        "num": 1,
-        "name": "amm8@pge.com"
+        "num": 2,
+        "name": "psellers@pacbell.net"
       },
       {
         "num": 1,
@@ -12730,7 +12726,11 @@
       },
       {
         "num": 1,
-        "name": "fitzgerald@enron.com"
+        "name": "pfa1@pge.com"
+      },
+      {
+        "num": 3,
+        "name": "'cherry@enron.com"
       },
       {
         "num": 1,
@@ -12768,16 +12768,16 @@
           "19": 0,
           "18": 0
         },
+        "day": "Mo",
+        "num_recipent": 4,
+        "date": "12/10/2001",
+        "total": 6,
         "sent_detail": {
           "9069876@skytel.com": 3,
           "wallace@haas.berkeley.edu": 1,
           "jeff_dasovich@enron.com": 1,
           "nancy.sellers@robertmondavi.com": 2
-        },
-        "num_recipent": 4,
-        "date": "12/10/2001",
-        "total": 6,
-        "day": "Mo"
+        }
       },
       {
         "day_num": "5",
@@ -12807,14 +12807,14 @@
           "19": 0,
           "18": 0
         },
-        "sent_detail": {
-          "alan.comnes@enron.com": 1,
-          "ginger.dernehl@enron.com": 1
-        },
+        "day": "Fr",
         "num_recipent": 2,
         "date": "12/14/2001",
         "total": 2,
-        "day": "Fr"
+        "sent_detail": {
+          "alan.comnes@enron.com": 1,
+          "ginger.dernehl@enron.com": 1
+        }
       },
       {
         "day_num": "3",
@@ -12845,46 +12845,46 @@
           "19": 3,
           "18": 5
         },
+        "day": "We",
+        "num_recipent": 34,
+        "date": "12/12/2001",
+        "total": 18,
         "sent_detail": {
           "kazi@haas.berkeley.edu": 1,
           "'kelly@enron.com": 1,
           "grm8@pge.com": 1,
-          "chrisjneale@hotmail.com": 1,
+          "wade.stubblefield@enron.com": 1,
           "bkc7@pge.com": 1,
           "d..smith@enron.com": 1,
           "d..steffes@enron.com": 4,
           "josepht@hallequitiesgroup.com": 2,
           "debrum@enron.com": 1,
+          "j..kean@enron.com": 1,
           "alliegro@enron.com": 1,
           "richard.shapiro@enron.com": 4,
           "brodie@haas.berkeley.edu": 1,
-          "j..kean@enron.com": 1,
+          "wallace@haas.berkeley.edu": 1,
           "abernath@haas.berkeley.edu": 1,
-          "'cherry@enron.com": 1,
+          "'mountford@enron.com": 1,
           "jdasovic@enron.com": 1,
           "april.hrach@enron.com": 1,
-          "wallace@haas.berkeley.edu": 1,
-          "fitzgerald@enron.com": 1,
-          "'mountford@enron.com": 1,
+          "pfa1@pge.com": 1,
+          "'cherry@enron.com": 1,
           "kupiecki@haas.berkeley.edu": 1,
           "add2@pge.com": 1,
           "otis_cat@rocketmail.com": 2,
           "'miller@enron.com": 1,
-          "wade.stubblefield@enron.com": 1,
-          "amm8@pge.com": 1,
-          "scofer@llgm.com": 1,
+          "chrisjneale@hotmail.com": 1,
           "psellers@pacbell.net": 1,
+          "scofer@llgm.com": 1,
+          "amm8@pge.com": 1,
           "jacqueline.kelly@schwab.com": 1,
           "djf8@pge.com": 1,
           "kathleen.magruder@newpower.com": 1,
           "tim.belden@enron.com": 1,
           "dshah@haas.berkeley.edu": 1,
-          "pfa1@pge.com": 1
-        },
-        "num_recipent": 34,
-        "date": "12/12/2001",
-        "total": 18,
-        "day": "We"
+          "fitzgerald@enron.com": 1
+        }
       },
       {
         "day_num": "4",
@@ -12915,20 +12915,20 @@
           "19": 0,
           "18": 2
         },
+        "day": "Th",
+        "num_recipent": 8,
+        "date": "12/13/2001",
+        "total": 9,
         "sent_detail": {
           "scofer@llgm.com": 1,
           "cameron@perfect.com": 3,
           "shelanski@mail.law.berkeley.edu": 1,
-          "tj@haas.berkeley.edu": 1,
-          "karen.denne@enron.com": 1,
           "bkc7@pge.com": 2,
+          "karen.denne@enron.com": 1,
+          "tj@haas.berkeley.edu": 1,
           "'cherry@enron.com": 2,
           "scottwl@hotmail.com": 1
-        },
-        "num_recipent": 8,
-        "date": "12/13/2001",
-        "total": 9,
-        "day": "Th"
+        }
       },
       {
         "day_num": "2",
@@ -12959,6 +12959,10 @@
           "19": 1,
           "18": 0
         },
+        "day": "Tu",
+        "num_recipent": 11,
+        "date": "12/11/2001",
+        "total": 8,
         "sent_detail": {
           "morel@haas.berkeley.edu": 1,
           "psellers@pacbell.net": 1,
@@ -12971,11 +12975,7 @@
           "hpatrick@gmssr.com": 1,
           "josepht@hallequitiesgroup.com": 2,
           "nancy.sellers@robertmondavi.com": 1
-        },
-        "num_recipent": 11,
-        "date": "12/11/2001",
-        "total": 8,
-        "day": "Tu"
+        }
       }
     ],
     "year": 2001,
