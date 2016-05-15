@@ -38,7 +38,7 @@
             <!-- Time Frame  -->
             <h4>
                 <span class="label label-info" id="timeFrame"></span>
-                <span class="label label-warning" id="mailTotal"></span>
+                <span class="label label-danger" id="mailTotal"></span>
             </h4>
             <!-- Main Chart  -->
             <svg id="mainChart"></svg>
@@ -47,11 +47,22 @@
     	<!-- Right pannel: Recipient list  -->
     	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-3">
             <div>
-                <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="#">Recipients <span id="recipTotal" class="badge">  </span></a></li>
-                    <li role="presentation"><a href="#">Keywords</a></li>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#recipients" aria-controls="recipients" role="tab" data-toggle="tab">Recipients 
+                            <span id="recipTotal" class="badge">  </span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#keywords" aria-controls="keywords" role="tab" data-toggle="tab">Keywords</a>
+                    </li>
                 </ul>
-                <div  id="recipListContainer"><svg id="recipList"></svg></div>
+                <!-- Tab panes -->
+                <div id="recipListContainer" class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="recipients"><svg id="recipList"></svg></div>
+                    <div role="tabpanel" class="tab-pane" id="keywords"><svg id="keyList"></svg></div>
+                </div>
             </div>
         </div><!-- END of Right pannel  -->
         <span id="tooltip" class="label label-success">Info</span>
