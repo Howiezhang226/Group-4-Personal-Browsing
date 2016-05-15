@@ -3,8 +3,7 @@ var weekNum = 40;
 var duration = 500;
 var days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 var daysReverse = ["Sa", "Fr", "Th", "We", "Tu", "Mo", "Su"];
-var times = ["12a", "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p", 
-                "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p"];
+var times = ["12a", "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p", "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p"];
 
 //Load .json data
 d3.json("json/js_week.json", function(error, result) {
@@ -13,7 +12,7 @@ d3.json("json/js_week.json", function(error, result) {
     var filteredData = data.filter(function(d) {
         return d.days.length > 0;
     });
-    filteredData.sort(function(a, b) { return d3.ascending(a.week_number, b.week_number)});
+    filteredData.sort(function(a, b) { return d3.ascending(a.week_number, b.week_number);});
         
     renderWeekList(filteredData);
     var weeklyData = filteredData.filter(function (d) {
@@ -126,6 +125,7 @@ function renderRecipList(data) {
     var recipText2 = recipList.selectAll(".text2").data(recipData);
 
     recipItems.enter().append("rect");
+    recipListContainer.scrollTop = 0;
     recipItems.attr("x", chartMargin.left)
         .attr("y", function(d, i) { return (chartHeight * i + chartMargin.top); })
         .attr("width", 0)
@@ -149,7 +149,7 @@ function renderRecipList(data) {
         .text(function(d) {return d.num})
         .style({"font-size": "15px", fill: "#555"})
         .attr("dx", chartWidth)
-        .attr("dy", function(d, i) { return (34 * i + 20); });
+        .attr("dy", function(d, i) { return (30 * i + 22); });
     
     recipText1.exit().remove();
     recipItems.exit().remove();
@@ -200,7 +200,7 @@ function renderKeyList(data) {
         .text(function(d) {return d.freq})
         .style({"font-size": "15px", fill: "#555"})
         .attr("dx", chartWidth)
-        .attr("dy", function(d, i) { return (34 * i + 20); });
+        .attr("dy", function(d, i) { return (30 * i + 22); });
     
     keyText1.exit().remove();
     keyItems.exit().remove();
@@ -294,8 +294,10 @@ function renderMainChart(data) {
             results.push(result);
         }
     }
-
-    d3.select("#mailTotal").html(weekly_total + " Emails");
+    var mailTotalTail = " Emails";
+    if (weekly_total == 1 || weekly_total == 0)
+        mailTotalTail = " Email";
+    d3.select("#mailTotal").html(weekly_total + mailTotalTail);
     var barChart = mainChart.append("g").attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
     var circleChart = mainChart.append("g").attr("transform", "translate(" + "20"  + "," + chartMargin.top + ")");
     
@@ -348,12 +350,17 @@ function renderMainChart(data) {
         .attr("height", function (d) { return rectScale(d.value);});
 
     cards.on("mouseenter", function(d, i) {
+        var tooltipTail = " Emails";
+        if (d.value == 0)
+            return;
+        else if (d.value == 1)
+            tooltipTail = " Email";
             d3.select("#tooltip").style({
                 visibility: "visible",
                 top: (d3.event.clientY + 5) +  "px",
                 left: (d3.event.clientX + 10) + "px",
                 opacity: 1
-            }).text(d.value + " Emails");
+            }).text(d.value + tooltipTail);
         })
         .on("mouseleave", function(d, i) {
             d3.select("#tooltip").style({
