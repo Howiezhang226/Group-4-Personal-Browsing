@@ -167,7 +167,7 @@ function renderKeyList(data) {
     var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
     var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
 
-    var barScale = d3.scale.linear().range([0, 90]).domain([0, chartInnerWidth]);
+    var barScale = d3.scale.linear().range([0, chartInnerWidth]).domain([0, 400]);
     var keyList = d3.select("#keyList")
         .attr("width", chartWidth)
         .attr("height", chartHeight)
