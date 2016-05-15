@@ -158,8 +158,8 @@ function renderRecipList(data) {
 
 function renderKeyList(data) {
     //Right panel - Tab 2 Keywords list
-    var keyData = data[0].recipients;
-    keyData.sort(function(a, b) { return d3.descending(a.num, b.num)});
+    var keyData = data[0].keywords;
+    keyData.sort(function(a, b) { return d3.descending(a.freq, b.freq)});
 
     var chartWidth = 250;
     var chartHeight = 30;
@@ -167,7 +167,7 @@ function renderKeyList(data) {
     var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
     var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
 
-    var barScale = d3.scale.linear().range([0, chartInnerWidth]).domain([0, 45]);
+    var barScale = d3.scale.linear().range([0, 90]).domain([0, chartInnerWidth]);
     var keyList = d3.select("#keyList")
         .attr("width", chartWidth)
         .attr("height", chartHeight)
@@ -184,12 +184,12 @@ function renderKeyList(data) {
         .style("fill", "#f0ad4e")
         .style("opacity", "0.8")
         .transition().duration(duration)
-        .attr("width", function(d) { return barScale(d.num); });  //green: #5cb85c yell: #f0ad4e info:#5bc0de red:#D9534F
+        .attr("width", function(d) { return barScale(d.freq); });  //green: #5cb85c yell: #f0ad4e info:#5bc0de red:#D9534F
 
     
     keyText1.enter().append("text") ;
     keyText1.attr("class", "text1")
-        .text(function(d) {return d.name})
+        .text(function(d) {return d.word})
         .style({"font-size": "14px", fill: "#555"})
         .attr("dx", 2)
         .attr("dy", function(d, i) { return (chartHeight * i + 20); });
@@ -197,7 +197,7 @@ function renderKeyList(data) {
     
     keyText2.enter().append("text"); 
     keyText2.attr("class", "text2")
-        .text(function(d) {return d.num})
+        .text(function(d) {return d.freq})
         .style({"font-size": "15px", fill: "#555"})
         .attr("dx", chartWidth)
         .attr("dy", function(d, i) { return (34 * i + 20); });
