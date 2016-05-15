@@ -57,7 +57,9 @@ rect.bordered {
      stroke: #E6E6E6;
      stroke-width: 1px;
  }
-
+.label {
+    font-size: 80%;
+}
 text.mono {
     font-size: 9pt;
     font-family: Consolas, courier;
