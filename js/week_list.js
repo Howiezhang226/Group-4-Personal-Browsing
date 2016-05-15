@@ -304,7 +304,7 @@ function renderMainChart(data) {
 
     //Remove Cells, Circles and Circles' text labels
     mainChart.selectAll(".bar").remove();
-    mainChart.selectAll("circle").remove();
+    mainChart.selectAll("circle").transition().duration(duration).attr("r", 0).remove();
     mainChart.selectAll(".circlesText").remove();
 
     //Draw Circles
@@ -314,10 +314,12 @@ function renderMainChart(data) {
     
     circleItems.enter().append("circle")
         //.attr("r", 0)
-        .attr("r", function (d, i) { return rScale(d.total);})
+        .attr("r", function (d, i) { return rScale(d.total)/2;})
         .attr("cx", 20)
         .attr("cy", function (d) { return (d.day * gridSize + gridSize/2);})
-        .attr("fill", "#f0ad4e"); //original #225ea8 info #5bc0de
+        .attr("fill", "#f0ad4e")
+        .transition().duration(duration)
+        .attr("r", function (d, i) { return rScale(d.total);}); //original #225ea8 info #5bc0de
 
     //Draw Circles' text labels
     circleItems.enter().append("text")
