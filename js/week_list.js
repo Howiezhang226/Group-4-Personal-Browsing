@@ -4,7 +4,7 @@ var duration = 500;
 var days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 var daysReverse = ["Sa", "Fr", "Th", "We", "Tu", "Mo", "Su"];
 var times = ["12a", "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p", "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p"];
-
+var weeklyData = []
 //Load .json data
 d3.json("json/js_week.json", function(error, result) {
     data = result;
@@ -15,12 +15,12 @@ d3.json("json/js_week.json", function(error, result) {
     filteredData.sort(function(a, b) { return d3.ascending(a.week_number, b.week_number);});
         
     renderWeekList(filteredData);
-    var weeklyData = filteredData.filter(function (d) {
+    weeklyData = filteredData.filter(function (d) {
         return d.week_number == weekNum;
     });
     renderRecipList(weeklyData);
     renderKeyList(weeklyData);
-    renderMainChart(weeklyData);
+    renderMainChart(weeklyData, "");
 })
 
 // Render functions  
@@ -58,12 +58,12 @@ function renderWeekList(data) {
         .attr("href", "#")
         .on("click", function(d, i) {
             weekNum = d.week_number;
-            var weeklyData = data.filter(function (d) {
+            weeklyData = data.filter(function (d) {
                 return d.week_number == weekNum;
             });
             renderRecipList(weeklyData);
             renderKeyList(weeklyData);
-            renderMainChart(weeklyData);
+            renderMainChart(weeklyData, "");
         });
 
     var weekSvg = weekLi.append("svg")
@@ -135,15 +135,17 @@ function renderRecipList(data) {
         .transition().duration(duration)
         .attr("width", function(d) { return barScale(d.num); });  //green: #5cb85c yell: #f0ad4e info:#5bc0de
 
-    
-    recipText1.enter().append("text") ;
+  recipText1.enter().append("text") ;
     recipText1.attr("class", "text1")
         .text(function(d) {return d.name})
         .style({"font-size": "14px", fill: "#555"})
         .attr("dx", 2)
         .attr("dy", function(d, i) { return (chartHeight * i + 20); });
 
-    
+  recipText1.on("click", function(d, i) {
+    //alert(d.name);
+    renderMainChart(weeklyData, d.name);
+  });
     recipText2.enter().append("text"); 
     recipText2.attr("class", "text2")
         .text(function(d) {return d.num})
@@ -207,7 +209,7 @@ function renderKeyList(data) {
     keyText2.exit().remove();
 }
 
-function renderMainChart(data) {
+function renderMainChart(data, name) {
     var chartWidth = 700;
     var chartHeight = 600;
     var chartMargin = {top: 30, left: 100, right: 20, bottom: 20};
@@ -276,6 +278,8 @@ function renderMainChart(data) {
     //Draw data items: cells, circles, circle-text
     var results = [];
     var circles = [];
+    var recipient_day_hour_value = [];
+    var recipient = name;
     var weekly_total = 0; //profile - total emails
     for (var i = 0; i < data[0].days.length; i++) {
         var day_data = data[0].days;
@@ -293,7 +297,18 @@ function renderMainChart(data) {
             result["value"] = myMap[key];
             results.push(result);
         }
+        var recp_day_hour =  day_data[i]["sent_detail"][recipient];
+        if(recp_day_hour) {
+          for (var j = 0; j < recp_day_hour.length; j++) {
+            var result_recp = {};
+            result_recp["day"] = day;
+            result_recp["hour"] = j;
+            result_recp["value"] = recp_day_hour[j];
+            recipient_day_hour_value.push(result_recp);
+          }
+        }
     }
+
     var mailTotalTail = " Emails";
     if (weekly_total == 1 || weekly_total == 0)
         mailTotalTail = " Email";
@@ -305,9 +320,13 @@ function renderMainChart(data) {
     var rScale = d3.scale.linear().range([10, gridSize / 2]).domain([0, 50]);
 
     //Remove Cells, Circles and Circles' text labels
+  if(!name) {
     mainChart.selectAll(".bar").remove();
     mainChart.selectAll("circle").transition().duration(duration).attr("r", 0).remove();
     mainChart.selectAll(".circlesText").remove();
+  }
+  mainChart.selectAll(".recp_bar").remove();
+
 
     //Draw Circles
     var circleItems = circleChart.selectAll("circle").data(circles, function (d) {
@@ -336,8 +355,8 @@ function renderMainChart(data) {
     var cards = barChart.selectAll(".hour").data(results, function (d) { 
         return d.day + ':' + d.hour;
     });
-    cards.enter().append("rect")
-        .attr("class", "hour bordered bar")
+    cards.enter().append("rect");
+    cards.attr("class", "hour bordered bar")
         .attr("x", function (d) { return (d.hour) * gridWeight;})
         .attr("y", function (d) { return (d.day) * gridSize + gridSize;})
         .attr("rx", 2)
@@ -355,19 +374,72 @@ function renderMainChart(data) {
             return;
         else if (d.value == 1)
             tooltipTail = " Email";
-            d3.select("#tooltip").style({
-                visibility: "visible",
-                top: (d3.event.clientY + 5) +  "px",
-                left: (d3.event.clientX + 10) + "px",
-                opacity: 1
-            }).text(d.value + tooltipTail);
-        })
+    
+    d3.select("#tooltip").style({
+            visibility: "visible",
+            top: (d3.event.clientY + 5) +  "px",
+            left: (d3.event.clientX + 10) + "px",
+            opacity: 1})
+        .text(d.value + tooltipTail);})
         .on("mouseleave", function(d, i) {
-            d3.select("#tooltip").style({
-                visibility: "hidden",
-                opacity: 0
-            });
+        d3.select("#tooltip").style({
+        visibility: "hidden",
+        opacity: 0
         });
+    });
+        
+if(name) {
+
+  var cards_recp = barChart.selectAll(".hour").data(recipient_day_hour_value, function (d) {
+    console.log(d.day + ':' + d.hour + ':' + day.value);
+    return d.day + ':' + d.hour + ':' + d.value;
+  });
+
+  cards_recp.enter().append("rect");
+
+  cards_recp.attr("class", "hour bordered bar")
+    .attr("class","recp_bar")
+    .attr("x", function (d) {
+      return (d.hour) * gridWeight;
+    })
+    .attr("y", function (d) {
+      return (d.day) * gridSize + gridSize;
+    })
+    .attr("rx", 2)
+    .attr("ry", 2)
+    .attr("width", gridWeight)
+    .attr("height", 0)
+    .attr("fill", "#d9534f") //yellow #f0ad4e
+    .attr("y", function (d) {
+      return (d.day) * gridSize + gridSize - rectScale(d.value);
+    })
+    .attr("height", function (d) {
+      return rectScale(d.value);
+    });
+
+
+  cards_recp.on("mouseenter", function (d, i) {
+      var tooltipTail = " Emails";
+      if (d.value == 0)
+        return;
+      else if (d.value == 1)
+        tooltipTail = " Email";
+      d3.select("#tooltip").style({
+        visibility: "visible",
+        top: (d3.event.clientY + 5) + "px",
+        left: (d3.event.clientX + 10) + "px",
+        opacity: 1
+      }).text(d.value + tooltipTail);
+    })
+    .on("mouseleave", function (d, i) {
+      d3.select("#tooltip").style({
+        visibility: "hidden",
+        opacity: 0
+      });
+    });
+  cards_recp.exit().remove();
+}
+
 }
 
 
