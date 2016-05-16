@@ -135,9 +135,6 @@ function renderRecipList(data) {
         .transition().duration(duration)
         .attr("width", function(d) { return barScale(d.num); });  //green: #5cb85c yell: #f0ad4e info:#5bc0de
 
-
-
-
   recipText1.enter().append("text") ;
     recipText1.attr("class", "text1")
         .text(function(d) {return d.name})
@@ -371,25 +368,26 @@ function renderMainChart(data, name) {
         .attr("y", function (d) { return (d.day) * gridSize + gridSize - rectScale(d.value);})
         .attr("height", function (d) { return rectScale(d.value);});
 
-  cards.on("mouseenter", function(d, i) {
-      var tooltipTail = " Emails";
-      if (d.value == 0)
-        return;
-      else if (d.value == 1)
-        tooltipTail = " Email";
-      d3.select("#tooltip").style({
-        visibility: "visible",
-        top: (d3.event.clientY + 5) +  "px",
-        left: (d3.event.clientX + 10) + "px",
-        opacity: 1
-      }).text(d.value + tooltipTail);
-    })
-    .on("mouseleave", function(d, i) {
-      d3.select("#tooltip").style({
+    cards.on("mouseenter", function(d, i) {
+        var tooltipTail = " Emails";
+        if (d.value == 0)
+            return;
+        else if (d.value == 1)
+            tooltipTail = " Email";
+    
+    d3.select("#tooltip").style({
+            visibility: "visible",
+            top: (d3.event.clientY + 5) +  "px",
+            left: (d3.event.clientX + 10) + "px",
+            opacity: 1})
+        .text(d.value + tooltipTail);})
+        .on("mouseleave", function(d, i) {
+        d3.select("#tooltip").style({
         visibility: "hidden",
         opacity: 0
-      });
+        });
     });
+        
 if(name) {
 
   var cards_recp = barChart.selectAll(".hour").data(recipient_day_hour_value, function (d) {
@@ -411,7 +409,7 @@ if(name) {
     .attr("ry", 2)
     .attr("width", gridWeight)
     .attr("height", 0)
-    .attr("fill", "#5cb85c")
+    .attr("fill", "#d9534f") //yellow #f0ad4e
     .attr("y", function (d) {
       return (d.day) * gridSize + gridSize - rectScale(d.value);
     })
