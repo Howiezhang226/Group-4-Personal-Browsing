@@ -44,7 +44,7 @@ text {
     font-size: 12px;
 }
 .bar:hover {
-    fill: #d9534f !important;
+    fill: rgba(240, 173, 78, .9) !important; /* #D9534F rgba(217, 83, 79, 0.9) #f0ad4e */
 }
 .list-group-item {
     padding: 3px;

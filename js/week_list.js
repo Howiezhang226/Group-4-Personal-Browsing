@@ -324,7 +324,7 @@ function renderMainChart(data, name) {
             var tooltipTail = (d.value == 1) ? " Email" : " Emails";
             d3.select("#tooltip")
                 .style({visibility: "visible", 
-                        opacity: 1,
+                        opacity: .8,
                         top: (d3.event.clientY + 5) +  "px", 
                         left: (d3.event.clientX + 10) + "px" })
                 .text(d.value + tooltipTail);
@@ -336,7 +336,7 @@ function renderMainChart(data, name) {
                 opacity: 0
             });
         });
-        
+
     } //if(!name)
     
     //Draw Recipient Cells
@@ -365,7 +365,7 @@ function renderMainChart(data, name) {
             d3.select("#tooltip").text(d.value + tooltipTail)
                 .style({
                     visibility: "visible",
-                    opacity: 1,
+                    opacity: .8,
                     top: (d3.event.clientY + 5) + "px",
                     left: (d3.event.clientX + 10) + "px"
                 });
