@@ -20,6 +20,7 @@ d3.json("json/js_week.json", function(error, result) {
     });
     renderRecipList(weeklyData);
     renderKeyList(weeklyData);
+    renderMainChartBG();
     renderMainChart(weeklyData, "");
 })
 
@@ -100,7 +101,7 @@ function renderWeekList(data) {
           .attr("width", xScale.rangeBand())
           .attr("height", function(d) { return chartInnerHeight - yScale(d.total); })
           .attr("transform", "translate(" + charMargin.left + ", " + charMargin.top + ")")
-          .attr("fill", "#337ab7");  
+          .attr("fill", "#5bc0de");
     }      
 }
 
@@ -130,26 +131,24 @@ function renderRecipList(data) {
         .attr("y", function(d, i) { return (chartHeight * i + chartMargin.top); })
         .attr("width", 0)
         .attr("height", chartInnerHeight)
-        .style("fill", "#5cb85c")
-        .style("opacity", "0.8")
+        .style("fill", "#5bc0de")
         .transition().duration(duration)
-        .attr("width", function(d) { return barScale(d.num); });  //green: #5cb85c yell: #f0ad4e info:#5bc0de
+        .attr("width", function(d) { return barScale(d.num); }); 
 
-  recipText1.enter().append("text") ;
+    recipText1.enter().append("text") ;
     recipText1.attr("class", "text1")
         .text(function(d) {return d.name})
-        .style({"font-size": "14px", fill: "#555"})
+        .style({"font-size": "14px", fill: "#777"})
         .attr("dx", 2)
         .attr("dy", function(d, i) { return (chartHeight * i + 20); });
 
-  recipText1.on("click", function(d, i) {
-    //alert(d.name);
-    renderMainChart(weeklyData, d.name);
-  });
+    recipText1.on("click", function(d, i) {
+        renderMainChart(weeklyData, d.name);
+    });
     recipText2.enter().append("text"); 
     recipText2.attr("class", "text2")
         .text(function(d) {return d.num})
-        .style({"font-size": "15px", fill: "#555"})
+        .style({"font-size": "15px", fill: "#777"})
         .attr("dx", chartWidth)
         .attr("dy", function(d, i) { return (30 * i + 22); });
     
@@ -183,10 +182,9 @@ function renderKeyList(data) {
         .attr("y", function(d, i) { return (chartHeight * i + chartMargin.top); })
         .attr("width", 0)
         .attr("height", chartInnerHeight)
-        .style("fill", "#f0ad4e")
-        .style("opacity", "0.8")
+        .style("fill", "#5bc0de")
         .transition().duration(duration)
-        .attr("width", function(d) { return barScale(d.freq); });  //green: #5cb85c yell: #f0ad4e info:#5bc0de red:#D9534F
+        .attr("width", function(d) { return barScale(d.freq); });  
 
     
     keyText1.enter().append("text") ;
@@ -225,18 +223,188 @@ function renderMainChart(data, name) {
 
     var xScale = d3.scale.ordinal().rangeBands([0, chartInnerWidth]).domain(times);  
     var yScale = d3.scale.ordinal().rangeBands([chartInnerHeight, 0]).domain(daysReverse);
+    
+    var gridWeight = xScale.rangeBand();
+    var gridSize = yScale.rangeBand();
+    
+    // Prepare data
+    var results = [];
+    var circles = [];
+    var recipient_day_hour_value = [];
+    var recipient = name;
+    var weekly_total = 0; //profile - total emails
+    for (var i = 0; i < data[0].days.length; i++) {
+        var day_data = data[0].days;
+        var day = day_data[i]["day_num"];
+        var circle_result = {};
+        circle_result["day"] = day;
+        circle_result["total"] = day_data[i]["total"];
+        weekly_total += day_data[i]["total"];
+        circles.push(circle_result);
+        var myMap = day_data[i]["daytime"];
+        for (var key in myMap) {
+            var result = {};
+            result["day"] = day;
+            result["hour"] = key;
+            result["value"] = myMap[key];
+            results.push(result);
+        }
+        var recp_day_hour =  day_data[i]["sent_detail"][recipient];
+        if(recp_day_hour) {
+          for (var j = 0; j < recp_day_hour.length; j++) {
+            var result_recp = {};
+            result_recp["day"] = day;
+            result_recp["hour"] = j;
+            result_recp["value"] = recp_day_hour[j];
+            recipient_day_hour_value.push(result_recp);
+          }
+        }
+    }
+    // Total mails label
+    var mailTotalTail = " Emails";
+    if (weekly_total == 1 || weekly_total == 0)
+        mailTotalTail = " Email";
+    d3.select("#mailTotal").html(weekly_total + mailTotalTail);
+
+    /** Draw data items: cells, circles, circle-text */
+    var barChart = mainChart.append("g").attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
+    var circleChart = mainChart.append("g").attr("transform", "translate(" + "20"  + "," + chartMargin.top + ")");
+    
+    var rectScale = d3.scale.linear().range([0, gridSize]).domain([0, 16]);
+    var rScale = d3.scale.linear().range([10, gridSize / 2]).domain([0, 50]);
+
+    //Remove Cells, Circles and Circles' text labels
+    if(!name) {
+        mainChart.selectAll(".bar").remove();
+        mainChart.selectAll("circle").transition().duration(duration).attr("r", 0).remove();
+        mainChart.selectAll(".circlesText").remove();
+    
+        //Draw Circles
+        var circleItems = circleChart.selectAll("circle").data(circles, function (d) {
+            return d.day + ':' + d.total;
+        });
+        
+        circleItems.enter().append("circle")
+            //.attr("r", 0)
+            .attr("r", function (d, i) { return rScale(d.total)/2;})
+            .attr("cx", 20)
+            .attr("cy", function (d) { return (d.day * gridSize + gridSize/2);})
+            .attr("fill", "#5bc0de")
+            .transition().duration(duration)
+            .attr("r", function (d, i) { return rScale(d.total);}); 
+
+        //Draw Circles' text labels
+        circleItems.enter().append("text")
+            .text(function(d) {return d.total})
+            .style({"font-size": "16px", fill: "#FFF", opacity: 1})
+            .attr("class", "circlesText")
+            .attr("text-anchor", "middle")
+            .attr("dx", 20)
+            .attr("dy", function (d) { return (d.day * gridSize + gridSize/2 + 6); });
+
+        //Draw Cells
+        var cards = barChart.selectAll(".hour").data(results, function (d) { 
+            return d.day + ':' + d.hour;
+        });
+        cards.enter().append("rect");
+        cards.attr("class", "hour bordered bar")
+            .attr("x", function (d) { return (d.hour) * gridWeight;})
+            .attr("y", function (d) { return (d.day) * gridSize + gridSize;})
+            .attr("rx", 2)
+            .attr("ry", 2)
+            .attr("width", gridWeight)
+            .attr("height", 0)
+            .attr("fill", "#5bc0de") //"#5bc0de" 
+            .transition().duration(duration)
+            .attr("y", function (d) { return (d.day) * gridSize + gridSize - rectScale(d.value);})
+            .attr("height", function (d) { return rectScale(d.value);});
+
+        cards.on("mouseenter", function(d, i) {
+            if (d.value == 0) return;
+            var tooltipTail = (d.value == 1) ? " Email" : " Emails";
+            d3.select("#tooltip")
+                .style({visibility: "visible", 
+                        opacity: .8,
+                        top: (d3.event.clientY + 5) +  "px", 
+                        left: (d3.event.clientX + 10) + "px" })
+                .text(d.value + tooltipTail);
+        });
+            
+        cards.on("mouseleave", function(d, i) {
+            d3.select("#tooltip").style({
+                visibility: "hidden",
+                opacity: 0
+            });
+        });
+
+    } //if(!name)
+    
+    //Draw Recipient Cells
+    mainChart.selectAll(".recip_bar").remove();
+    if(name) {
+        var cards_recp = barChart.selectAll(".hour").data(recipient_day_hour_value, function (d) {
+            console.log(d.day + ':' + d.hour + ':' + day.value);
+            return d.day + ':' + d.hour + ':' + d.value;
+        });
+
+        cards_recp.enter().append("rect");
+        cards_recp.attr("class", "recip_bar hour bar")
+            .attr("x", function (d) { return (d.hour) * gridWeight + 1; })
+            .attr("y", function (d) { return (d.day) * gridSize + gridSize; })
+            .attr("width", gridWeight - 2)
+            .attr("height", 0)
+            .attr("fill", "#337ab7") //rgba(91, 192, 222, 0.8) //#099AC5
+            .transition().duration(duration)
+            .attr("y", function (d) { return (d.day) * gridSize + gridSize - rectScale(d.value);})
+            .attr("height", function (d) { return rectScale(d.value); });
+
+        cards_recp.on("mouseenter", function (d) {
+            if (d.value == 0) return;
+            var tooltipTail = (d.value == 1) ? " Email" : " Emails";
+
+            d3.select("#tooltip").text(d.value + tooltipTail)
+                .style({
+                    visibility: "visible",
+                    opacity: .8,
+                    top: (d3.event.clientY + 5) + "px",
+                    left: (d3.event.clientX + 10) + "px"
+                });
+        });
+        
+        cards_recp.on("mouseleave", function (d) {
+                d3.select("#tooltip").style({
+                visibility: "hidden",
+                opacity: 0});
+        });
+    } //if(name)
+
+}
+
+function renderMainChartBG() {
+    var chartWidth = 700;
+    var chartHeight = 600;
+    var chartMargin = {top: 30, left: 100, right: 20, bottom: 20};
+    var chartInnerWidth = chartWidth - chartMargin.left - chartMargin.right;
+    var chartInnerHeight = chartHeight - chartMargin.top - chartMargin.bottom;
+    d3.select("#timeFrame").html(data[0].start_date + " - " + data[0].end_date);
+    d3.select("#recipTotal").html(data[0].recipients.length);
+
+    var mainChart = d3.select("#mainChart")
+                        .attr("width", chartWidth)
+                        .attr("height", chartHeight)
+                        .attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
+
+    var xScale = d3.scale.ordinal().rangeBands([0, chartInnerWidth]).domain(times);  
+    var yScale = d3.scale.ordinal().rangeBands([chartInnerHeight, 0]).domain(daysReverse);
     var yAxis = d3.svg.axis().scale(yScale).orient("left").outerTickSize(0);
     var xAxis = d3.svg.axis().scale(xScale).orient("top")
                 .innerTickSize(-chartInnerHeight)
                 .outerTickSize(0);
     
     var gridWeight = xScale.rangeBand();
-    var gridSize = yScale.rangeBand();
+    var gridSize = yScale.rangeBand();    
 
-    //Draw axis and shade
-    mainChart.selectAll(".axis").remove(); 
-    mainChart.selectAll(".shade").remove(); 
-
+    /** Draw axis and shade */
     mainChart.append("g")
         .attr("class", "axis")
         .attr("transform", "translate(" + (chartMargin.left - gridWeight/2) + ", " + chartMargin.top + ")")
@@ -274,172 +442,4 @@ function renderMainChart(data, name) {
         .attr("height", gridSize*7)
         .style("fill", "#ccc")
         .style("opacity", ".2");
-    
-    //Draw data items: cells, circles, circle-text
-    var results = [];
-    var circles = [];
-    var recipient_day_hour_value = [];
-    var recipient = name;
-    var weekly_total = 0; //profile - total emails
-    for (var i = 0; i < data[0].days.length; i++) {
-        var day_data = data[0].days;
-        var day = day_data[i]["day_num"];
-        var circle_result = {};
-        circle_result["day"] = day;
-        circle_result["total"] = day_data[i]["total"];
-        weekly_total += day_data[i]["total"];
-        circles.push(circle_result);
-        var myMap = day_data[i]["daytime"];
-        for (var key in myMap) {
-            var result = {};
-            result["day"] = day;
-            result["hour"] = key;
-            result["value"] = myMap[key];
-            results.push(result);
-        }
-        var recp_day_hour =  day_data[i]["sent_detail"][recipient];
-        if(recp_day_hour) {
-          for (var j = 0; j < recp_day_hour.length; j++) {
-            var result_recp = {};
-            result_recp["day"] = day;
-            result_recp["hour"] = j;
-            result_recp["value"] = recp_day_hour[j];
-            recipient_day_hour_value.push(result_recp);
-          }
-        }
-    }
-
-    var mailTotalTail = " Emails";
-    if (weekly_total == 1 || weekly_total == 0)
-        mailTotalTail = " Email";
-    d3.select("#mailTotal").html(weekly_total + mailTotalTail);
-    var barChart = mainChart.append("g").attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
-    var circleChart = mainChart.append("g").attr("transform", "translate(" + "20"  + "," + chartMargin.top + ")");
-    
-    var rectScale = d3.scale.linear().range([0, gridSize]).domain([0, 16]);
-    var rScale = d3.scale.linear().range([10, gridSize / 2]).domain([0, 50]);
-
-    //Remove Cells, Circles and Circles' text labels
-  if(!name) {
-    mainChart.selectAll(".bar").remove();
-    mainChart.selectAll("circle").transition().duration(duration).attr("r", 0).remove();
-    mainChart.selectAll(".circlesText").remove();
-  }
-  mainChart.selectAll(".recp_bar").remove();
-
-
-    //Draw Circles
-    var circleItems = circleChart.selectAll("circle").data(circles, function (d) {
-        return d.day + ':' + d.total;
-    });
-    
-    circleItems.enter().append("circle")
-        //.attr("r", 0)
-        .attr("r", function (d, i) { return rScale(d.total)/2;})
-        .attr("cx", 20)
-        .attr("cy", function (d) { return (d.day * gridSize + gridSize/2);})
-        .attr("fill", "#f0ad4e")
-        .transition().duration(duration)
-        .attr("r", function (d, i) { return rScale(d.total);}); //original #225ea8 info #5bc0de
-
-    //Draw Circles' text labels
-    circleItems.enter().append("text")
-        .text(function(d) {return d.total})
-        .style({"font-size": "16px", fill: "#FFF", opacity: 1})
-        .attr("class", "circlesText")
-        .attr("text-anchor", "middle")
-        .attr("dx", 20)
-        .attr("dy", function (d) { return (d.day * gridSize + gridSize/2 + 6); });
-
-    //Draw Cells
-    var cards = barChart.selectAll(".hour").data(results, function (d) { 
-        return d.day + ':' + d.hour;
-    });
-    cards.enter().append("rect");
-    cards.attr("class", "hour bordered bar")
-        .attr("x", function (d) { return (d.hour) * gridWeight;})
-        .attr("y", function (d) { return (d.day) * gridSize + gridSize;})
-        .attr("rx", 2)
-        .attr("ry", 2)
-        .attr("width", gridWeight)
-        .attr("height", 0)
-        .attr("fill", "#5bc0de")
-        .transition().duration(duration)
-        .attr("y", function (d) { return (d.day) * gridSize + gridSize - rectScale(d.value);})
-        .attr("height", function (d) { return rectScale(d.value);});
-
-    cards.on("mouseenter", function(d, i) {
-        var tooltipTail = " Emails";
-        if (d.value == 0)
-            return;
-        else if (d.value == 1)
-            tooltipTail = " Email";
-    
-    d3.select("#tooltip").style({
-            visibility: "visible",
-            top: (d3.event.clientY + 5) +  "px",
-            left: (d3.event.clientX + 10) + "px",
-            opacity: 1})
-        .text(d.value + tooltipTail);})
-        .on("mouseleave", function(d, i) {
-        d3.select("#tooltip").style({
-        visibility: "hidden",
-        opacity: 0
-        });
-    });
-        
-if(name) {
-
-  var cards_recp = barChart.selectAll(".hour").data(recipient_day_hour_value, function (d) {
-    console.log(d.day + ':' + d.hour + ':' + day.value);
-    return d.day + ':' + d.hour + ':' + d.value;
-  });
-
-  cards_recp.enter().append("rect");
-
-  cards_recp.attr("class", "hour bordered bar")
-    .attr("class","recp_bar")
-    .attr("x", function (d) {
-      return (d.hour) * gridWeight;
-    })
-    .attr("y", function (d) {
-      return (d.day) * gridSize + gridSize;
-    })
-    .attr("rx", 2)
-    .attr("ry", 2)
-    .attr("width", gridWeight)
-    .attr("height", 0)
-    .attr("fill", "#d9534f") //yellow #f0ad4e
-    .attr("y", function (d) {
-      return (d.day) * gridSize + gridSize - rectScale(d.value);
-    })
-    .attr("height", function (d) {
-      return rectScale(d.value);
-    });
-
-
-  cards_recp.on("mouseenter", function (d, i) {
-      var tooltipTail = " Emails";
-      if (d.value == 0)
-        return;
-      else if (d.value == 1)
-        tooltipTail = " Email";
-      d3.select("#tooltip").style({
-        visibility: "visible",
-        top: (d3.event.clientY + 5) + "px",
-        left: (d3.event.clientX + 10) + "px",
-        opacity: 1
-      }).text(d.value + tooltipTail);
-    })
-    .on("mouseleave", function (d, i) {
-      d3.select("#tooltip").style({
-        visibility: "hidden",
-        opacity: 0
-      });
-    });
-  cards_recp.exit().remove();
 }
-
-}
-
-
