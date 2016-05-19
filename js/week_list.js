@@ -50,7 +50,8 @@ function renderWeekList(data) {
         .orient("left")
         .tickValues([0, 40]);
 
-    var weekList = d3.select("#weekList");
+    var weekList = d3.select("#weekList")
+                        .classed("svg-container", true);
 
     var weekLi = weekList.selectAll("a")
         .data(data)
@@ -69,8 +70,8 @@ function renderWeekList(data) {
 
     var weekSvg = weekLi.append("svg")
         .attr("id", function(d, i){return "week" + i})
-        .attr("width", chartWidth)
-        .attr("height", chartHeight)
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", "0 0 170 70")
         .attr("transform", "translate(" + charMargin.left + "," + charMargin.top + ")");
 
     weekSvg.append("g")
@@ -217,8 +218,12 @@ function renderMainChart(data, name) {
     d3.select("#recipTotal").html(data[0].recipients.length);
 
     var mainChart = d3.select("#mainChart")
-                        .attr("width", chartWidth)
-                        .attr("height", chartHeight)
+                        .classed("svg-container", true)
+                        .attr("preserveAspectRatio", "xMinYMin meet")
+                        .attr("viewBox", "0 -40 400 600")
+                        .classed("svg-content-responsive", true)
+//                        .attr("width", chartWidth)
+//                        .attr("height", chartHeight)
                         .attr("transform", "translate(" + chartMargin.left + "," + chartMargin.top + ")");
 
     var xScale = d3.scale.ordinal().rangeBands([0, chartInnerWidth]).domain(times);  
