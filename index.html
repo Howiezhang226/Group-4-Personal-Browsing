@@ -17,18 +17,8 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Visualization of Personal Email Behavior</a>
         </div>
-
         <ul class="nav navbar-nav navbar-right">
-            <li class="navbar-text">Hello,</li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jeff Dasvich <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Sign Out</a></li>
-                </ul>
-            </li>
+            <li class="navbar-text">Hello, Jeff Dasvich</li>
         </ul>
     </div>
 </nav>
@@ -38,48 +28,45 @@
     <!-- ROW  -->    
     <div class="row">
         <!-- Left pannel: Weekly bar charts list  -->
-        <div class="col-md-2">
-            <h4>Weekly View<span class="caret"></span></h4>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <h4 style = "color: #777">Weekly View</h4>
             <div class="list-group" id="weekList"></div>
         </div><!-- END of Left pannel  -->
 
         <!-- Middle pannel: 3 Main Charts  -->
-        <div class="col-md-7">
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
             <!-- Time Frame  -->
-            <h4><span class="label label-info" id="timeFrame">06/24/01 - 06/30/01</span></h4>
-            <!-- Chart 1  -->
-            <svg id="chart1"></svg>
-    		<!-- Chart 2 & 3 -->
-    		<div class="row">
-    			<div class="col-md-6"><svg id="chart2"></svg></div>
-    			<div class="col-md-6"><svg id="chart3"></svg></div>
-    		</div>
+            <h4>
+                <span class="label label-info" id="timeFrame"></span>
+                <span class="label label-info" id="mailTotal"></span>
+            </h4>
+            <!-- Main Chart  -->
+            <svg id="mainChart"></svg>
     	</div><!-- END of Middle pannel  -->
 
     	<!-- Right pannel: Recipient list  -->
-    	<div class="col-md-3">
-            <!-- User Profile-->
-            <table id="profile">
-                <tr>
-                    <td rowspan="2">
-                        <button type="button" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-user"></i></button>
-                    </td>
-                    <td>20 Recipients</td>
-                </tr>
-                <tr>
-                    <td>390 Emails</td>
-                </tr>
-            </table>
-            <!-- Recipient List-->
-            <div id="recipListContainer">
-                <table class="table table-striped table-hover" >
-                    <thead><th class="text-center">ALL Recipient</th></thead>
-                    <tbody id="recipList"></tbody>
-                </table>
+    	<div class="col-xs-3 col-sm-3 col-md-2 col-lg-3">
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#recipients" aria-controls="recipients" role="tab" data-toggle="tab">Recipients 
+                            <span id="recipTotal" class="badge">  </span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#keywords" aria-controls="keywords" role="tab" data-toggle="tab">Keywords</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div id="recipListContainer" class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="recipients"><svg id="recipList"></svg></div>
+                    <div role="tabpanel" class="tab-pane" id="keywords"><svg id="keyList"></svg></div>
+                </div>
             </div>
         </div><!-- END of Right pannel  -->
-
-    </div><!-- END of ROW 2 -->
+        <span id="tooltip" class="label label-warning">Info</span>
+    </div><!-- END of ROW -->
 </div><!-- END of Body: Container -->
     
 <!-- Footer -->
@@ -93,6 +80,3 @@
 <script src="js/week_list.js" charset="utf-8"></script> 
 </body>
 </html>
-
-
-

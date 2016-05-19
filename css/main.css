@@ -1,6 +1,9 @@
 .navbar {
     margin-bottom: 10px;
 }
+text {
+    cursor: default;
+}
 #profile td {
     padding: 3px;
 }
@@ -9,17 +12,18 @@
     text-align: center;
 }
 #recipListContainer {
-	height: 500px;
+	height: 580px;
     border: 1px solid #eee;
+    border-top: 0px;
 	overflow: auto;
 }
-#recipListContainer table{
+#recipList, #keyList{
     margin: 0 auto;
-    height: 100%;
+    height: 2000px;
     width: 100%;
 }
 #weekList {
-    height: 550px;
+    height: 580px;
 	overflow: auto;
 }
 #weekList li {
@@ -27,16 +31,68 @@
 }
 .axis text {
   font: 9px sans-serif;
+  fill: #5e5e5e;
 }
 .axis path,
 .axis line{
     fill: none;
-    stroke: #000;
+    stroke: #eee;
+    stroke-width: 1px;
     shape-rendering: crispEdges;
 }
+#mainChart .axis text{
+    font-size: 12px;
+}
 .bar:hover {
-    fill: #d9534f;
+    fill: rgba(240, 173, 78, .9) !important; /* #D9534F rgba(217, 83, 79, 0.9) #f0ad4e */
 }
 .list-group-item {
-    padding: 8px;
+    padding: 3px;
+}
+.list-group-item svg{
+    margin: 0 auto;
+    /*padding: 3px auto;*/
+}
+rect.bordered {
+     stroke: #E6E6E6;
+     stroke-width: 1px;
+ }
+.label {
+    font-size: 80%;
+}
+text.mono {
+    font-size: 9pt;
+    font-family: Consolas, courier;
+    fill: #aaa;
+}
+
+text.axis-workweek {
+    fill: #000;
+}
+
+text.axis-worktime {
+    fill: #000;
+}
+
+#tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: all 0.3s
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+/*    padding-bottom: 100%;  aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
 }
