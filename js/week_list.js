@@ -220,7 +220,7 @@ function renderMainChart(data, name) {
     var mainChart = d3.select("#mainChart")
                         .classed("svg-container", true)
                         .attr("preserveAspectRatio", "xMinYMin meet")
-                        .attr("viewBox", "0 -40 400 600")
+                        .attr("viewBox", "0 -40 400 620")
                         .classed("svg-content-responsive", true)
 //                        .attr("width", chartWidth)
 //                        .attr("height", chartHeight)
