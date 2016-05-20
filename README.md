@@ -10,7 +10,7 @@ In the modern era, almost everyone uses emails. These emails contain a wealth of
 
 **Demo**: http://nyu-cs6313-spring2016.github.io/Group-4-Personal-Browsing/
 
-**Document**: https://raw.githubusercontent.com/NYU-CS6313-SPRING2016/Group-4-Personal-Browsing/master/FinalProjectDescription-Group4.pdf
+**Document**: https://github.com/NYU-CS6313-SPRING2016/Group-4-Personal-Browsing/blob/master/FinalProjectDescription-Group4.pdf
 
 ##Additional Information
 ###Dataset Used
